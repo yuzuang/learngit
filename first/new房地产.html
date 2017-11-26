@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/jquery-3.2.0.min.js"></script>
+	<title>房天下</title>
+	<style>
+	      html,body,ul,li{
+	      	margin: 0;
+	      	padding: 0;
+	      }
+	      a{
+	      	text-decoration: none;
+	      }
+	      ul{
+	      	list-style: none;
+	      }
+	      .bar {
+            width: 100%;
+            height: 50px;
+            background-image: url("./img/1.gif");
+            background-position: 0 -666px;
+          }
+        .center-bar {
+            width: 1200px;
+            margin: 0 auto;
+            height: 50px;
+        }
+	    .center-bar ul li{
+	      	position: relative;
+            height: 35px;
+            line-height: 50px;
+            float: left;
+            padding: 0 13px;
+	    }
+	    .clearfix::after {
+            clear: both;
+            height: 0;
+            content: "";
+            display: block;
+        }.center-bar ul li a{
+        	color: white;
+            font-size: 14px;
+        }
+
+         .child-bar li {
+            width: 120px;
+            text-align: left;
+            padding: 10px 0 10px 10px;
+            line-height: 1;
+        }
+        .center-bar>ul>li:hover {
+            background: #b30000;
+            height: 50px;
+        }
+        .center-bar>ul>li:hover .child-bar {
+            display: block;
+        }
+        .center-bar>ul>li:hover .child-bar1{
+            display: block;
+        }
+        .center-bar>ul>li:hover .child-bar2{
+            display: block;
+        }
+        .center-bar>ul>li:hover .child-bar3{
+            display: block;
+        }
+        .center-bar>ul>li:hover .child-bar4{
+            display: block;
+        }
+        .center-bar>ul>li:hover .child-bar5{
+            display: block;
+        }
+        .center-bar>ul>li:hover .child-bar6{
+            display: block;
+        }
+        .center-bar>ul>li:hover .child-bar7{
+            display: block;
+        }
+        .center-bar>ul>li:hover .child-bar8{
+            display: block;
+        }
+        .center-bar>ul>li:hover .child-bar9{
+            display: block;
+        }
+        .head-img {
+            position: relative;
+            width: 100%;
+            height: 464px;
+            overflow: hidden;
+        }
+        .head-img img {
+            height: 464px;
+            width: 2000px;
+            position: absolute;
+            left: 50%;
+            margin-left: -1000px;
+            z-index: 1;
+        }
+        .child-bar {
+            position: absolute;
+            left: 0;
+            top: 50px;
+            width: 560px;
+            z-index: 4;
+            display: none;
+            background: #fff;
+            height: 200px;
+            font-size:10px;
+        }
+        .child-bar li{
+            width: 54px;
+        } 
+        .child-bar1 {
+            position: absolute;
+            left: 0;
+            top: 50px;
+            width: 120px;
+            z-index: 4;
+            display: none;
+            background: #fff;
+            height: 400px;
+            font-size:10px;
+        }
+        .child-bar2 {
+            position: absolute;
+            left: 0;
+            top: 50px;
+            width: 120px;
+            z-index: 4;
+            display: none;
+            background: #fff;
+            height: 300px;
+            font-size:10px;
+        }
+        .child-bar3 {
+            position: absolute;
+            left: 0;
+            top: 50px;
+            width: 100px;
+            z-index: 4;
+            display: none;
+            background: #fff;
+            height: 320px;
+            font-size:10px;
+        }
+        .child-bar4 {
+            position: absolute;
+            left: 0;
+            top: 50px;
+            width: 120px;
+            z-index: 4;
+            display: none;
+            background: #fff;
+            height: 250px;
+            font-size:10px;
+        } 
+       .child-bar5 {
+            position: absolute;
+            left: 0;
+            top: 50px;
+            width: 120px;
+            z-index: 4;
+            display: none;
+            background: #fff;
+            height: 120px;
+            font-size:10px;
+        }
+        .child-bar6 {
+            position: absolute;
+            left: 0;
+            top: 50px;
+            width: 120px;
+            z-index: 4;
+            display: none;
+            background: #fff;
+            height: 120px;
+            font-size:10px;
+        }
+        .child-bar7 {
+            position: absolute;
+            left: 0;
+            top: 50px;
+            width: 120px;
+            z-index: 4;
+            display: none;
+            background: #fff;
+            height: 150px;
+            font-size:10px;
+        }
+        .child-bar8 {
+            position: absolute;
+            left: 0;
+            top: 50px;
+            width: 120px;
+            z-index: 4;
+            display: none;
+            background: #fff;
+            height: 150px;
+            font-size:10px;
+        } 
+        .child-bar9 {
+            position: absolute;
+            left: 0;
+            top: 50px;
+            width: 120px;
+            z-index: 4;
+            display: none;
+            background: #fff;
+            height: 150px;
+            font-size:10px;
+        }                                                                                /*点击列表（隐藏）*/
+        .tip-div {
+            position: absolute;
+            top: 0;
+            width: 720px;
+            height: 200px;
+            top: 50%;
+            left: 50%;
+            margin-top: -150px;
+            margin-left: -360px;
+            background: rgba(0,0,0,0.6);
+            z-index: 3;
+            box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.6);
+        }
+        .head .head-middle{
+            height: 66px;
+            width: 1347px;
+            border: 1px solid #ddd;
+            background-color:black;
+        }
+        .head .head-middle1{
+            height: 66px;
+            width: 420px;
+            border-right: 1px solid #ddd;
+            background-color:#f1f1f1;
+            margin-left: 0px;
+            float:left;
+        }
+        .head .head-middle2{
+            height: 66px;
+            width: 456px;
+            border-right: 1px solid #ddd;
+            background-color:#f1f1f1;
+            margin-left: 0px;
+            float:left;
+        }
+         .head .head-middle3{
+            height: 66px;
+            width: 468px;
+            border-right: 1px solid #ddd;
+            background-color:#f1f1f1;
+            margin-left: 878px;
+        }
+        .hide{
+            display: none;
+        }
+        .icon {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            left: 50px;
+            margin-left: 555px;
+            z-index: 5;
+        }
+        .icon li {
+            float: left;
+            width: 15px;
+            height: 15px;
+            background: white;
+            margin: 0 20px;
+           
+        }
+        .icon li.selected {
+            background: red;
+        }
+        .left{
+            margin:50px 0 0 0;
+            z-index: 5;
+        }
+        .a{
+            margin-left: 20px;
+            color: white;
+            font-size: 15px;
+        }
+        .b{
+            margin-left:-15px;
+            color: white;
+            font-size: 15px;
+        }
+        .c{
+            margin-left:-25px;
+        }
+        .d{
+           margin-left:-15px; 
+        }
+        .tip-div ul li a img{
+            margin:25px 0 0 22px;
+        }
+        .tip-div .tip-div1 a {
+            float: left;
+            margin-top: -30px;
+            margin-left: 245px;
+            color: white;
+            font-size: 14px;
+        }
+        .tip-div .tip-div2 a {
+            float: left;
+            margin-top: -30px;
+            margin-left: 275px;
+            color: white;
+            font-size: 14px;
+        }
+        .tip-div .tip-ul li{
+            float: left;
+            padding: 22px 18px 0 0;
+        }
+        .tip-div .tip-ul li a{
+            color: white;
+        }
+        .tip-div .tip-ul {
+            margin-left: 22px;
+        }
+        .tip-div .tip-ul img{
+            float: left;
+            margin-top: 9px;
+            margin-left: -15px;
+        }
+        .input input{
+            height: 36px;
+            width: 610px;
+            margin:15px 0 0 22px;
+        }
+        .tip-div .img1{
+             margin:0 0 -41px -659px;
+        }
+        .tip-div .img2{
+             margin:0 0 -41px -595px;
+        }
+        .tip-div .img3{
+             margin:0 0 -41px -520px;
+        }
+        .tip-div .img4{
+             margin:0 0 -41px -448px;
+        }
+        .tip-div .img5{
+             margin:0 0 -41px -374px;
+        }
+        .tip-div .img6{
+             margin:0 0 -41px -292px;
+        }
+        .tip-div .img7{
+             margin:0 0 -41px -210px;
+        }
+        .tip-div .img8{
+             margin:0 0 -41px -127px;
+        }
+        .tip-div .tab-box .input input{
+            color: #888;
+            font-size: 14px;
+        }
+      /*  ..tip-div .many {
+            position: absolute;
+            left: 0;
+            top: 50px;
+            width: 120px;
+            z-index: 4;
+            display: none;
+            background: #fff;
+            height: 250px;
+            font-size:10px;
+        } */
+        .hide {
+            display: none;
+        }
+        .show {
+            display: block;
+        }
+        .middle{
+            width: 100%;
+            height: 54px;
+            border-bottom: 1px solid #ddd;
+            padding: 23px 0;
+            min-width: 1200px
+        }
+        .center-middle{
+            position: relative;
+            width: 1200px;
+            height: 54px;
+            margin: 0 auto;
+        }
+        .center-middle1{
+            width: 234px;
+            float: left;
+            height: 54px;
+            border-right: 1px dashed #ddd;
+            position: relative;        
+        }
+        .center-middle1 .s1{
+            line-height: 54px;
+            font-size: 28px;
+            float: left;
+        }
+        .center-middle1 .s1 a{
+            color: red;
+        }
+        .center-middle1 .s2{
+                float: left;
+                line-height: 25px;
+                font-size: 14px;
+                margin-left: 70px;
+                position: absolute;
+                left: 0px;          
+        }
+        .center-middle1 .s2 p{
+            margin-top: 0px;
+        }
+        .center-middle1 .s2 p a{
+            color: black;
+            padding: 0 0 0 17px;
+        }
+        .center-middle2{
+            width: 210px;
+            float: left;
+            height: 54px;
+            border-right: 1px dashed #ddd;
+            position: relative;
+            margin-left: 0px;      
+        }
+        .center-middle2 .s1{
+            line-height: 54px;
+            font-size: 28px;
+            float: left;
+            margin-left: 30px;
+        }
+        .center-middle2 .s1 a{
+            color: red;
+        }
+        .center-middle2 .s2{
+            float: left;
+            line-height: 25px;
+            font-size: 14px;
+            margin-left: 107px;
+            position: absolute;
+            left: 0px;      
+        }
+        .center-middle2 .s2 p{
+            margin-top: 0px;
+        }
+        .center-middle2 .s2 p a{
+            color: black;
+            padding: 0 0 0 17px;
+        }
+        .center-middle3{
+            width: 260px;
+            float: left;
+            height: 54px;
+            border-right: 1px dashed #ddd;
+            position: relative;
+            margin-left: 0px;      
+        }
+        .center-middle3 .s1{
+            line-height: 54px;
+            font-size: 28px;
+            float: left;
+            margin-left: 20px;
+        }
+        .center-middle3 .s1 a{
+            color: red;
+        }
+        .center-middle3 .s2{
+            float: left;
+            line-height: 25px;
+            font-size: 14px;
+            margin-left: 85px;
+            position: absolute;
+            left: 0px;      
+        }
+        .center-middle3 .s2 p{
+            margin-top: 0px;
+        }
+        .center-middle3 .s2 p a{
+            color: black;
+            padding: 0 0 0 17px;
+        }
+        .center-middle4{
+            width: 260px;
+            float: left;
+            height: 54px;
+            border-right: 1px dashed #ddd;
+            position: relative;
+            margin-left: 0px;      
+        }
+        .center-middle4 .s1{
+            line-height: 54px;
+            font-size: 28px;
+            float: left;
+            margin-left: 20px;
+        }
+        .center-middle4 .s1 a{
+            color: red;
+        }
+        .center-middle4 .s2{
+            float: left;
+            line-height: 25px;
+            font-size: 14px;
+            margin-left: 85px;
+            position: absolute;
+            left: 0px;      
+        }
+        .center-middle4 .s2 p{
+            margin-top: 0px;
+        }
+        .center-middle4 .s2 p a{
+            color: black;
+            padding: 0 0 0 17px;
+        }
+        .center-middle4{
+            width: 260px;
+            float: left;
+            height: 54px;
+            border-right: 1px dashed #ddd;
+            position: relative;
+            margin-left: 0px;      
+        }
+        .center-middle5 .s1{
+            line-height: 54px;
+            font-size: 28px;
+            float: left;
+            margin-left: 16px;
+        }
+        .center-middle5 .s1 a{
+            color: red;
+        }
+        .center-middle5 .s2{
+            float: left;
+            line-height: 25px;
+            font-size: 14px;
+            margin-left: 1045px;
+            position: absolute;
+            left: 0px;      
+        }
+        .center-middle5 .s2 p{
+            margin-top: 0px;
+        }
+        .center-middle5 .s2 p a{
+            color: black;
+            padding: 0 0 0 17px;
+        }
+        .bottom{
+            width: 1200px;
+            overflow: hidden;
+            z-index: 2;
+            margin: 0 auto;
+            background-color: #fff;            
+        }
+        .tetit{
+            width: 1198px;
+            height: 46px;
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            /*border-top: 2px solid #c00;*/
+            margin-top: 22px;
+        }
+        .tetit .a1{
+            float: left;
+            width: 399px;
+            text-align: center;
+            border-top: 2px solid #c00;
+            font-size: 18px;
+            font-weight: bold;
+            height: 44px;
+           /* line-height: 44px;*/
+            border-bottom: 1px solid #fff;
+            border-right: 1px solid #ddd;
+            background: #fff;
+        }
+        .tetit .a1 p a{
+            color: black;
+            text-align: center;
+        }
+        .tetit .a2{
+            float: left;
+            width: 398px;
+            text-align: center;
+            height: 43px;
+            line-height: 43px;
+            border-bottom: 1px solid #ddd;
+            border-top: 2px solid #ddd;
+            font-size: 18px;
+            cursor: pointer;
+            background: #f1f1f1;
+            border-right: 1px solid #ddd;
+        }
+        .tetit .a2 a{
+            color: black;
+            text-align: center;
+        }
+        .tetit .a3{
+            float: left;
+            width: 398px;
+            text-align: center;
+            height: 43px;
+            line-height: 43px;
+            border-bottom: 1px solid #ddd;
+            border-top: 2px solid #ddd;
+            font-size: 18px;
+            cursor: pointer;
+            background: #f1f1f1;
+            border-right: 1px solid #ddd;
+        }
+        .tetit .a3 a{
+            color: black;
+            text-align: center;
+        }
+        .bottom-er{
+            overflow: hidden;
+            margin-top: 8px;
+            min-width: 1200px;
+            height: 252px;
+        }
+        .bottom-er1{
+            float: left;
+            width: 259px;
+            height: 230px;
+            overflow: hidden;
+            border-radius: 1px;
+            padding: 10px 10px;
+            border: 1px solid #ddd;
+        }
+        .bottom-er1 .img-a{
+            width: 258px;
+            height: 69px;
+            border: 1px solid #e7e7e7;
+            border-top: 0px;
+            position: absolute;
+            left: 85px;
+            bottom: -270px;
+            background: #fff;
+        }
+        .bottom-er1 .xing{
+            float: left;
+            width: 129px;
+            height: 69px;
+            overflow: hidden; 
+            margin-top: 0px;      
+        }
+        .bottom-er1 .rong{
+            float: left;
+            width: 129px;
+            height: 69px;
+            overflow: hidden;
+            /*background-image: url("./img/bai.gif")no-repeat left;      */
+        }
+        .bottom-er1 .rong h1{
+            font-size: 18px;
+            margin-left: 27px;
+            color: #c00;
+        }
+        .bottom-er1 .rong p{
+            font-size: 10px;
+            margin-top: -7px;
+            margin-left: 12px;
+        }
+        .bottom-er1 .xing h1{
+            width: 129px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 18px;
+            text-align: center;
+            overflow: hidden;
+            margin-top: 10px;       
+        }
+        .bottom-er1 .xing h1 a{
+            font-size: 18px;
+            margin-top: 0px;
+            color: black;
+        }
+        .bottom-er1 .xing p{
+            font-size: 10px;
+            margin-top: -11px;
+            margin-left: 6px;
+        }
+        .bottom-er2{
+            float: left;
+            width: 259px;
+            height: 230px;
+            overflow: hidden;
+            border-radius: 1px;
+            padding: 10px 10px;
+            border: 1px solid #ddd;
+            margin-left: 24px;
+        }
+        .bottom-er2 .img-b{
+            width: 258px;
+            height: 69px;
+            border: 1px solid #e7e7e7;
+            border-top: 0px;
+            position: absolute;
+            left: 391px;
+            bottom: -270px;
+            background: #fff;
+        }
+        .bottom-er2 .da{
+            float: left;
+            width: 129px;
+            height: 69px;
+            overflow: hidden; 
+            margin-top: 0px;      
+        }
+        .bottom-er2 .ye{
+            float: left;
+            width: 129px;
+            height: 69px;
+            overflow: hidden;
+            /*background-image: url("./img/bai.gif")no-repeat left;      */
+        }
+        .bottom-er2 .ye h1{
+            font-size: 18px;
+            margin-left: 27px;
+            color: #c00;
+        }
+        .bottom-er2 .ye p{
+            font-size: 10px;
+            margin-top: -7px;
+            margin-left: 1px;
+        }
+        .bottom-er2 .da h1{
+            width: 129px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 18px;
+            text-align: center;
+            overflow: hidden;
+            margin-top: 10px;       
+        }
+        .bottom-er2 .da h1 a{
+            font-size: 18px;
+            margin-top: 0px;
+            color: black;
+        }
+        .bottom-er2 .da p{
+            font-size: 10px;
+            margin-top: -11px;
+            margin-left: 20px;
+        }
+        .bottom-er3{
+            float: left;
+            width: 259px;
+            height: 230px;
+            overflow: hidden;
+            border-radius: 1px;
+            padding: 10px 10px;
+            border: 1px solid #ddd;
+            margin-left: 24px;
+        }
+        .bottom-er3 .img-c{
+            width: 258px;
+            height: 69px;
+            border: 1px solid #e7e7e7;
+            border-top: 0px;
+            position: absolute;
+            left: 696px;
+            bottom: -270px;
+            background: #fff;
+        }
+        .bottom-er3 .chao{
+            float: left;
+            width: 129px;
+            height: 69px;
+            overflow: hidden; 
+            margin-top: 0px;      
+        }
+        .bottom-er3 .wan{
+            float: left;
+            width: 129px;
+            height: 69px;
+            overflow: hidden;
+            /*background-image: url("./img/bai.gif")no-repeat left;      */
+        }
+        .bottom-er3 .wan h1{
+            font-size: 18px;
+            margin-left: 7px;
+            color: #c00;
+        }
+        .bottom-er3 .wan p{
+            font-size: 10px;
+            margin-top: -7px;
+            margin-left: 18px;
+        }
+        .bottom-er3 .chao h1{
+            width: 129px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 18px;
+            text-align: center;
+            overflow: hidden;
+            margin-top: 10px;       
+        }
+        .bottom-er3 .chao h1 a{
+            font-size: 18px;
+            margin-top: 0px;
+            color: black;
+        }
+        .bottom-er3 .chao p{
+            font-size: 10px;
+            margin-top: -11px;
+            margin-left: 33px;
+        }
+        .bottom-er4{
+            float: left;
+            width: 259px;
+            height: 230px;
+            overflow: hidden;
+            border-radius: 1px;
+            padding: 10px 10px;
+            border: 1px solid #ddd;
+            margin-left: 24px;
+        }
+        .bottom-er4 .img-d{
+            width: 258px;
+            height: 69px;
+            border: 1px solid #e7e7e7;
+            border-top: 0px;
+            position: absolute;
+            left: 1001px;
+            bottom: -270px;
+            background: #fff;
+        }
+        .bottom-er4 .hong{
+            float: left;
+            width: 129px;
+            height: 69px;
+            overflow: hidden; 
+            margin-top: 0px;      
+        }
+        .bottom-er4 .chou{
+            float: left;
+            width: 129px;
+            height: 69px;
+            overflow: hidden;
+            /*background-image: url("./img/bai.gif")no-repeat left;      */
+        }
+        .bottom-er4 .chou h1{
+            font-size: 18px;
+            margin-left: 7px;
+            color: #c00;
+        }
+        .bottom-er4 .chou p{
+            font-size: 10px;
+            margin-top: -7px;
+            margin-left: 18px;
+        }
+        .bottom-er4 .hong h1{
+            width: 129px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 18px;
+            text-align: center;
+            overflow: hidden;
+            margin-top: 10px;       
+        }
+        .bottom-er4 .hong h1 a{
+            font-size: 18px;
+            margin-top: 0px;
+            color: black;
+        }
+        .bottom-er4 .hong p{
+            font-size: 10px;
+            margin-top: -11px;
+            margin-left: 33px;
+        }
+        .hide {
+            display: none;
+        }
+        .show {
+            display: block;
+        }
+        .bottom-er-a{
+            overflow: hidden;
+            margin-top: 8px;
+            min-width: 1200px;
+            height: 252px;
+        }
+</style>
+</head>
+<body>
+	<div class="head">
+		<div class="bar">
+			<div class="center-bar">
+				<ul class="clearfix">
+					<li>
+						<a href="#">全国<img src="./img/QQ图片20170918194146.gif"></a>
+						<ul class="child-bar">
+							<li>北京</li>
+							<li>上海</li>
+							<li>广州</li>
+                            <li>深圳</li>
+                            <li>成都</li>
+                            <li>重庆</li>
+                            <li>天津</li>
+                            <li>武汉</li>
+                            <li>苏州</li>
+                            <li>杭州</li>
+                            <li>南京</li>
+                            <li>青岛</li>
+                            <li>长沙</li>
+                            <li>西安</li>
+                            <li>沈阳</li>
+                            <li>长春</li>
+                            <li>常洲</li>
+                            <li>大连</li>
+                            <li>东莞</li>
+                            <li>海南</li>
+                            <li>济南</li>
+                            <li>三亚</li>
+                            <li>石家庄</li>
+                            <li>无锡</li>
+                            <li>郑州</li>
+                            <li>宁波</li>
+                            <li>南宁</li>
+                            <li>昆明</li>
+                            <li>合肥</li>
+                            <li>南昌</li>
+                            <li>香港</li>
+                            <li>海外</li>
+                            <li>其他城市</li>
+						</ul>
+					</li>
+					<li><a href="#">首页</a></li>
+					<li>
+                        <a href="#">新房</a>
+                            <ul class="child-bar1">
+                                <li>本月开盘</li>
+                                <li>热门楼盘</li>
+                                <li>房天下直销</li>
+                                <li>打折楼盘</li>
+                                <li>新开楼盘</li>
+                                <li>楼盘导购</li>
+                                <li>新房排行榜</li>
+                                <li>购房知识</li>
+                                <li>看房团</li>
+                                <li>商业地产</li>
+                            </ul>
+                    </li>
+					<li>
+                        <a href="#">二手房</a>
+                            <ul class="child-bar2">
+                                <li>在售房源</li>
+                                <li>优选房源</li>
+                                <li>房天下直销</li>
+                                <li>找 小 区</li>
+                                <li>找 别 墅</li>
+                                <li>查 成 交</li>
+                                <li>二手房排行榜</li>
+                                <li>购房知识</li>
+                            </ul>
+                    </li>
+					<li>
+                        <a href="#">租房</a>
+                            <ul class="child-bar3">
+                                <li>房天下精选</li>
+                                <li>个人房源</li>
+                                <li>整租房源</li>
+                                <li>合租房源</li>
+                                <li>别墅房源</li>
+                                <li>短租日租</li>
+                                <li>特价房</li>
+                                <li>购房知识</li>
+                                <li>求租</li>
+                            </ul>
+                    </li>
+					<li><a href="#">查房价</a></li>
+					<li>
+                        <a href="#">装修房居</a>
+                            <ul class="child-bar4">
+                                <li>免费装修报价</li>
+                                <li>找装修公司</li>
+                                <li>装修日记</li>
+                                <li>装修效果图</li>
+                                <li>装修攻略</li>
+                                <li>家居资讯</li>
+                            </ul>
+                    </li>
+					<li>
+                        <a href="#">写字楼</a>
+                            <ul class="child-bar5">
+                                <li>写字楼出租</li>
+                                <li>写字楼出售</li>
+                                <li>写字楼新盘</li>
+                            </ul>
+                    </li>
+					<li>
+                        <a href="#">商铺</a>
+                           <ul class="child-bar6">
+                                <li>商铺出租</li>
+                                <li>商铺出售</li>
+                                <li>商铺新盘</li>
+                            </ul>
+                    </li>
+					<li>
+                        <a href="#">业主论坛</a>
+                          <ul class="child-bar7">
+                                <li>精华帖</li>
+                                <li>购房圈</li>
+                                <li>业主活动</li>
+                                <li>装修论坛</li>
+                            </ul>
+                    </li>
+					<li>
+                        <a href="#">房产百科</a>
+                         <ul class="child-bar8">
+                                <li>房产快讯</li>
+                                <li>房产问答</li>
+                                <li>房产知识</li>
+                                <li>房产圈</li>
+                            </ul>
+                    </li>
+					<li><a href="#">移动APP</a></li>
+					<li>
+                        <a href="#">更多</a>
+                         <ul class="child-bar8">
+                                <li>金融贷款</li>
+                                <li>产业</li>
+                                <li>海外房产</li>
+                                <li>文化活动频道</li>
+                            </ul>
+                    </li>
+                    <ul >
+                                <li class="a"><a href=""><img src="./img/2.png">看房</a></li>
+                                <li class="b"><a href=""><img src="./img/3.png">订单</a></li>
+                    </ul>
+                    <ul>
+                        <li class="d"><a href="">登录</a></li>
+                        <li class="c"><a href="">丨注册</a></li>
+                    </ul>
+                </ul>
+			</div>
+		</div>
+		<div class="head-img">
+            <ul <ul class="img-box clearfix">
+                <li><a href=""><img src="./img/f3dae2f84a994f49adaef5eaac718ae8.jpg"></a></li>
+                <li class="hide"><a href=""><img src="./img/fangbeijingtupian.jpg"></a></li>
+                <li class="hide"><a href=""><img src="./img/95202de71d324402bfc9593e440701e5.jpg"></a></li>
+            </ul>
+            <ul class="icon">
+                <li class="selected"></li>
+                <li></li>
+                <li></li>
+            </ul>
+             <!--  <button class="left">←</button>
+              <button class="right">→</button> -->
+        </div>
+              <button class="left">←</button>
+              <button class="right">→</button>
+        <script type="text/javascript">
+        //     $(function(){
+        //         $(".icon li").mouseover(function(){
+        //         var nowIndex = $(this).index();
+        //         $(".img-box li").eq(nowIndex).fadeIn().siblings().fadeOut()
+        //         $(".icon li").eq(nowIndex).addClass("selected").siblings().removeClass("selected");
+        //     })
+        // })
+            $(function(){
+                var index = $(".icon li.selected").index();
+                function goleft(){
+                 if (index == 1) { index = -1;}
+                 $(".icon li").eq(index+=1).addClass("selected").siblings().removeClass("selected");
+                 $(".img-box li").eq(index).fadeIn().siblings().fadeOut();
+                }
+                function goright(){
+                if (index == 0) { index = 3;}
+                 $(".icon li").eq(index-=1).addClass("selected").siblings().removeClass("selected");   
+                $(".img-box li").eq(index).fadeIn().siblings().fadeOut();
+                }
+
+                $(".left").click(function(){
+                    goleft();
+                })
+                 $(".right").click(function(){
+                    goright();
+                })
+                 function exportTimer(){
+                    timer = setInterval(function(){
+                        goLfet();
+                    },2000);
+                 }
+                 exportTimer();
+                 $(".left").hover(
+                    function(){
+                        clearInterval(timer)
+                    },
+                    function(){
+                        exportTimer();
+                    }
+                )
+                 $(".left").hover(
+                    function(){
+                        clearInterval(timer)
+                    },
+                    function(){
+                        exportTimer();
+                    }
+                )
+     })
+        </script>
+			<div class="tip-div">
+                <ul>
+                    <li ><a href=""><img src="./img/fangtianxia.png"></a></li>
+                    <li class="tip-div1"><a href="">全国</a></li>
+                    <li class="tip-div2"><a href="">【切换城市】</a></li>
+                </ul>
+                <ul class="tip-ul">
+                    <li class="selected"><a href="">查房价</a></li>
+                    <li><a href="">买新房</a></li>
+                    <li><a href="">买二手房</a></li>
+                    <li><a href="">找租房</a></li>
+                    <li><a href="">装修家居</a></li>
+                    <li><a href="">房产快讯</a></li>
+                    <li><a href="">海外房产</a></li>
+                    <li><a href="">地图找房</a></li>
+                    <li><a href="">更多</a></li>
+                    <li><img src="./img/navicon1.gif"></li>
+                </ul>
+                <div class="tab-box">
+                    <div class="box">
+                        <img class="img1" src="./img/navsjt.gif">
+                        <div class="input">
+                            <input type="text" value="  请输入小区房名或地址，给自己的房子估个价">
+                        </div>
+                    </div>
+                    <div class="box hide">
+                        <img class="img2" src="./img/navsjt.gif">
+                        <div class="input">
+                            <input type="text" value="  兴隆融创城 开启环境绿居生活">
+                        </div>
+                    </div>
+                    <div class="box hide">
+                        <img class="img3" src="./img/navsjt.gif">
+                        <div class="input">
+                            <input type="text" value="  请输入关键字 （楼盘名或地名）">
+                        </div>
+                    </div>
+                    <div class="box hide">
+                        <img class="img4" src="./img/navsjt.gif">
+                        <div class="input">
+                            <input type="text" value="  请输入关键字 （楼盘名或地名）">
+                        </div>
+                    </div>
+                    <div class="box hide">
+                        <img class="img5" src="./img/navsjt.gif">
+                        <div class="input">
+                            <input type="text" value="  请输入户型/功能间/风格等关键字">
+                        </div>
+                    </div>
+                    <div class="box hide">
+                        <img class="img6" src="./img/navsjt.gif">
+                        <div class="input">
+                            <input type="text" value="  请输入关键字">
+                        </div>
+                    </div>
+                    <div class="box hide">
+                        <img class="img7" src="./img/navsjt.gif">
+                        <div class="input">
+                            <input type="text" value="  请输入关键字（国家/城市/地区）">
+                        </div>
+                    </div>
+                    <div class="box hide">
+                        <img class="img8" src="./img/navsjt.gif">
+                        <div class="input">
+                            <input type="text" value="  请输入区县/商圈/小区名">
+                        </div>
+                    </div>
+<!--                     <div class="box hide">
+                        <ul class="many">
+                            <li><a href="">房产问答</a></li>
+                            <li><a href="">房产知识</a></li>
+                            <li><a href="">短租</a></li>
+                            <li><a href="">写字楼</a></li>
+                            <li><a href="">商铺</a></li>
+                            <li><a href="">业主论坛</a></li>
+                            <li><a href="">综合搜索</a></li>
+                        </ul>  
+                    </div> -->
+                </div>
+                 <script type="text/javascript">
+                    $(function(){
+                        $(".tip-ul li").mouseover(function(){
+                        $(this).addClass("selected").siblings().removeClass("selected");
+                         var index = $(this).index();
+                        $(".box").eq(index).show().siblings().hide();
+                    })
+            })
+                 </script>
+            </div>
+		</div>
+        <div class="middle">
+             <div class="center-middle">
+                 <div class="center-middle1">
+                     <div class="s1">
+                         <a href="">买房</a>
+                     </div> 
+                     <div class="s2">
+                         <p>
+                             <a href="">新房  </a>
+                             <a href="">二手房</a>
+                         </p>
+                         <p>
+                             <a href="">业主论坛</a>
+                             <a href="">海外房产</a>
+                         </p>
+                     </div>    
+                 </div>
+                  <div class="center-middle2">
+                     <div class="s1">
+                         <a href="">卖房</a>
+                     </div> 
+                     <div class="s2">
+                         <p>
+                             <a href="">我要买房  </a>
+                         </p>
+                         <p>
+                             <a href="">查房价  </a>
+                         </p>
+                     </div>    
+                 </div>
+                <div class="center-middle3">
+                     <div class="s1">
+                         <a href="">租房</a>
+                     </div> 
+                     <div class="s2">
+                         <p>
+                             <a href="">找租房 </a>
+                             <a href="">短租</a>
+                         </p>
+                         <p>
+                             <a href="">我要出租</a>
+                             <a href="">月付公寓</a>
+                         </p>
+                     </div>    
+                 </div>
+                <div class="center-middle4">
+                     <div class="s1">
+                         <a href="">装修</a>
+                     </div> 
+                     <div class="s2">
+                         <p>
+                             <a href="">装修案例 </a>
+                             <a href="">我要装修</a>
+                         </p>
+                         <p>
+                             <a href="">找装修公司</a>
+                             <a href="">抢优惠</a>
+                         </p>
+                     </div>    
+                 </div>
+                <div class="center-middle5">
+                     <div class="s1">
+                         <a href="">直销</a>
+                     </div> 
+                     <div class="s2">
+                         <p>
+                             <a href="">新房直销 </a>
+                             <a href="">二手房源</a>
+                         </p>
+                         <p>
+                             <a href="">金融贷款</a>
+                             <a href="">我要加盟</a>
+                         </p>
+                     </div>    
+                 </div>
+             </div>
+        </div>
+        <div class="bottom">
+            <div class="tetit clearfix">
+                <div class="a1">
+                    <p class="seleced"><a href="">热销楼盘</a></p>
+                </div>
+                <div class="a2">
+                    <p><a href="">品牌地产</a></p>
+                </div>
+                <div class="a3">
+                    <p><a href="">全城好房</a></p>
+                </div>
+            </div>
+            <div class="bottom-er">
+                <div class="bottom-er-a hide">
+                    <div class="bottom-er1">
+                        <div class="img">
+                            <img src="./img/tong.jpg">
+                        </div>
+                        <div class="img-a">
+                            <div class="xing">
+                                <h1><a href="">兴隆</a></h1>
+                                <p>雾灵山下轻度度假村</p>
+                            </div>
+                            <div class="rong">
+                                <h1>融创巨著</h1>
+                                <p>兴隆封面 恢弘启幕</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-er2">
+                        <div class="img">
+                            <img src="./img/da.jpg">
+                        </div>
+                        <div class="img-b">
+                            <div class="da">
+                                <h1><a href="">大兴</a></h1>
+                                <p>南海子公园西侧</p>
+                            </div>
+                            <div class="ye">
+                                <h1>墅质洋房</h1>
+                                <p>建面145-160舒适三居</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-er3">
+                        <div class="img">
+                            <img src="./img/chao.jpg">
+                        </div>
+                        <div class="img-c">
+                            <div class="chao">
+                                <h1><a href="">朝阳公园</a></h1>
+                                <p>优质二手房</p>
+                            </div>
+                            <div class="wan">
+                                <h1>1000万以上</h1>
+                                <p>共258条房源</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-er4">
+                        <div class="img">
+                            <img src="./img/hong.jpg">
+                        </div>
+                        <div class="img-d">
+                            <div class="hong">
+                                <h1><a href="">红包等你来领</a></h1>
+                                <p>全国25城联动</p>
+                            </div>
+                            <div class="chou">
+                                <h1>抽iPhone8</h1>
+                                <p>赢10000元现金</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="bottom-er-a hide">
+            
+        </div>
+        <script>
+        $(function(){
+            $(".tetit p").mouseover(function(){
+                $(this).addClass("selected").siblings().removeClass("selected");
+                var index = $(this).index();
+                $(".bottom-er-a").eq(index).show().siblings().hide();
+            })
+        })
+    </script>
+	</div>
+</body>
+</html>

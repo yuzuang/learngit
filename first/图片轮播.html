@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul,li {
+            margin: 0;
+            padding: 0;
+        }
+        .clearfix::after {
+            clear: both;
+            display: block;
+            content: "";
+            height: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        .img-box  {
+            list-style: none;
+            width: 1500px;
+            margin-left: -300px;
+        }
+        .img-box>li, .img-box>li>img {
+            width: 300px;
+            height: 300px;
+        }
+        .img-box>li {
+            float: left;
+            line-height: 300px;
+            text-align: center;
+            font-size: 30px;
+        }
+        ul>li, ul>li>img {
+            width: 300px;
+            height: 300px;
+        }
+        ul>li {
+            float: left;
+            line-height: 300px;
+            text-align: center;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .left {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .right {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .icon {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            left: 50px;
+        }
+        .icon li {
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: #000;
+            margin: 0 10px;
+        }
+        .icon li.selected {
+            background: red;
+        }
+    </style>
+    <script src="./js/jquery-3.2.0.min.js"></script>
+</head>
+<body>
+    <div class="box">
+        <ul class="img-box clearfix">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <ul class="icon">
+        	<li></li>
+        	<li class="selected"></li>
+        	<li></li>
+        	<li></li>
+        	<li></li>
+        </ul>
+        <button class="left">向左移动</button>
+        <button class="right">向右移动</button>
+    </div>
+    <script>
+        $(function(){
+        	var index = $(".icon li.selected").index();
+            $(".left").click(function(){
+                $(".img-box").stop(true,true).animate({
+                    marginLeft: "-=300px",
+                },500,function(){
+                    var first = $(".img-box li").first();
+                    var last = $(".img-box li").last();
+                    first.insertAfter(last);
+                    $(".img-box").css("margin-left","-300px");
+                })
+                if (index==4) {index=-1;}
+                $(".icon li").eq(index+=1).addClass("selected").
+                    siblings().removeClass("selected");
+            })
+        })
+        $(function(){
+        	$(".right").click(function(){
+        		$(".img-box").stop(true,true).animate({
+        			marginLeft: "+=300px",
+        		},500,function(){
+        			var first = $(".img-box li").first();
+        			var last = $(".img-box li").last();
+        			last.insertBefore(first);
+        			$(".img-box").css("margin-left","-300px")
+        		})
+        		if (index==0) {index=-5;}
+                $(".icon li").eq(index-=1).addClass("selected").
+                    siblings().removeClass("selected");
+        	})
+        })
+    </script>
+</body>
+</html>

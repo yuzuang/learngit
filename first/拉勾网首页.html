@@ -1,0 +1,1980 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/jquery-3.2.0.min.js"></script>
+	<title>拉勾网首页</title>
+	<style type="text/css">
+			  html,body,ul,li{
+	      	margin: 0;
+	      	padding: 0;
+	      }
+	          a{
+	      	text-decoration: none;
+	      }
+	          ul{
+	      	list-style: none;
+	      }
+		   .clearfix::after{
+			content: "";
+			height: 0;
+			display: block;
+			clear: both;
+		  }
+		  .lg-header{
+			width: 100%;
+			height: 86px;
+		  }
+		  .lg-tbar{
+		  	height: 30px;
+    		background-color: #333;
+		  }
+		  .lg-tbar1 a{
+		  	/*background: url(./img/shouji.png) no-repeat scroll 23px 5px;*/
+			float: left;
+			color: #08d7a2;
+			padding: 4px 12px 0 40px;
+			font-size: 14px;
+		  }
+		  .lg-tbar1 img{
+		  	margin:6px 0 0 -146px;
+		  }
+		  .lg-tbar1 a span{
+		  	border-left: 1px solid #5d5d5d;
+		  	color: #c4c3c3;
+		    float: left;
+		    line-height: 14px;
+		    padding: 0 12px;
+		    margin: 3px -44px;
+		  }
+		  .lg-tbar .lg-tbar-r{
+		  	float: right;
+		  }
+		  .lg-tbar-r li{
+		  	float: left;
+		  }
+		  .lg-tbar-r li a{
+		  	color: #c4c3c3;
+		  	padding: 4px 6px 0 0;
+		  }
+		  .lg-tbar ul{
+		  	margin: 0 20px 0 0;
+		  }
+		  .lg-tnav{
+		  	width: 100%;
+			height: 54px;
+		    border-top: 1px solid #d2d2d2;
+		    border-bottom: 1px solid #e5e5e5;
+		    background-color: #fafafa;
+		  }
+		  .lg-tnav .lg-tnav-1 img{
+		  	float: left;
+		    margin: 10px 0px 0 65px;
+		  }
+		  .lg-tnav .suggestCity{
+		  	float: left;
+		    height: 44px;
+		    padding-top: 10px;
+		    padding-left: 12px;
+		    line-height: 44px;
+		    font-size: 18px;
+		  }
+		  .lg-tnav .suggestCity em{
+		  	color: #999;
+		    font-size: 12px;
+		    cursor: pointer;
+		    font-style: normal;
+		    margin: 0 30px 0 3px;
+		  }
+		  .lg-tnav-wrap li a{
+		  	font-size: 18px;
+		    color: #999;
+		    line-height: 53px;
+		    padding: 0 5px;
+		    display: block;
+		  }
+		  .lg-tnav-wrap li{
+		  	float: left;
+		  	margin: 0 16px;
+            position: relative;
+		  }
+		  .lg-tnav-wrap li a:hover{
+		  	color: black;
+		  	border-bottom: 2px solid #00b38a
+		  }
+		  .contain-header{
+		  	width: 100%;
+		  	height: 132px;
+		  	background-color: #fafafa;
+		  }
+		  .contain-header input{
+		  	width: 762px;
+		    height: 20px;
+		    line-height: 20px;
+		    float: left;
+		    font-size: 16px;
+		    padding: 12px 16px;
+		    margin: 0;
+		    border: 1px solid #E8E8E8;
+		    border-right: 0;
+		    color: #999;
+		    margin:33px 0 0 196px;
+		  }
+		  .search-button{
+		  	float: left;
+		    width: 142px;
+		    height: 46px;
+		    font-size: 18px;
+		    color: #FFF;
+		    border: 0;
+		    background: #00b38a;
+		    margin-top: 33px;
+		  /*  margin-right: 233px;*/
+		  }
+		  .hot-search p{
+		  	float:left;
+		  	font-size: 14px;
+    		color: #777;
+    		margin-left: 197px;
+		  }
+		  .hot-search  ul li{
+		  	margin:11px 0 0 15px;
+		  	float: left;
+		  }
+		  .hot-search ul li a{
+		  	color: #00b38a;
+		  	font-size: 14px;
+		  }
+		  .hot-search ul li a:hover{
+			border-bottom: 1px solid #00b38a;
+		  }
+		  .container-body .clearfix{
+		  	b/*order: 1px solid black;*/
+		  	width: 1200px;
+		  	margin:33px 0 0 66px;
+		  }
+		  .container-body .clearfix .sidebar{
+		    float: left;
+		    position: relative;
+		    width: 321px;
+		    margin-left: -15px;
+		    height: 50px;
+		  }
+		  .category-list:hover{
+		  	box-shadow: 0 0 10px 1px rgba(0,0,0,.09);
+		  	width: 321px;
+		  	height: 50px;
+		  	box-shadow
+		  }
+		  .category-list h2{
+		  	float: left;
+		  	font-size: 18px;
+    		font-weight: 500;
+		  }
+		  .category-list li{
+		  	float: left;
+		  }
+		  .category-list ul li{
+		  	margin: 17px 0px 0px 25px;
+		  }
+		  .category-list ul li a{
+		  	color: #555;
+		  	font-size: 14px;
+		  }
+		  .menu-sub-dn{
+		  	display: none;
+		  	z-index: 10;
+		  	position: absolute;
+		    left: 321px;
+		    top: 0;
+		    width: 600px;
+		    padding: 20px 10px 0 12px;
+		    z-index: 10;
+		    background: #fff;
+		    box-shadow: 0 0 4px 2px rgba(0,0,0,.09);
+		    border-radius: 2px;
+		    border-top-left-radius: 0;
+		  }
+		  .sidebar:hover .menu-sub-dn{
+            display: block;
+          }
+		  .menu-sub-dn dl dt{
+			position: relative;
+		    margin: -17px 15px;
+		    padding-left: 10px;
+		    font-size: 14px;
+		    line-height: 20px;
+		    margin-bottom: 6px;
+		  }
+		  .menu-sub-dn dl dd{
+		  	margin-left: 15px;
+		  }
+		  .menu-sub-dn dl dd a{
+		  	display: inline-block;
+		    position: relative;
+		    margin-left: -1px;
+		    padding: 0 11px;
+		    font-size: 14px;
+		    line-height: 28px;
+		    color: #777;
+		    white-space: nowrap;
+		  }
+		  		  .container-body-1 .clearfix{
+		  	b/*order: 1px solid black;*/
+		  	width: 1200px;
+		  	margin:0px 0 0 0px;
+		  	height: 50px;
+		  }
+		  .container-body-1 .clearfix .sidebar{
+		    float: left;
+		    position: relative;
+		    width: 321px;
+		    margin-left: 51px;
+		    height: 50px;
+		  }
+		  .category-list1:hover{
+		  	box-shadow: 0 0 10px 1px rgba(0,0,0,.09);
+		  	width: 321px;
+		  	height: 50px;
+		  	box-shadow
+		  }
+		  .category-list1 h3{
+		  	float: left;
+		  	font-size: 18px;
+    		font-weight: 500;
+    		margin-top: 12px;
+		  }
+		  .category-list1 li{
+		  	float: left;
+		  }
+		  .category-list1 ul li{
+		  	margin: 15px 0px 0px 25px;
+		  }
+		  .category-list1 ul li a{
+		  	color: #555;
+		  	font-size: 14px;
+		  }
+		  .menu-sub-dn1{
+		  	display: none;
+		  	z-index: 10;
+		  	position: absolute;
+		    left: 321px;
+		    top: 0;
+		    width: 600px;
+		    padding: 20px 10px 0 12px;
+		    z-index: 10;
+		    background: #fff;
+		    box-shadow: 0 0 4px 2px rgba(0,0,0,.09);
+		    border-radius: 2px;
+		    border-top-left-radius: 0;
+		  }
+		  .sidebar:hover .menu-sub-dn1{
+            display: block;
+          }
+		  .menu-sub-dn1 dl dt{
+			position: relative;
+		    margin: -17px 15px;
+		    padding-left: 10px;
+		    font-size: 14px;
+		    line-height: 20px;
+		    margin-bottom: 6px;
+		  }
+		  .menu-sub-dn1 dl dd{
+		  	margin-left: 15px;
+		  }
+		  .menu-sub-dn1 dl dd a{
+		  	display: inline-block;
+		    position: relative;
+		    margin-left: -1px;
+		    padding: 0 11px;
+		    font-size: 14px;
+		    line-height: 28px;
+		    color: #777;
+		    white-space: nowrap;
+		  }
+		  		  .container-body-2 .clearfix{
+		  	b/*order: 1px solid black;*/
+		  	width: 1200px;
+		  	margin:0px 0 0 0px;
+		  }
+		  .container-body-2 .clearfix .sidebar{
+		    float: left;
+		    position: relative;
+		    width: 321px;
+		    margin-left: 51px;
+		    height: 50px;
+		  }
+		  .category-list2:hover{
+		  	box-shadow: 0 0 10px 1px rgba(0,0,0,.09);
+		  	width: 321px;
+		  	height: 50px;
+		  	box-shadow
+		  }
+		  .category-list2 h4{
+		  	float: left;
+		  	font-size: 18px;
+    		font-weight: 500;
+    		margin-top: 12px;
+		  }
+		  .category-list2 li{
+		  	float: left;
+		  }
+		  .category-list2 ul li{
+		  	margin: 15px 0px 0px 25px;
+		  }
+		  .category-list2 ul li a{
+		  	color: #555;
+		  	font-size: 14px;
+		  }
+		  .menu-sub-dn2{
+		  	display: none;
+		  	z-index: 10;
+		  	position: absolute;
+		    left: 321px;
+		    top: 0;
+		    width: 600px;
+		    padding: 20px 10px 0 12px;
+		    z-index: 10;
+		    background: #fff;
+		    box-shadow: 0 0 4px 2px rgba(0,0,0,.09);
+		    border-radius: 2px;
+		    border-top-left-radius: 0;
+		  }
+		  .sidebar:hover .menu-sub-dn2{
+            display: block;
+          }
+		  .menu-sub-dn2 dl dt{
+			position: relative;
+		    margin: -17px 15px;
+		    padding-left: 10px;
+		    font-size: 14px;
+		    line-height: 20px;
+		    margin-bottom: 6px;
+		  }
+		  .menu-sub-dn2 dl dd{
+		  	margin-left: 15px;
+		  }
+		  .menu-sub-dn2 dl dd a{
+		  	display: inline-block;
+		    position: relative;
+		    margin-left: -1px;
+		    padding: 0 11px;
+		    font-size: 14px;
+		    line-height: 28px;
+		    color: #777;
+		    white-space: nowrap;
+		  }
+		  		  		  .container-body-3 .clearfix{
+		  	b/*order: 1px solid black;*/
+		  	width: 1200px;
+		  	margin:0px 0 0 0px;
+		  }
+		  .container-body-3 .clearfix .sidebar{
+		    float: left;
+		    position: relative;
+		    width: 321px;
+		    margin-left: 51px;
+		    height: 50px;
+		  }
+		  .category-list3:hover{
+		  	box-shadow: 0 0 10px 1px rgba(0,0,0,.09);
+		  	width: 321px;
+		  	height: 50px;
+		  	box-shadow
+		  }
+		  .category-list3 h5{
+		  	float: left;
+		  	font-size: 18px;
+    		font-weight: 500;
+    		    margin-top: 12px;
+		  }
+		  .category-list3 li{
+		  	float: left;
+		  }
+		  .category-list3 ul li{
+		  	margin: 15px 0px 0px 25px;
+		  }
+		  .category-list3 ul li a{
+		  	color: #555;
+		  	font-size: 14px;
+		  }
+		  .menu-sub-dn3{
+		  	display: none;
+		  	z-index: 10;
+		  	position: absolute;
+		    left: 321px;
+		    top: 0;
+		    width: 600px;
+		    padding: 20px 10px 0 12px;
+		    z-index: 10;
+		    background: #fff;
+		    box-shadow: 0 0 4px 2px rgba(0,0,0,.09);
+		    border-radius: 2px;
+		    border-top-left-radius: 0;
+		  }
+		  .sidebar:hover .menu-sub-dn3{
+            display: block;
+          }
+		  .menu-sub-dn3 dl dt{
+			position: relative;
+		    margin: -17px 15px;
+		    padding-left: 10px;
+		    font-size: 14px;
+		    line-height: 20px;
+		    margin-bottom: 6px;
+		  }
+		  .menu-sub-dn3 dl dd{
+		  	margin-left: 15px;
+		  }
+		  .menu-sub-dn3 dl dd a{
+		  	display: inline-block;
+		    position: relative;
+		    margin-left: -1px;
+		    padding: 0 11px;
+		    font-size: 14px;
+		    line-height: 28px;
+		    color: #777;
+		    white-space: nowrap;
+		  }
+		  		  		  		  .container-body-4 .clearfix{
+		  	b/*order: 1px solid black;*/
+		  	width: 1200px;
+		  	margin:0px 0 0 0px;
+		  }
+		  .container-body-4 .clearfix .sidebar{
+		    float: left;
+		    position: relative;
+		    width: 321px;
+		    margin-left: 51px;
+		    height: 50px;
+		  }
+		  .category-list4:hover{
+		  	box-shadow: 0 0 10px 1px rgba(0,0,0,.09);
+		  	width: 321px;
+		  	height: 50px;
+		  	box-shadow
+		  }
+		  .category-list4 h6{
+		  	float: left;
+		  	font-size: 18px;
+    		font-weight: 500;
+    		    margin-top: 12px;
+		  }
+		  .category-list4 li{
+		  	float: left;
+		  }
+		  .category-list4 ul li{
+		  	margin: 15px 0px 0px 25px;
+		  }
+		  .category-list4 ul li a{
+		  	color: #555;
+		  	font-size: 14px;
+		  }
+		  .menu-sub-dn4{
+		  	display: none;
+		  	z-index: 10;
+		  	position: absolute;
+		    left: 321px;
+		    top: 0;
+		    width: 600px;
+		    padding: 20px 10px 0 12px;
+		    z-index: 10;
+		    background: #fff;
+		    box-shadow: 0 0 4px 2px rgba(0,0,0,.09);
+		    border-radius: 2px;
+		    border-top-left-radius: 0;
+		  }
+		  .sidebar:hover .menu-sub-dn4{
+            display: block;
+          }
+		  .menu-sub-dn4 dl dt{
+			position: relative;
+		    margin: -17px 15px;
+		    padding-left: 10px;
+		    font-size: 14px;
+		    line-height: 20px;
+		    margin-bottom: 6px;
+		  }
+		  .menu-sub-dn4 dl dd{
+		  	margin-left: 15px;
+		  }
+		  .menu-sub-dn4 dl dd a{
+		  	display: inline-block;
+		    position: relative;
+		    margin-left: -1px;
+		    padding: 0 11px;
+		    font-size: 14px;
+		    line-height: 28px;
+		    color: #777;
+		    white-space: nowrap;
+		  }
+		  		  		  		  		  .container-body-5 .clearfix{
+		  	b/*order: 1px solid black;*/
+		  	width: 1200px;
+		  	margin:0px 0 0 0px;
+		  }
+		  .container-body-5 .clearfix .sidebar{
+		    float: left;
+		    position: relative;
+		    width: 321px;
+		    margin-left: 51px;
+		    height: 50px;
+		  }
+		  .category-list5:hover{
+		  	box-shadow: 0 0 10px 1px rgba(0,0,0,.09);
+		  	width: 321px;
+		  	height: 50px;
+		  	box-shadow
+		  }
+		  .category-list5 h6{
+		  	float: left;
+		  	font-size: 18px;
+    		font-weight: 500;
+    		    margin-top: 12px;
+		  }
+		  .category-list5 li{
+		  	float: left;
+		  }
+		  .category-list5 ul li{
+		  	margin: 15px 0px 0px 25px;
+		  }
+		  .category-list5 ul li a{
+		  	color: #555;
+		  	font-size: 14px;
+		  }
+		  .menu-sub-dn5{
+		  	display: none;
+		  	z-index: 10;
+		  	position: absolute;
+		    left: 321px;
+		    top: 0;
+		    width: 600px;
+		    padding: 20px 10px 0 12px;
+		    z-index: 10;
+		    background: #fff;
+		    box-shadow: 0 0 4px 2px rgba(0,0,0,.09);
+		    border-radius: 2px;
+		    border-top-left-radius: 0;
+		  }
+		  .sidebar:hover .menu-sub-dn5{
+            display: block;
+          }
+		  .menu-sub-dn5 dl dt{
+			position: relative;
+		    margin: -17px 15px;
+		    padding-left: 10px;
+		    font-size: 14px;
+		    line-height: 20px;
+		    margin-bottom: 6px;
+		  }
+		  .menu-sub-dn5 dl dd{
+		  	margin-left: 15px;
+		  }
+		  .menu-sub-dn5 dl dd a{
+		  	display: inline-block;
+		    position: relative;
+		    margin-left: -1px;
+		    padding: 0 11px;
+		    font-size: 14px;
+		    line-height: 28px;
+		    color: #777;
+		    white-space: nowrap;
+		  }
+		  		  		  		  		  .container-body-6 .clearfix{
+		  	b/*order: 1px solid black;*/
+		  	width: 1200px;
+		  	margin:0px 0 0 0px;
+		  }
+		  .container-body-6 .clearfix .sidebar{
+		    float: left;
+		    position: relative;
+		    width: 321px;
+		    margin-left: 51px;
+		    height: 50px;
+		  }
+		  .category-list6:hover{
+		  	box-shadow: 0 0 10px 1px rgba(0,0,0,.09);
+		  	width: 321px;
+		  	height: 50px;
+		  	box-shadow
+		  }
+		  .category-list6 h6{
+		  	float: left;
+		  	font-size: 18px;
+    		font-weight: 500;
+    		    margin-top: 12px;
+		  }
+		  .category-list6 li{
+		  	float: left;
+		  }
+		  .category-list6 ul li{
+		  	margin: 15px 0px 0px 25px;
+		  }
+		  .category-list6 ul li a{
+		  	color: #555;
+		  	font-size: 14px;
+		  }
+		  .menu-sub-dn6{
+		  	display: none;
+		  	z-index: 10;
+		  	position: absolute;
+		    left: 321px;
+		    top: 0;
+		    width: 600px;
+		    padding: 20px 10px 0 12px;
+		    z-index: 10;
+		    background: #fff;
+		    box-shadow: 0 0 4px 2px rgba(0,0,0,.09);
+		    border-radius: 2px;
+		    border-top-left-radius: 0;
+		  }
+		  .sidebar:hover .menu-sub-dn6{
+            display: block;
+          }
+		  .menu-sub-dn6 dl dt{
+			position: relative;
+		    margin: -17px 15px;
+		    padding-left: 10px;
+		    font-size: 14px;
+		    line-height: 20px;
+		    margin-bottom: 6px;
+		  }
+		  .menu-sub-dn6 dl dd{
+		  	margin-left: 15px;
+		  }
+		  .menu-sub-dn6 dl dd a{
+		  	display: inline-block;
+		    position: relative;
+		    margin-left: -1px;
+		    padding: 0 11px;
+		    font-size: 14px;
+		    line-height: 28px;
+		    color: #777;
+		    white-space: nowrap;
+		  }
+		  .middle{
+		  	border:1px solid white;
+		  	width: 370px;
+		  	height: 380px;
+		  	float: left;
+		  }
+		  .middle-img{
+		  	float:left;
+		  	height: 380px;
+		  }
+		  .middle-img img{
+		  	float: left;
+		    height: 313px;
+		    padding-top: 55px;
+		    width: 860px;
+		    margin-left: 40px;
+		  }
+		  .jop-tab{
+		  	float:left;
+		  	width: 100%;
+		  	height:88px;
+		  	border-bottom: 1px solid #E8E8E8;
+		  }
+		  .jop-tab .module-tabs li{
+		  	float: left;
+		  	color: #999;
+		  	font: 16px;
+		  	margin-left: 52px;
+		  	padding-top: 50px;
+		  }
+		  .jop-tab .module-tabs li:hover{
+		  	border-bottom: 2px solid #333;
+		    background: #fff;
+		    color: #333;
+		    display: block;
+		  }
+		  .jop-list-wreaaer{
+		  	width: 1320px;
+		  	height: 575px;
+		  	float: left;
+		  }
+		  .jop-list-wreaaer .list-01 li {
+		      border: 1px solid #EAEEED;
+		      width: 389px;
+		      height: 200px;
+		      float: left;
+		  }
+		  .name-f1{
+		  	height: 22px;
+		    font-size: 0;
+		    max-width: 290px;
+		        max-width: 380px;
+		  }
+		  .name-f1 h2{
+		  	font-size: 16px;
+		  	font-weight: 100;
+		  	float: left;
+		  	margin-left: 20px;
+		  }
+		  .name-f1 h2 span{
+		  	font-size: 14px;
+		  	font-weight: 100;
+		  	color: #999;
+		  	padding-left: 8px;
+		  }
+		  .chat-me{
+		  	display: inline-block;
+		    position: relative;
+		    top: 3px;
+		    left: 5px;
+		    width: 16px;
+		    height: 16px;
+		    background: url(./img/a1.png) no-repeat 0 0; 
+		    cursor: pointer; 
+		  }
+		  .name-f1 .fr{
+		  	float:right;
+		  	margin-left: 97px;
+		  }
+		  .name-f1 .fr span{
+		  	font-size: 16px;
+    		color: #fa6041;
+		  }
+		  .name-f2{
+		  	height: 22px;
+		    font-size: 0;
+		    max-width: 290px;
+		        max-width: 380px;
+		  }
+		  	  .name-f2 h2{
+		  	font-size: 14px;
+		  	font-weight: 100;
+		  	color: #999;
+		  	padding-left: 20px;
+		  }
+		  	  	  .name-f3{
+		    border-bottom: 1px dashed #999;
+		    width: 354px;
+		    height: 44px;
+		    margin-left: 21px;
+		        margin-top: 21px;
+		  }
+		  .name-f3-1{
+		  	    display: inline-block;
+		    width: 61px;
+		    height: 26px;
+		    padding: 0 5px;
+		    font-size: 12px;
+		    line-height: 26px;
+		    color: #999;
+		    border: 1px solid #F0F0F0;
+		    border-radius: 3px;
+		    text-align: center;
+		  }
+		  		  .name-f3-2{
+		  	    display: inline-block;
+		    width: 61px;
+		    height: 26px;
+		    padding: 0 5px;
+		    font-size: 12px;
+		    line-height: 26px;
+		    color: #999;
+		    border: 1px solid #F0F0F0;
+		    border-radius: 3px;
+		    text-align: center;
+		  }
+		  		  .name-f3-3{
+		  	    display: inline-block;
+		    width: 61px;
+		    height: 26px;
+		    padding: 0 5px;
+		    font-size: 12px;
+		    line-height: 26px;
+		    color: #999;
+		    border: 1px solid #F0F0F0;
+		    border-radius: 3px;
+		    text-align: center;
+		  }
+		  .name-f4{
+		  	width: 380px;
+		  	height: 60px;
+		  }
+		  .name-f4-1 img{
+		  	width: 40px;
+		  	height: 40px;
+		  	float: left;
+	    margin-left: 20px;
+    margin-top: -4px;
+		  }
+		  		  .name-f4-2 h2{
+		  	font-size: 14px;
+		  	font-weight: 100;
+		  	margin-left: 66px;
+		  	    margin-bottom: -8px;
+		  	        margin-top: 25px;
+		  }
+		  		  		  .name-f4-3 h2{
+		  	font-size: 12px;
+		  	font-weight: 100;
+		  	margin-left: 66px;
+		  }
+		  		  .name-f11{
+		  	height: 22px;
+		    font-size: 0;
+		    max-width: 290px;
+		        max-width: 380px;
+		  }
+		  .name-f11 h2{
+		  	font-size: 16px;
+		  	font-weight: 100;
+		  	float: left;
+		  	margin-left: 20px;
+		  }
+		  .name-f11 h2 span{
+		  	font-size: 14px;
+		  	font-weight: 100;
+		  	color: #999;
+		  	padding-left: 1px;
+		  }
+		  .chat-me{
+		  	display: inline-block;
+		    position: relative;
+		    top: 3px;
+		    left: 5px;
+		    width: 16px;
+		    height: 16px;
+		    background: url(./img/a1.png) no-repeat 0 0; 
+		    cursor: pointer; 
+		  }
+		  .name-f11 .fr{
+		  	float:right;
+		  	margin-left: 97px;
+		  }
+		  .name-f11 .fr span{
+		  	font-size: 16px;
+    		color: #fa6041;
+		  }
+		  .name-f22{
+		  	height: 22px;
+		    font-size: 0;
+		    max-width: 290px;
+		        max-width: 380px;
+		  }
+		  	  .name-f22 h2{
+		  	font-size: 14px;
+		  	font-weight: 100;
+		  	color: #999;
+		  	padding-left: 20px;
+		  }
+		  	  	  .name-f33{
+		    border-bottom: 1px dashed #999;
+		    width: 354px;
+		    height: 44px;
+		    margin-left: 21px;
+		        margin-top: 21px;
+		  }
+		  .name-f33-1{
+		  	    display: inline-block;
+		    width: 61px;
+		    height: 26px;
+		    padding: 0 5px;
+		    font-size: 12px;
+		    line-height: 26px;
+		    color: #999;
+		    border: 1px solid #F0F0F0;
+		    border-radius: 3px;
+		    text-align: center;
+		  }
+		  		  .name-f33-2{
+		  	    display: inline-block;
+		    width: 61px;
+		    height: 26px;
+		    padding: 0 5px;
+		    font-size: 12px;
+		    line-height: 26px;
+		    color: #999;
+		    border: 1px solid #F0F0F0;
+		    border-radius: 3px;
+		    text-align: center;
+		  }
+		  		  .name-f33-3{
+		  	    display: inline-block;
+		    width: 61px;
+		    height: 26px;
+		    padding: 0 5px;
+		    font-size: 12px;
+		    line-height: 26px;
+		    color: #999;
+		    border: 1px solid #F0F0F0;
+		    border-radius: 3px;
+		    text-align: center;
+		  }
+		  .name-f44{
+		      width: 367px;
+    height: 48px;
+		  }
+		  .name-f44-1 img{
+		  	width: 40px;
+		  	height: 40px;
+		  	float: left;
+    margin-top: -4px;
+		  }
+		  		  .name-f44-2 h2{
+		  	font-size: 14px;
+		  	font-weight: 100;
+		  	margin-left: 50px;
+		  	    margin-bottom: -8px;
+		  	        margin-top: 44px;
+		  }
+		  		  		  .name-f44-3 h2{
+		  	font-size: 12px;
+		  	font-weight: 100;
+		  	margin-left: 50px;
+		  }
+		  		  		  .name-f111{
+		  	height: 22px;
+		    font-size: 0;
+		    max-width: 290px;
+		        max-width: 380px;
+		  }
+		  .name-f111 h2{
+		  	font-size: 16px;
+		  	font-weight: 100;
+		  	float: left;
+		  	margin-left: 20px;
+		  }
+		  .name-f111 h2 span{
+		  	font-size: 14px;
+		  	font-weight: 100;
+		  	color: #999;
+		  	padding-left: 1px;
+		  }
+		  .chat-me{
+		  	display: inline-block;
+		    position: relative;
+		    top: 3px;
+		    left: 5px;
+		    width: 16px;
+		    height: 16px;
+		    background: url(./img/a1.png) no-repeat 0 0; 
+		    cursor: pointer; 
+		  }
+		  .name-f111 .fr{
+		  	float:right;
+		  	margin-left: 97px;
+		  }
+		  .name-f111 .fr span{
+		  	font-size: 16px;
+    		color: #fa6041;
+		  }
+		  .name-f222{
+		  	height: 22px;
+		    font-size: 0;
+		    max-width: 290px;
+		        max-width: 380px;
+		  }
+		  	  .name-f222 h2{
+		  	font-size: 14px;
+		  	font-weight: 100;
+		  	color: #999;
+		  	padding-left: 20px;
+		  }
+		  	  	  .name-f333{
+		    border-bottom: 1px dashed #999;
+		    width: 354px;
+		    height: 44px;
+		    margin-left: 21px;
+		        margin-top: 21px;
+		  }
+		  .name-f333-1{
+		  	    display: inline-block;
+		    width: 61px;
+		    height: 26px;
+		    padding: 0 5px;
+		    font-size: 12px;
+		    line-height: 26px;
+		    color: #999;
+		    border: 1px solid #F0F0F0;
+		    border-radius: 3px;
+		    text-align: center;
+		  }
+		  		  .name-f333-2{
+		  	    display: inline-block;
+		    width: 61px;
+		    height: 26px;
+		    padding: 0 5px;
+		    font-size: 12px;
+		    line-height: 26px;
+		    color: #999;
+		    border: 1px solid #F0F0F0;
+		    border-radius: 3px;
+		    text-align: center;
+		  }
+		  		  .name-f333-3{
+		  	    display: inline-block;
+		    width: 61px;
+		    height: 26px;
+		    padding: 0 5px;
+		    font-size: 12px;
+		    line-height: 26px;
+		    color: #999;
+		    border: 1px solid #F0F0F0;
+		    border-radius: 3px;
+		    text-align: center;
+		  }
+		  .name-f444{
+		      width: 367px;
+    height: 48px;
+    margin: -20px 0 0px 17px;
+		  }
+		  .name-f444-1 img{
+		  	width: 40px;
+		  	height: 40px;
+		  	float: left;
+    margin-top: -4px;
+		  }
+		  		  .name-f444-2 h2{
+		  	font-size: 14px;
+		  	font-weight: 100;
+		  	margin-left: 50px;
+		  	    margin-bottom: -8px;
+		  	        margin-top: 44px;
+		  }
+		  		  		  .name-f444-3 h2{
+		  	font-size: 12px;
+		  	font-weight: 100;
+		  	margin-left: 50px;
+		  }
+		  		  		  		  .name-f1111{
+		  	height: 22px;
+		    font-size: 0;
+		    max-width: 290px;
+		        max-width: 380px;
+		  }
+		  .name-f1111 h2{
+		  	font-size: 16px;
+		  	font-weight: 100;
+		  	float: left;
+		  	margin-left: 20px;
+		  }
+		  .name-f1111 h2 span{
+		  	font-size: 14px;
+		  	font-weight: 100;
+		  	color: #999;
+		  	padding-left: 1px;
+		  }
+		  .chat-me{
+		  	display: inline-block;
+		    position: relative;
+		    top: 3px;
+		    left: 5px;
+		    width: 16px;
+		    height: 16px;
+		    background: url(./img/a1.png) no-repeat 0 0; 
+		    cursor: pointer; 
+		  }
+		  .name-f1111 .fr{
+		  	float:right;
+		  	margin-left: 97px;
+		  }
+		  .name-f1111 .fr span{
+		  	font-size: 16px;
+    		color: #fa6041;
+		  }
+		  .name-f2222{
+		  	height: 22px;
+		    font-size: 0;
+		    max-width: 290px;
+		        max-width: 380px;
+		  }
+		  	  .name-f2222 h2{
+		  	font-size: 14px;
+		  	font-weight: 100;
+		  	color: #999;
+		  	padding-left: 20px;
+		  }
+		  	  	  .name-f3333{
+		    border-bottom: 1px dashed #999;
+		    width: 354px;
+		    height: 44px;
+		    margin-left: 21px;
+		        margin-top: 21px;
+		  }
+		  .name-f3333-1{
+		  	    display: inline-block;
+		    width: 61px;
+		    height: 26px;
+		    padding: 0 5px;
+		    font-size: 12px;
+		    line-height: 26px;
+		    color: #999;
+		    border: 1px solid #F0F0F0;
+		    border-radius: 3px;
+		    text-align: center;
+		  }
+		  		  .name-f3333-2{
+		  	    display: inline-block;
+		    width: 61px;
+		    height: 26px;
+		    padding: 0 5px;
+		    font-size: 12px;
+		    line-height: 26px;
+		    color: #999;
+		    border: 1px solid #F0F0F0;
+		    border-radius: 3px;
+		    text-align: center;
+		  }
+		  		  .name-f3333-3{
+		  	    display: inline-block;
+		    width: 61px;
+		    height: 26px;
+		    padding: 0 5px;
+		    font-size: 12px;
+		    line-height: 26px;
+		    color: #999;
+		    border: 1px solid #F0F0F0;
+		    border-radius: 3px;
+		    text-align: center;
+		  }
+		  .name-f4444{
+		      width: 367px;
+    height: 48px;
+        margin: -20px 0 0px 17px;
+		  }
+		  .name-f4444-1 img{
+		  	width: 40px;
+		  	height: 40px;
+		  	float: left;
+    margin-top: -4px;
+		  }
+		  		  .name-f4444-2 h2{
+		  	font-size: 14px;
+		  	font-weight: 100;
+		  	margin-left: 50px;
+		  	    margin-bottom: -8px;
+		  	        margin-top: 44px;
+		  }
+		  		  		  .name-f4444-3 h2{
+		  	font-size: 12px;
+		  	font-weight: 100;
+		  	margin-left: 50px;
+		  }
+		  		  		  		  		  .name-f11111{
+		  	height: 22px;
+		    font-size: 0;
+		    max-width: 290px;
+		        max-width: 380px;
+		  }
+		  .name-f11111 h2{
+		  	font-size: 16px;
+		  	font-weight: 100;
+		  	float: left;
+		  	margin-left: 20px;
+		  }
+		  .name-f11111 h2 span{
+		  	font-size: 14px;
+		  	font-weight: 100;
+		  	color: #999;
+		  	padding-left: 1px;
+		  }
+		  .chat-me{
+		  	display: inline-block;
+		    position: relative;
+		    top: 3px;
+		    left: 5px;
+		    width: 16px;
+		    height: 16px;
+		    background: url(./img/a1.png) no-repeat 0 0; 
+		    cursor: pointer; 
+		  }
+		  .name-f11111 .fr{
+		  	float:right;
+		  	margin-left: 97px;
+		  }
+		  .name-f11111 .fr span{
+		  	font-size: 16px;
+    		color: #fa6041;
+    		margin-left: 55px;
+		  }
+		  .name-f22222{
+		  	height: 22px;
+		    font-size: 0;
+		    max-width: 290px;
+		        max-width: 380px;
+		  }
+		  	  .name-f22222 h2{
+		  	font-size: 14px;
+		  	font-weight: 100;
+		  	color: #999;
+		  	padding-left: 20px;
+		  }
+		  	  	  .name-f33333{
+		    border-bottom: 1px dashed #999;
+		    width: 354px;
+		    height: 44px;
+		    margin-left: 21px;
+		        margin-top: 21px;
+		  }
+		  .name-f33333-1{
+		  	    display: inline-block;
+		    width: 61px;
+		    height: 26px;
+		    padding: 0 5px;
+		    font-size: 12px;
+		    line-height: 26px;
+		    color: #999;
+		    border: 1px solid #F0F0F0;
+		    border-radius: 3px;
+		    text-align: center;
+		  }
+		  		  .name-f33333-2{
+		  	    display: inline-block;
+		    width: 61px;
+		    height: 26px;
+		    padding: 0 5px;
+		    font-size: 12px;
+		    line-height: 26px;
+		    color: #999;
+		    border: 1px solid #F0F0F0;
+		    border-radius: 3px;
+		    text-align: center;
+		  }
+		  		  .name-f33333-3{
+		  	    display: inline-block;
+		    width: 61px;
+		    height: 26px;
+		    padding: 0 5px;
+		    font-size: 12px;
+		    line-height: 26px;
+		    color: #999;
+		    border: 1px solid #F0F0F0;
+		    border-radius: 3px;
+		    text-align: center;
+		  }
+		  .name-f44444{
+		      width: 367px;
+    height: 48px;
+        margin: -20px 0 0px 17px;
+		  }
+		  .name-f44444-1 img{
+		  	width: 40px;
+		  	height: 40px;
+		  	float: left;
+    margin-top: -4px;
+		  }
+		  		  .name-f44444-2 h2{
+		  	font-size: 14px;
+		  	font-weight: 100;
+		  	margin-left: 50px;
+		  	    margin-bottom: -8px;
+		  	        margin-top: 44px;
+		  }
+		  		  		  .name-f44444-3 h2{
+		  	font-size: 12px;
+		  	font-weight: 100;
+		  	margin-left: 50px;
+		  }
+		  		  		  		  		  		  .name-f111111{
+		  	height: 22px;
+		    font-size: 0;
+		    max-width: 290px;
+		        max-width: 380px;
+		  }
+		  .name-f111111 h2{
+		  	font-size: 16px;
+		  	font-weight: 100;
+		  	float: left;
+		  	margin-left: 20px;
+		  }
+		  .name-f111111 h2 span{
+		  	font-size: 14px;
+		  	font-weight: 100;
+		  	color: #999;
+		  	padding-left: 1px;
+		  }
+		  .chat-me{
+		  	display: inline-block;
+		    position: relative;
+		    top: 3px;
+		    left: 5px;
+		    width: 16px;
+		    height: 16px;
+		    background: url(./img/a1.png) no-repeat 0 0; 
+		    cursor: pointer; 
+		  }
+		  .name-f111111 .fr{
+		  	float:right;
+		  	margin-left: 97px;
+		  }
+		  .name-f111111 .fr span{
+		  	font-size: 16px;
+    		color: #fa6041;
+    		    margin-left: -12px;
+		  }
+		  .name-f222222{
+		  	height: 22px;
+		    font-size: 0;
+		    max-width: 290px;
+		        max-width: 380px;
+		  }
+		  	  .name-f222222 h2{
+		  	font-size: 14px;
+		  	font-weight: 100;
+		  	color: #999;
+		  	padding-left: 20px;
+		  }
+		  	  	  .name-f333333{
+		    border-bottom: 1px dashed #999;
+		    width: 354px;
+		    height: 44px;
+		    margin-left: 21px;
+		        margin-top: 21px;
+		  }
+		  .name-f333333-1{
+		  	    display: inline-block;
+		    width: 61px;
+		    height: 26px;
+		    padding: 0 5px;
+		    font-size: 12px;
+		    line-height: 26px;
+		    color: #999;
+		    border: 1px solid #F0F0F0;
+		    border-radius: 3px;
+		    text-align: center;
+		  }
+		  		  .name-f333333-2{
+		  	    display: inline-block;
+		    width: 61px;
+		    height: 26px;
+		    padding: 0 5px;
+		    font-size: 12px;
+		    line-height: 26px;
+		    color: #999;
+		    border: 1px solid #F0F0F0;
+		    border-radius: 3px;
+		    text-align: center;
+		  }
+		  		  .name-f333333-3{
+		  	    display: inline-block;
+		    width: 61px;
+		    height: 26px;
+		    padding: 0 5px;
+		    font-size: 12px;
+		    line-height: 26px;
+		    color: #999;
+		    border: 1px solid #F0F0F0;
+		    border-radius: 3px;
+		    text-align: center;
+		  }
+		  .name-f444444{
+		      width: 367px;
+    height: 48px;
+        margin: -20px 0 0px 17px;
+		  }
+		  .name-f444444-1 img{
+		  	width: 40px;
+		  	height: 40px;
+		  	float: left;
+    margin-top: -4px;
+		  }
+		  		  .name-f444444-2 h2{
+		  	font-size: 14px;
+		  	font-weight: 100;
+		  	margin-left: 50px;
+		  	    margin-bottom: -8px;
+		  	        margin-top: 44px;
+		  }
+		  		  		  .name-f444444-3 h2{
+		  	font-size: 12px;
+		  	font-weight: 100;
+		  	margin-left: 50px;
+		  }
+		  		  		  		  		  		  		  .name-f1111111{
+		  	height: 22px;
+		    font-size: 0;
+		    max-width: 290px;
+		        max-width: 380px;
+		  }
+		  .name-f1111111 h2{
+		  	font-size: 16px;
+		  	font-weight: 100;
+		  	float: left;
+		  	margin-left: 20px;
+		  }
+		  .name-f1111111 h2 span{
+		  	font-size: 14px;
+		  	font-weight: 100;
+		  	color: #999;
+		  	padding-left: 1px;
+		  }
+		  .chat-me{
+		  	display: inline-block;
+		    position: relative;
+		    top: 3px;
+		    left: 5px;
+		    width: 16px;
+		    height: 16px;
+		    background: url(./img/a1.png) no-repeat 0 0; 
+		    cursor: pointer; 
+		  }
+		  .name-f1111111 .fr{
+		  	float:right;
+		  	margin-left: 97px;
+		  }
+		  .name-f1111111 .fr span{
+		  	font-size: 16px;
+    		color: #fa6041;
+    		    margin-left: -12px;
+		  }
+		  .name-f2222222{
+		  	height: 22px;
+		    font-size: 0;
+		    max-width: 290px;
+		        max-width: 380px;
+		  }
+		  	  .name-f2222222 h2{
+		  	font-size: 14px;
+		  	font-weight: 100;
+		  	color: #999;
+		  	padding-left: 20px;
+		  }
+		  	  	  .name-f3333333{
+		    border-bottom: 1px dashed #999;
+		    width: 354px;
+		    height: 44px;
+		    margin-left: 21px;
+		        margin-top: 21px;
+		  }
+		  .name-f3333333-1{
+		  	    display: inline-block;
+		    width: 61px;
+		    height: 26px;
+		    padding: 0 5px;
+		    font-size: 12px;
+		    line-height: 26px;
+		    color: #999;
+		    border: 1px solid #F0F0F0;
+		    border-radius: 3px;
+		    text-align: center;
+		  }
+		  		  .name-f3333333-2{
+		  	    display: inline-block;
+		    width: 61px;
+		    height: 26px;
+		    padding: 0 5px;
+		    font-size: 12px;
+		    line-height: 26px;
+		    color: #999;
+		    border: 1px solid #F0F0F0;
+		    border-radius: 3px;
+		    text-align: center;
+		  }
+		  		  .name-f3333333-3{
+		  	    display: inline-block;
+		    width: 61px;
+		    height: 26px;
+		    padding: 0 5px;
+		    font-size: 12px;
+		    line-height: 26px;
+		    color: #999;
+		    border: 1px solid #F0F0F0;
+		    border-radius: 3px;
+		    text-align: center;
+		  }
+		  .name-f4444444{
+		      width: 367px;
+    height: 48px;
+           margin: -2px 0 0px 4px;
+		  }
+		  .name-f4444444-1 img{
+		  	width: 40px;
+		  	height: 40px;
+		  	float: left;
+    margin-top: -4px;
+		  }
+		  		  .name-f4444444-2 h2{
+		  	font-size: 14px;
+		  	font-weight: 100;
+		  	margin-left: 50px;
+		  	    margin-bottom: -8px;
+		  	        margin-top: 44px;
+		  }
+		  		  		  .name-f4444444-3 h2{
+		  	font-size: 12px;
+		  	font-weight: 100;
+		  	margin-left: 50px;
+		  }
+		  .jop-list-wreaaer ul li{
+		  	margin: 30px 0 0 25px;
+		  }
+		   .jop-list-wreaaer .list-01{
+		   	margin-left: 27px;
+		   }
+		   .jop-tab ul li a{
+		   	color: #999;
+		   }
+		           .hide {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+        .list_more{
+        	display: block;
+        	float: left;
+		    width: 387px;
+		    height: 42px;
+		    line-height: 42px;
+		    margin: 16px auto 0;
+		    background: #FFF;
+		    border: 1px solid #00B38A;
+		    font-size: 16px;
+		    color: #00b38a;
+		    text-align: center;
+		        margin-left: 443px;
+        }
+        .list_more a{
+        	color: #00B38A;
+
+        }
+        .list_more:hover{
+            background-color: #00b38a;
+
+        }
+        .list_more:hover>a{
+        	color: white;
+        }
+    </style>
+</head>
+<body>
+	<div class="lg-header">
+		<div class="lg-tbar">
+			<div class="lg-tbar1">
+				<img src="./img/shouji.png">
+				<a href="#">拉钩APP</a>
+				<a href="#"><span>进入企业版</span></a>
+			    <ul class="lg-tbar-r">
+					<li><a href="">登录</a></li>
+					<li><a href="">丨</a></li>
+					<li><a href="">注册</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="lg-tnav">
+			<div class="lg-tnav-1">
+				<a href="#"><img src="./img/la1.png"></a>
+				<div class="suggestCity">
+					<span>全国站</span>
+					<em>[切换城市]</em>
+				</div>
+					<ul class="lg-tnav-wrap">
+						<li><a href="#">首页</a></li>
+						<li><a href="#">公司</a></li>
+						<li><a href="#">校园</a></li>
+						<li><a href="#">言职</a></li>
+						<li><a href="#">大鲲</a></li>
+					</ul>
+				</div>
+		</div>
+	</div>
+	<div class="contain-header">
+		 <input type="text" value="搜索职位、公司或地点">
+		 <button class="search-button">搜索</button>
+		 <div class="hot-search">
+		 	<p>热门搜索 : </p>
+		 	<UL>
+		 		<li><a href="#">java</a></li>
+		 		<li><a href="#">新媒体运营</a></li>
+		 		<li><a href="#">UI设计师</a></li>
+		 		<li><a href="#">PHP</a></li>
+		 		<li><a href="#">销售经理</a></li>
+		 		<li><a href="#">产品经理</a></li>
+		 		<li><a href="#">C++</a></li>
+		 		<li><a href="#">内容运营</a></li>
+		 		<li><a href="#">拉钩App</a></li>		 	
+		 	</UL>
+		 </div>
+	</div>
+<div class="middle">
+	<div class="container-body">
+		<div class="clearfix">
+			<div class="sidebar">
+				<div class="mainNavs">
+					<div class="menu-box">
+						<div class="menu-main-jop-hopping">
+							<div class="category-list">
+								<h2>技术</h2>
+								<ul>
+									<li><a href="#">Java</a></li>
+									<li><a href="#">PHP</a></li>
+									<li><a href="#">C++</a></li>
+									<li><a href="#">Android</a></li>
+								</ul>
+								<div class="menu-sub-dn">
+									<dl>
+										<dt>
+											<span>后端开发</span>
+										</dt>
+										<dd>
+											<a href="">Java</a>
+											<a href="">C++</a>
+											<a href="">PHP</a>
+											<a href="">数据挖掘</a>
+											<a href="">搜索算法</a>
+											<a href="">C</a>
+											<a href="">C#</a>
+											<a href="">全栈工程师</a>
+											<a href="">.NET</a>
+											<a href="">Hadoop</a>
+											<a href="">Python</a>
+											<a href="">Delphi</a>
+											<a href="">VB</a>
+											<a href="">Per1</a>
+											<a href="">Ruby</a>
+											<a href="">Node.js</a>
+											<a href="">Go</a>
+											<a href="">ASP</a>
+											<a href="">Shell</a>
+											<a href="">后端开发其它</a>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="container-body-1">
+		<div class="clearfix">
+			<div class="sidebar">
+				<div class="mainNavs">
+					<div class="menu-box">
+						<div class="menu-main-jop-hopping">
+							<div class="category-list1">
+								<h3>产品</h3>
+								<ul>
+									<li><a href="#">产品总监</a></li>
+									<li><a href="#">产品经理</a></li>
+								</ul>
+								<div class="menu-sub-dn1">
+									<dl>
+										<dt>
+											<span>产品经理</span>
+										</dt>
+										<dd>
+											<a href="">产品经理</a>
+											<a href="">网页产品经理</a>
+											<a href="">移动产品经理</a>
+											<a href="">产品助理</a>
+											<a href="">数据产品经理</a>
+											<a href="">电商产品经理</a>
+											<a href="">游戏策划</a>
+											<a href="">产品实习生</a>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<div class="container-body-2">
+		<div class="clearfix">
+			<div class="sidebar">
+				<div class="mainNavs">
+					<div class="menu-box">
+						<div class="menu-main-jop-hopping">
+							<div class="category-list2">
+								<h4>设计</h4>
+								<ul>
+									<li><a href="#">UI设计师</a></li>
+									<li><a href="#">交互设计</a></li>
+									<li><a href="#">网页设计师</a></li>
+								</ul>
+								<div class="menu-sub-dn2">
+									<dl>
+										<dt>
+											<span>视觉设计</span>
+										</dt>
+										<dd>
+											<a href="">视觉设计师</a>
+											<a href="">网页设计师</a>
+											<a href="">Flash设计师</a>
+											<a href="">App设计师</a>
+											<a href="">UI设计师</a>
+											<a href="">平面设计师</a>
+											<a href="">美术设计师（2D/3D）</a>
+											<a href="">广告设计师</a>
+											<a href="">多媒体设计师</a>
+											<a href="">原画师</a>
+											<a href="">游戏特效</a>
+											<a href="">游戏界面设计师</a>
+											<a href="">游戏场景</a>
+											<a href="">游戏角色</a>
+											<a href="">游戏动作</a>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<div class="container-body-3">
+		<div class="clearfix">
+			<div class="sidebar">
+				<div class="mainNavs">
+					<div class="menu-box">
+						<div class="menu-main-jop-hopping">
+							<div class="category-list3">
+								<h5>运营</h5>
+								<ul>
+									<li><a href="#">新媒体运营</a></li>
+									<li><a href="#">编辑</a></li>
+									<li><a href="#">数据运营</a></li>
+								</ul>
+								<div class="menu-sub-dn3">
+									<dl>
+										<dt>
+											<span>运营</span>
+										</dt>
+										<dd>
+											<a href="">用户运营</a>
+											<a href="">产品运营</a>
+											<a href="">数据运营</a>
+											<a href="">数据运营</a>
+											<a href="">内容运营</a>
+											<a href="">活动运营</a>
+											<a href="">商家运营</a>
+											<a href="">品类运营</a>
+											<a href="">游戏运营</a>
+											<a href="">网络推广</a>
+											<a href="">运营专员</a>
+											<a href="">网店运营</a>
+											<a href="">新媒体运营</a>
+											<a href="">海外运营</a>
+											<a href="">运营经理</a>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<div class="container-body-4">
+		<div class="clearfix">
+			<div class="sidebar">
+				<div class="mainNavs">
+					<div class="menu-box">
+						<div class="menu-main-jop-hopping">
+							<div class="category-list4">
+								<h6>市场与销售</h6>
+								<ul>
+									<li><a href="#">市场推广</a></li>
+									<li><a href="#">市场总监</a></li>
+								</ul>
+								<div class="menu-sub-dn4">
+									<dl>
+										<dt>
+											<span>市场/营销</span>
+										</dt>
+										<dd>
+											<a href="">市场营销</a>
+											<a href="">市场策划</a>
+											<a href="">市场顾问</a>
+											<a href="">市场推广</a>
+											<a href="">SEO</a>
+											<a href="">SEM</a>
+											<a href="">商务渠道</a>
+											<a href="">商业数据分析</a>
+											<a href="">活动策划</a>
+											<a href="">网络营销</a>
+											<a href="">海外市场</a>
+											<a href="">政府关系</a>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+    <div class="container-body-5">
+		<div class="clearfix">
+			<div class="sidebar">
+				<div class="mainNavs">
+					<div class="menu-box">
+						<div class="menu-main-jop-hopping">
+							<div class="category-list5">
+								<h6>职能</h6>
+								<ul>
+									<li><a href="#">HR</a></li>
+									<li><a href="#">财务</a></li>
+									<li><a href="#">行政</a></li>
+									<li><a href="#">审计</a></li>
+								</ul>
+								<div class="menu-sub-dn5">
+									<dl>
+										<dt>
+											<span>人力资源</span>
+										</dt>
+										<dd>
+											<a href="">人力资源</a>
+											<a href="">招聘</a>
+											<a href="">HRBP</a>
+											<a href="">人事/HR</a>
+											<a href="">培训经理</a>
+											<a href="">薪资福利经理</a>
+											<a href="">绩效考核经理</a>
+											<a href="">员工关系</a>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<div class="container-body-6">
+		<div class="clearfix">
+			<div class="sidebar">
+				<div class="mainNavs">
+					<div class="menu-box">
+						<div class="menu-main-jop-hopping">
+							<div class="category-list6">
+								<h6>金融</h6>
+								<ul>
+									<li><a href="#">投资</a></li>
+									<li><a href="#">融资</a></li>
+									<li><a href="#">并购</a></li>
+									<li><a href="#">风控</a></li>
+								</ul>
+								<div class="menu-sub-dn6">
+									<dl>
+										<dt>
+											<span>投融资</span>
+										</dt>
+										<dd>
+											<a href="">投资经理</a>
+											<a href="">分析师</a>
+											<a href="">投资助理</a>
+											<a href="">融资</a>
+											<a href="">并购</a>
+											<a href="">行业研究</a>
+											<a href="">投资者关系</a>
+											<a href="">资产管理</a>
+											<a href="">理财顾问</a>
+											<a href="">交易员</a>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<div class="middle-img"><img src="./img/dayu.JPG"></div>
+<div class="jop-tab">
+	<ul class="module-tabs">
+		<li class="selected"><a href="#">热门职业</a></li>
+		<li><a href="#">最新单位</a></li>
+	</ul>
+</div>
+<div class="tab-jop-list-wreaaer">
+	<div class="jop-list-wreaaer">
+		<ul class="list-01">
+			<li class="list-li-1">
+				<div class="name-f1"><h2>大数据平台开发<span>[3天前发布]</span><div class="chat-me"></div><div class="fr"><span>7k-14k</span></div></h2></div>
+				<div class="name-f2"><h2>经验1-3年 / 本科</h2></div>
+				<div class="name-f3"><div class="name-f3-1"><span>架构师</span></div>
+				<div class="name-f3-2"><span>hadoop</span></div>
+				<div class="name-f3-3"><span>数据分析</span></div></div>
+				<div class="name-f4"><div class="name-f4-1"><img src="./img/yidong.png"></div>
+				<div class="name-f4-2"><h2>重庆移动</h2></div>
+				<div class="name-f4-3"><h2>移动互联网 / 不需要融资 / 重庆</h2></div></div>
+			</li>
+			<li class="list-li-2">
+				<div class="name-f11"><h2>java游戏服务端...<span>[18:48发布]</span><div class="chat-me"></div><div class="fr"><span>6k-12k</span></div></h2></div>
+				<div class="name-f22"><h2>经验1-3年 / 本科</h2></div>
+				<div class="name-f33"><div class="name-f33-1"><span>游戏</span></div>
+				<div class="name-f44"><div class="name-f44-1"><img src="./img/qile.png"></div>
+				<div class="name-f44-2"><h2>启乐科技-随时开启快乐</h2></div>
+				<div class="name-f44-3"><h2>移动互联网,游戏  /天使轮 /成都</h2></div></div>
+			</li>
+			<li class="list-li-3">
+				<div class="name-f111"><h2>前端开发工程师<span>[08:44发布]</span><div class="chat-me"></div><div class="fr"><span>10k-20k</span></div></h2></div>
+				<div class="name-f222"><h2>经验1-3年 / 本科</h2></div>
+					<div class="name-f333"><div class="name-f333-1"><span>web</span></div>
+				<div class="name-f333-2"><span>web前端</span></div>
+				<div class="name-f333-3"><span>HTML</span></div></div>
+				<div class="name-f444"><div class="name-f444-1"><img src="./img/shidai.png"></div>
+				<div class="name-f444-2"><h2>时代邻里邦</h2></div>
+				<div class="name-f444-3"><h2>移动互联网,生活服务 /不需要融资 /广州</h2></div></div>
+			</li>
+			<li class="list-li-4">
+				<div class="name-f11111"><h2>天猫店长<span>[08:43发布]</span><div class="chat-me"></div><div class="fr"><span>10k-15k</span></div></h2></div>
+				<div class="name-f22222"><h2>经验5-10年 / 大专</h2></div>
+					<div class="name-f33333"><div class="name-f33333-1"><span>跨境电商</span></div>
+				<div class="name-f33333-2"><span>电商</span></div>
+				<div class="name-f33333-3"><span>总监</span></div></div>
+				<div class="name-f44444"><div class="name-f44444-1"><img src="./img/yicun.jpg"></div>
+				<div class="name-f44444-2"><h2>易存</h2></div>
+				<div class="name-f44444-3"><h2>电子商务 /不需要融资 /上海</h2></div></div>
+			</li>
+			<li class="list-li-5">
+				<div class="name-f111111"><h2>商务总监/外联总...<span>[08:44发布]</span><div class="chat-me"></div><div class="fr"><span>15k-25k</span></div></h2></div>
+				<div class="name-f222222"><h2>经验5-10年 / 大专</h2></div>
+					<div class="name-f333333"><div class="name-f333333-1"><span>电商</span></div>
+				<div class="name-f333333-2"><span>运营</span></div>
+				<div class="name-f333333-3"><span>媒介</span></div></div>
+				<div class="name-f444444"><div class="name-f444444-1"><img src="./img/niuren.jpg"></div>
+				<div class="name-f44444-2"><h2>时代牛人网</h2></div>
+				<div class="name-f44444-3"><h2>移动互联网,社交网络 /不需要融资 /深圳</h2></div></div>
+			</li>
+			<li class="list-li-6">
+				<div class="name-f1111111"><h2>诚聘web产品经理<span>[08:43发布]</span><div class="chat-me"></div><div class="fr"><span>20k-30k</span></div></h2></div>
+				<div class="name-f2222222"><h2>经验1-3年 / 本科</h2></div>
+					<div class="name-f3333333"><div class="name-f3333333-1"><span>产品设计</span></div>
+				<div class="name-f4444444"><div class="name-f4444444-1"><img src="./img/zizhi.jpg"></div>
+				<div class="name-f444444-2"><h2>资质管家</h2></div>
+				<div class="name-f444444-3"><h2>电子商务/ 不需要融资 /北京</h2></div></div>
+			</li>
+			<div class="list_more"><a href="#">查看更多</a></div>
+		</ul>
+	</div>
+	<div class="jop-list-wreaaer hide"></div>
+	
+</div>
+<script>
+	        $(function(){
+            $(".jop-tab li").click(function(){
+                $(this).addClass("selected").siblings().removeClass("selected");
+                var index = $(this).index();
+                $(".jop-list-wreaaer").eq(index).show().siblings().hide();
+            })
+        })
+</script>
+</body>
+</html>

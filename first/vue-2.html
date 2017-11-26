@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="./js/vue.js"></script>
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <title>Document</title>
+    <style media="screen">
+      ul,li {
+        list-style: none;
+      }
+    </style>
+</head>
+<body>
+    <div id="component">
+        输入标题：<input type="text" name="title" value="">
+        输入内容：<input type="text" name="content" value=""><br/>
+        <button type="button" @click="addLast()">最后位置新增一条push()</button>
+        <button type="button" @click="deleteLast()">最后位置移除一条pop()</button>
+        <button type="button" @click="addFirst()">最前位置新增一条unshift()</button>
+        <button type="button" @click="deleteFirst()">最前位置删除一条shift()</button>
+        <button type="button" @click="reverseList()">反转列表reverse()</button>
+        <button type="button" @click="concatList()">加入多条concat</button>
+        <ul>
+          <li v-for="item in list"><span>{{ item.title }}</span> <span>-</span><span>{{ item.content }}</span> <button type="button" @click="deleteItem(item)">删除</button><button type="button" @click="editItem(item)">确认编辑</button> </li>
+        </ul>
+    </div>
+    <script>
+        var List = new Vue({
+          el:"#component",
+          data: {
+            list: [
+              {
+                "title":"111",
+                "content":"1111111"
+              },
+              {
+                "title":"222",
+                "content":"2222222"
+              },
+              {
+                "title":"333",
+                "content":"3333333"
+              },
+              {
+                "title":"444",
+                "content":"4444444"
+              },
+            ],
+            a:"hahahhahah",
+          },
+          methods: {
+            addLast: function(){
+              var newItem = {
+                "title":"你好",
+                "content":"你好你好你好你好",
+              };
+              this.list.push(newItem);
+            },
+            deleteLast:function(){
+              this.list.pop();
+            },
+            deleteFirst:function(){
+              this.list.shift();
+            },
+            addFirst:function(){
+              this.list.unshift({
+                "title":"第一条第一条",
+                "content":"第一条第一条第一条第一条"
+              });
+            },
+            reverseList:function(){
+              this.list.reverse();
+            },
+            concatList:function(){
+              var addNew = [
+                {
+                  "title":"22222",
+                  "content":"2222222222"
+                },
+                {
+                  "title":"22222",
+                  "content":"2222222222"
+                }
+              ];
+              this.list = this.list.concat(addNew)
+            },
+            deleteItem:function(deleteItem){
+              var that = this;
+              that.list.forEach(function(item,index){
+                if(item == deleteItem){
+                  that.＝list.splice(index,1);
+                }
+              })
+            },
+            editItem:function(editItem){
+              var title = $("input[name='title']").val();
+              var content = $("input[name='content']").val();
+              if(title != "" && content != ""){
+                editItem.title = title;
+                editItem.content = content;
+              }else {
+                alert("内容、标题不能为空");
+              }
+              var title = $("input[name='title']").val("");
+              var content = $("input[name='content']").val("");
+            }
+          }
+        })
+    </script>
+</body>
+</html>

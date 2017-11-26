@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/jquery-3.2.0.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <script src="js/jquery.fullPage.js"></script>
+	<title></title>
+	<style type="text/css">
+	.section{
+		width: 100%;
+		height: 100%;
+		font-size:25px;
+		color: green;
+		text-align: center;
+	}
+	.section .slide{
+		width: 100%;
+		height: 100%;
+		background: blue;
+	}
+	.section { text-align: center; font: 50px "Microsoft Yahei"; color: #fff;}
+
+	.section2 p { position: relative; left: -120%;}
+
+	.section3 p { position: relative; bottom: -120%;}
+
+	.section4 p { display: none;}
+	</style>
+</head>
+<body>
+	<!-- <div id="fullpage">
+		    <div class="section" style="background: blue;"><h3>第一屏</h3><p>fullPage.js — 回调函数演示</p></div>
+		    <div class="section section2" style="background: red;"><h3>第二屏</h3>
+		    <p class="Btop" style="color:green; font-size:50px;">回调函数</p></div>
+
+		    <div class="section section3" style="background: black;">
+		        <div class="slide">第三屏的第一屏</div>
+		        <div class="slide">第三屏的第二屏</div>
+		        <div class="slide">第三屏的第三屏</div>
+		        <div class="slide">第三屏的第四屏</div>
+		    </div>
+	    <div class="section section4"style="background: yellow;"><h3>第四屏</h3><p>第四屏回调函数演示</p></div>
+	</div> -->
+	<div class="section section1">
+
+	<h3>第一屏</h3>
+
+	<p>fullPage.js — 回调函数演示</p>
+
+</div>
+
+<div class="section section2">
+
+	<h3>第二屏</h3>
+
+	<p>滚动到第二屏后的回调函数执行的效果</p>
+
+</div>
+
+<div class="section section3">
+
+	<h3>第三屏</h3>
+
+	<p>滚动到第三屏后的回调函数执行的效果</p>
+
+</div>
+
+<div class="section section4">
+
+	<h3>第四屏</h3>
+
+	<p>滚动到第四屏后的回调函数执行的效果</p>
+
+</div>
+
+</body>
+		<script type="text/javascript">
+		// $(function(){
+		//     $('#fullpage').fullpage();
+		//     afterLoad:function(anchorLink,index){
+		//     	if (index == 2) {
+		//     		$(".section").find('p').delay(500).animate({
+		//     			left:'0'
+		//     		}),1500,'easeOutExpo';
+		//     	}
+		//     onLeave:function(){
+
+		//     	}
+		// 	}
+		// });
+$(document).ready(function() {
+
+	$.fn.fullpage({
+
+		slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90', '#ef820'],
+
+		anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
+
+		afterLoad: function(anchorLink, index){
+
+			if(index == 2){
+
+				$('.section2').find('p').delay(500).animate({
+
+					left: '0'
+
+				}, 1500, 'easeOutExpo');
+
+			}
+
+			if(index == 3){
+
+				$('.section3').find('p').delay(500).animate({
+
+					bottom: '0'
+
+				}, 1500, 'easeOutExpo');
+
+			}
+
+			if(index == 4){
+
+				$('.section4').find('p').fadeIn(2000);
+
+			}
+
+		},
+
+		onLeave: function(index, direction){
+
+			if(index == '2'){
+
+				$('.section2').find('p').delay(500).animate({
+
+					left: '-120%'
+
+				}, 1500, 'easeOutExpo');
+
+			}
+
+			if(index == '3'){
+
+				$('.section3').find('p').delay(500).animate({
+
+					bottom: '-120%'
+
+				}, 1500, 'easeOutExpo');
+
+			}
+
+			if(index == '4'){
+
+				$('.section4').find('p').fadeOut(2000);
+
+			}
+
+		}
+
+	});
+
+});
+
+</script>
+		</script>
+</html>

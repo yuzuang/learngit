@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery-3.2.0.min.js"></script>
+    <style>
+        input[type='checkbox'] {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <button name="all-selected">全选</button>
+    <button name="cancel-selected">取消全选</button>
+    <button name="invert-selected">反选</button><br/><br/><br/>
+
+    <label for="ID1">选项1</label>
+    <input type="checkbox" id="ID1"><br/>
+    <label for="ID2">选项1</label>
+    <input type="checkbox" id="ID2"><br/>
+    <label for="ID3">选项1</label>
+    <input type="checkbox" id="ID3">
+
+    <script>
+        $(function(){
+            $("button[name='all-selected']").click(function(){
+                $("input[type='checkbox']").prop({ checked:true });
+            })
+
+            $("button[name='cancel-selected']").click(function(){
+                $("input[type='checkbox']").prop({ checked:false });
+            })
+
+            $("button[name='invert-selected']").click(function(){
+                $("input[type='checkbox']").each(function(index,item){
+                    $(item).prop({ checked:!$(item).prop("checked")});
+                })
+            })
+        })
+    </script>
+</body>
+</html>

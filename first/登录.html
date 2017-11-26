@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/jquery-3.2.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p>用户姓名：<input type="text" value="" name="username"></p>
+    <p>用户密码：<input type="password" value="" name="password"></p>
+    <p><button>登录</button></p>
+    <p class="go-back"><a href="./index.html">返回首页</a></p>
+    <script>
+        $(function(){
+            var goBackHtml = $(".go-back").html("111");
+            console.log(goBackHtml);
+
+            $("button").click(function(){
+                var username = "fanyuanhe";
+                var password = "123456";
+
+                var loginText = $("button").text("1122233323");
+
+                console.log(loginText);
+
+                var enterUserName = $("input[name='username']").val();
+                var enterPassword = $("input[name='password']").val();
+
+                if(enterUserName == username && enterPassword == password){
+                    alert("登录成功！");
+                    location.href="http://www.baidu.com";
+                }else {
+                    alert("登陆失败！");
+                }
+            })
+        })
+    </script>
+</body>
+</html>

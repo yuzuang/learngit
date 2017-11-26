@@ -1,0 +1,650 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"content",
+				"content-wrapper"
+			],
+			[
+				"ti",
+				"title"
+			],
+			[
+				"lis",
+				"list"
+			],
+			[
+				"t",
+				"type"
+			],
+			[
+				"sear",
+				"search-sections"
+			],
+			[
+				"li",
+				"li"
+			],
+			[
+				"J",
+				"J-main-section"
+			],
+			[
+				"top",
+				"top-wrapper"
+			],
+			[
+				"movie",
+				"movie-list"
+			],
+			[
+				"ma",
+				"margin-left"
+			],
+			[
+				"a-",
+				"a-left"
+			],
+			[
+				"c",
+				"class	Attr"
+			],
+			[
+				"fl",
+				"fl-l	float: left;"
+			],
+			[
+				"b",
+				"background"
+			],
+			[
+				"s",
+				"script	Tag"
+			],
+			[
+				"pa",
+				"padding-right"
+			],
+			[
+				"p",
+				"padding-top"
+			],
+			[
+				"f",
+				"font-size"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"back",
+				"background-size"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"bt",
+				"bottom"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"in",
+				"in-bar"
+			],
+			[
+				"po",
+				"position"
+			],
+			[
+				"m",
+				"margin-left"
+			],
+			[
+				"e",
+				"exportTimer"
+			],
+			[
+				"w",
+				"white"
+			],
+			[
+				"pi",
+				"position"
+			],
+			[
+				"go",
+				"goright"
+			],
+			[
+				"R",
+				"right"
+			],
+			[
+				"l",
+				"left"
+			],
+			[
+				"fa",
+				"fadeOut"
+			],
+			[
+				"no",
+				"nowIndex"
+			],
+			[
+				"re",
+				"removeClass"
+			],
+			[
+				"i",
+				"icon"
+			],
+			[
+				"tip",
+				"tip-ul"
+			],
+			[
+				"r",
+				"right"
+			],
+			[
+				"d",
+				"div	Tag"
+			],
+			[
+				"im",
+				"img-box"
+			],
+			[
+				"fo",
+				"float"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"bor",
+				"border-right"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"o",
+				"opacity"
+			],
+			[
+				"v",
+				"vertical-align"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"bl",
+				"black"
+			],
+			[
+				"border-c",
+				"border-color"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"cl",
+				"clear"
+			],
+			[
+				"st",
+				"style	Tag"
+			],
+			[
+				"ran",
+				"range"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"res",
+				"res"
+			],
+			[
+				"array",
+				"array	$… = array (…)"
+			],
+			[
+				"arr",
+				"array	$… = array (…)"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"ex",
+				"explode"
+			],
+			[
+				"A",
+				"a"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"getl",
+				"ob_get_level"
+			],
+			[
+				"valu",
+				"array_count_values"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"fe",
+				"dba_fetch"
+			],
+			[
+				"de",
+				"delete"
+			],
+			[
+				"fet",
+				"apc_fetch"
+			],
+			[
+				"inc",
+				"inclued_get_data"
+			],
+			[
+				"use",
+				"username"
+			],
+			[
+				"user",
+				"users"
+			],
+			[
+				"pass",
+				"password"
+			],
+			[
+				"ar",
+				"array	$… = array (…)"
+			],
+			[
+				"echo",
+				"echo"
+			],
+			[
+				"foreach",
+				"foreach嵌套"
+			],
+			[
+				"a",
+				"a"
+			],
+			[
+				"ec",
+				"echo"
+			],
+			[
+				"pri",
+				"print_r"
+			],
+			[
+				"pr",
+				"preg_filter"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/Users/YXY/Desktop/好到家.html",
+			"settings":
+			{
+				"buffer_size": 45602,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 373.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 188.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/YXY/Desktop/web/first"
+	],
+	"file_history":
+	[
+		"/C/Users/YXY/Desktop/web/first/好到家1.html",
+		"/C/Users/YXY/Desktop/web/first/mmm.html",
+		"/C/Users/YXY/Desktop/web/first/选择卡.html",
+		"/C/Users/YXY/Documents/Tencent Files/349528031/FileRecv/getJson.html",
+		"/C/Users/YXY/Desktop/web/房地产.zip",
+		"/C/Users/YXY/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/YXY/Desktop/web/first/手书移动端.html",
+		"/C/Users/YXY/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/YXY/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/YXY/Desktop/web/first/new房地产.html",
+		"/C/Users/YXY/Desktop/web/first/导航栏.html",
+		"/C/Users/YXY/Desktop/web/mobile2/mobile2.html",
+		"/C/Users/YXY/Desktop/web/first/移动端.html",
+		"/C/Users/YXY/Desktop/web/first/批量通知患者.html",
+		"/C/Users/YXY/Desktop/web/first/拉勾网首页.html",
+		"/C/Users/YXY/Documents/Tencent Files/349528031/FileRecv/lagou-scroll-img (1).html",
+		"/C/Users/YXY/Desktop/web/first/春雨医生.html",
+		"/C/Users/YXY/Desktop/web/first/全选.html",
+		"/C/Users/YXY/Desktop/web/first/登录.html",
+		"/C/Users/YXY/Desktop/web/first/拉勾网.html",
+		"/C/Users/YXY/Desktop/web/first/tupianlunbo dian.html",
+		"/C/Users/YXY/Desktop/web/first/newfangdichan.html",
+		"/C/Users/YXY/Desktop/web/first/fangdichan.html",
+		"/C/Users/YXY/Desktop/web/first/tupian xuanzeka.html",
+		"/C/Users/YXY/Desktop/fangtianxia.html",
+		"/C/Users/YXY/Desktop/web/first/aaa.html",
+		"/C/Users/YXY/Desktop/jquery-3.2.0.min.js",
+		"/C/Users/YXY/Desktop/web/first/js/newfangdichan.html",
+		"/C/Users/YXY/Desktop/web/first/img/QQ图片20170918194146.gif",
+		"/C/Users/YXY/Desktop/download.png",
+		"/C/Users/YXY/Desktop/web/first/first.html",
+		"/C/web1/HTML笔记.md",
+		"/C/web1/README.md",
+		"/C/web1/09.txt",
+		"/D/xampp/htdocs/arr.php",
+		"/D/xampp/htdocs/zidingyi.php",
+		"/D/xampp/htdocs/phpcl.php",
+		"/D/xampp/htdocs/ucenternew/zidingyi.php",
+		"/D/xampp/htdocs/ucenternew/deletenew.php",
+		"/D/xampp/htdocs/ucenternew1/updatenew1.php",
+		"/D/xampp/htdocs/ucenternew1/deletenew1.php",
+		"/D/xampp/htdocs/ucenternew/viewnew/listnew.html",
+		"/D/xampp/htdocs/ucenternew1/doupdatenew1.php",
+		"/D/xampp/htdocs/ucenternew/doupdatenew.php",
+		"/D/xampp/htdocs/ucenternew/updatenew.php",
+		"/D/xampp/htdocs/ucenternew1/viewnew1/listnew1.html",
+		"/D/xampp/htdocs/ucenternew/doaddnew.php",
+		"/D/xampp/htdocs/ucenternew1/doaddnew1.php",
+		"/D/xampp/htdocs/ucenternew1/listnew1.php",
+		"/D/xampp/htdocs/a.php",
+		"/D/xampp/htdocs/ucenternew/viewnew/up",
+		"/D/xampp/htdocs/ucenternew/viewnew/updatanew.html",
+		"/D/xampp/htdocs/ucenternew1/viewnew1/updatenew1.html",
+		"/D/xampp/htdocs/ucenternew/listnew.php",
+		"/D/xampp/htdocs/ucenter/list.php",
+		"/D/xampp/htdocs/ucenternew1/viewnew1/addnew1.html",
+		"/D/xampp/htdocs/ucenternew/viewnew/addnew.html",
+		"/D/xampp/htdocs/ucenternew1/base.php",
+		"/D/xampp/htdocs/ucenternew1/addnew1.php",
+		"/D/xampp/htdocs/ucenternew/basenew.php",
+		"/D/xampp/htdocs/ucenter/update.php",
+		"/D/xampp/htdocs/ucenternew/doupdatanew.php",
+		"/D/xampp/htdocs/ucenternew/addnew.php",
+		"/D/xampp/htdocs/ucenter/base.php",
+		"/D/xampp/htdocs/ucenternew/add.php",
+		"/D/xampp/htdocs/ucenter/delete.php",
+		"/D/xampp/htdocs/ucenter/view/list.html",
+		"/D/xampp/htdocs/ucenter/doadd.php",
+		"/D/xampp/htdocs/ucenter/doupdate.php",
+		"/D/xampp/htdocs/ucenter/view/update.html",
+		"/D/xampp/htdocs/ucenter/view/doupdate.php",
+		"/D/xampp/htdocs/phpchangliang.php",
+		"/D/xampp/htdocs/php常量",
+		"/D/xampp/htdocs/yz.php",
+		"/D/xampp/htdocs/a1.php",
+		"/D/xampp/htdocs/于壮.html",
+		"/D/xampp/htdocs/a2.php",
+		"/D/xampp/htdocs/zifuchuanzhuanhuan.php",
+		"/D/xampp/htdocs/字符串转换.php",
+		"/D/xampp/htdocs/字符串转换",
+		"/D/xampp/htdocs/ucenter/view/add.html",
+		"/D/xampp/htdocs/ucenter/add.php",
+		"/D/xampp/htdocs/html jicu.php",
+		"/D/xampp/htdocs/s2.php",
+		"/D/xampp/htdocs/s1.php",
+		"/D/xampp/htdocs/ucenter/next.php",
+		"/D/xampp/htdocs/html jicu",
+		"/D/xampp/htdocs/2",
+		"/D/xampp/htdocs/1",
+		"/C/Users/YXY/Desktop/PHP/调试代码.txt",
+		"/C/Users/YXY/Desktop/php基础.txt",
+		"/C/Users/YXY/Desktop/php增删改查.txt",
+		"/C/Users/YXY/Desktop/aa.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"contral",
+			"tu",
+			">\n",
+			"a",
+			"jg",
+			"doaddnew1"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/YXY/Desktop/好到家.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 45602,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								44554,
+								44554
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 16238.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 44.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "first.sublime-project",
+	"replace":
+	{
+		"height": 38.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 182.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

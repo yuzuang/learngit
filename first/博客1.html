@@ -1,0 +1,147 @@
+<html>
+<head>
+ <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/jquery-3.2.0.min.js"></script><link rel="stylesheet" type="text/css" href="./css/boke1.css">
+	<title>博客</title>
+		
+		
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<a href="#">
+				<img src="./img/boke.png">
+			</a>
+		</div>
+		<nav class="topnav">
+			<a href="file:///C:/Users/YXY/Desktop/web/first/%E5%8D%9A%E5%AE%A2.html">
+				<span>首页</span>
+				<span class="en" style="display:none">Home</span>
+			</a>
+			<a href="#">
+				<span>关于我</span>
+				<span class="en" style="display:none">About</span>
+			</a>
+			<a href="#">
+				<span>慢生活</span>
+				<span class="en" style="display:none">Life</span>
+			</a>
+			<a href="#">
+				<span>模块分享</span>
+				<span class="en" style="display:none">Share</span>
+			</a>
+			<a href="#">
+				<span>学无止境</span>
+				<span class="en" style="display:none">Learn</span>
+			</a>
+			<a href="#">
+				<span class="say">留言</span>
+				<span class="en" style="display:none">Saying</span>
+			</a>
+		</nav>
+	</header>
+	<article>
+		<div class="container">
+			<h2 class="ctitle">
+				<b>留言板</b>
+				 <span>你，生命中最重要的过客，之所以是过客，因为你未曾为我停留。</span>
+			</h2>
+			<div class="gbook">
+				<div class="about">
+					<div class="about_girl">
+						<span>
+							<a href="#">
+								<img src="./img/girl.jpg">
+							</a>
+						</span>
+						<p>当您驻足停留过，从此便注定我们的缘分。站在时间的尽头，我们已是朋友，前端的路上我再也不用一个人独自行走。</p>
+					</div>
+				</div>
+			</div>
+			<div class="goko">
+				<div id="SOHUCS">
+					<div class="SOHU_MAIN">
+						<div class="module-cmt-header">
+						<!-- 	<div class="cy-hidden">
+								<button id="jump-to-kz"></button>
+							</div> -->
+							<div class="section-cbox-w">
+								<div class="cbox-block-w">
+									<div class="cbox-block-w clear-g">
+										<div node-type="block-head-w" class="block-head-w">
+											<div node-type="avatar" class="head-img-w">
+												<div node-type="header-login" class="header-login">登录</div>
+											</div>
+										</div>
+										<div node-type="login-select" class="block-post-w">
+											<div class="module-cmt-box">
+												<div class="post-wrap-w">
+													<input type="text" placeholder="来说两句吧">
+													<div class="clear-g wrap-action-w">
+														<div class="action-funvtion-w">
+															<ul class="clear-g" style="    float: left;">
+																<li node-type="function-face" class="function-face-w" style="float: left;width: 88px;margin-left: -40px;">
+											                        <a class="effect-w" href="javascript:void(0)" >
+											                            <img src="./img/face1.png">
+											                        </a>
+											                    </li>
+											                    <li node-type="function-face" class="function-face-w" style="float: left;width: 88px;margin-left: -40px;">
+											                        <a class="effect-w" href="javascript:void(0)">
+											                            <img src="./img/image.png">
+											                        </a>
+											                    </li>
+															</ul>
+														</div>
+														<div class="clear-g action-issue-w">
+															<div class="issue-btn-w">
+																<a href="#">
+																	<button node-type="issue" class="btn-fw" style="    margin-left: 547px;"><img src="./img/post-btn.png"></button>
+																</a>
+															</div>
+															<div class="hot-saying">
+																<p style="color: #e74851;font-size: 15px;">热门评论</p>
+															</div>
+															<div class="user-saying">
+																<ul class="sayings" style="background:url(./img/tou.png) no-repeat ;">
+																	<li></li>
+																</ul>
+																<ul class="sayings" style="background:url(./img/tou.png) no-repeat ;">
+																	<li></li>
+																</ul>
+																<ul class="sayings" style="background:url(./img/tou.png) no-repeat ;">
+																	<li></li>
+																</ul>
+																<ul class="sayings" style="background:url(./img/tou.png) no-repeat ;">
+																	<li></li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+</body>
+<script type="text/javascript">
+	$(".say").click(function(){
+		        var searchQuery = $("#search").val();
+		        $.ajax({
+					url: "http://test.zhituteam.com/fetch.php",
+					type: "get",
+					dataType: "json",
+					data: {
+						query: searchQuery,
+					}
+</script>
+</html>

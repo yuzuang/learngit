@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        .p-list {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        $(function(){
+
+            $.ajax({
+                url: "http://test.zhituteam.com/index.php/home/api/getquestion",
+                type: "get",
+                dataType: "json",
+                data: {
+                    type: 2,
+                    level: 94,
+                    lesson: 1360,
+                    question_flag: 2,
+                },
+                success: function(res){
+                    var list = res.result.lists;
+                    var str = "";
+                    for(var i = 0; i<list.length; i++){
+                        str+="<p class='p-list'>"+list[i].data.title+"</p>"
+                    }
+                    $("body").html(str)
+                    console.log(str);
+                },
+                error: function(res){
+                    console.log(res);
+                }
+            })
+        })
+        var ob = {
+            a: [
+                {w:1},
+                {e:2},
+                {r:3}
+            ],
+            b: 222,
+        }
+        var obA = ob.a;
+        var obB = ob.b;
+        console.log(obA,obB);
+
+        // var newOb = {};
+        // var newObFunc = new Object();
+
+        var arr = ["1",2,3,4,5];
+
+
+        var arrFirst = arr[0];
+        var arrSecond = arr[1];
+
+        console.log(arrFirst,arrSecond);
+
+        // var newArr = [];
+        // var newArrFunc = new Array();
+    </script>
+</body>
+</html>

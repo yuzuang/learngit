@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>房地产</title>
+	<style type="text/css">
+	html,body,ul,li{
+		margin: 0;
+		padding: 0;
+	}
+    .top {
+         height: 50px;
+         background-color: #CD0000;
+    }
+    .top ul{
+    	height: 50px;
+    	line-height: 50px;
+		list-style: none;
+		margin: 0 0 0 70px;
+	}
+	.top ul li{
+		float: left;
+		font-size: 14px;
+		font-weight: 600;
+		text-align: center;
+		height: 50px;
+		padding-left: 8px;
+		padding-right: 15px;
+	}
+	.clearfix::after{
+		content: "";
+		height: 0;
+		display: block;
+		clear: both;
+	}
+	.top ul li:hover{
+            background-color: #B00000;
+	}
+	.top .a ul li:hover{
+            background-color: #CD0000;
+	}
+	.top .b ul li:hover{
+            background-color: #CD0000;
+	}
+	.image ul:hover{
+			background-color: #CD0000;
+	}
+	.image1 ul:hover{
+			background-color: #CD0000;
+	}
+	.dl ul li:hover{
+			background-color: #CD0000;
+	}
+	.zc ul li:hover{
+			background-color: #CD0000;
+	}
+	.top .img a:hover{
+			background-color: #CD0000;
+	}
+	a {
+		text-decoration: none;
+		color:white;
+		margin: auto;
+	}
+	.top ul .kan{
+		 padding-left: 0px;
+		 margin-top: -1px;
+	}
+	.kan a{
+		text-decoration: none;
+		color:white;
+		margin: auto;
+		font-weight: 200
+	}
+	.a .image{
+		height: 32px;
+		width: 9px;
+		background-image: url("./img/look.png");
+		background-repeat: no-repeat;
+		background-position: 0px 16px;
+		padding-left: 0px;
+		padding-right: 10px;
+		padding-top: -1px;
+	}
+	.b .image1{
+		height: 32px;
+		width: 9px;
+		background-image: url("./img/look.png");
+		background-position: 0px -16px;
+		background-repeat: no-repeat;
+		padding-left: 0px;
+		padding-right: 10px;
+		margin-left: -82px;
+		margin-top: 15px;
+	}
+	.top ul,.look,.image,.image1,.top img .opacity{
+		float:left;
+	}
+	.ding a{
+		text-decoration: none;
+		color:white;
+		margin: 0 auto;
+		font-weight: 200
+    }
+	.top ul .ding{
+		padding-left: 0px;
+		 margin-top: -1px;
+	}
+	.a ul{
+		height: 50px;
+		width: 62px;
+	}
+	.b ul{
+		height: 50px;
+		width: 62px;
+	}
+	.b li{
+        margin-left: -63px;
+	}
+	.dl li{
+		margin-left: -152px;
+	}
+	.zc li{
+		margin-left: -186px;
+	}
+	.img img{
+		margin-left: -125px;
+		margin-top: 8px;
+
+	}
+	.datu img{
+		margin-left: -348px;
+		z-index: 2;
+	}
+	.datu .xtu img{
+		position:relative;
+		left: 642px;
+		bottom: 370px;
+	}
+	.datu .ftx img{
+		position:relative;
+		left: 683px;
+		bottom: 566px;
+		z-index: 1;
+	}
+	.datu .qg p{
+		position:relative;
+		left: 560px;
+		bottom: 610px;
+		color:white;
+		font-weight: 200;
+	}
+	.datu .qh a{
+		position:relative;
+		left: 592px;
+		bottom: 647px;
+		color:white;
+		font-weight: 50;
+	}
+	.datu .suo ul li{
+		position:relative;
+		left: 346px;
+		bottom: 621px;
+		color:white;
+		font-weight: 50;
+		float: left;
+		list-style: none;
+		text-align: center;
+		padding-left: 9px;
+		padding-right: 7px;
+	}
+	.datu .suo ul li:hover{
+		background-color: #CD0000;
+	}
+	.datu .sanjiao img{
+		position:relative;
+		left: 693px;
+		bottom: 624px;
+		color:white;
+		font-weight: 50;
+	}
+	.datu .input input{
+		position:relative;
+		left: 348px;
+		bottom: 606px;
+		height: 36px;
+		width: 591px;
+	}
+	.datu .fdj img{
+		position:relative;
+		left: 1291px;
+		bottom: 648px;
+		height: 43px;
+	}
+	.datu .fdj a:hover{
+        background-color: #CD0000;
+	}
+	.mai p{
+		position:relative;
+		left: 75px;
+		bottom: 472px;
+		color:#c00;
+		font-size:28px;
+	}
+	.maili ul{
+		position:relative;
+		left: 75px;
+		bottom: 472px;
+		color:#c00;
+		font-size:200;
+	}
+	.maili li a{
+		position:relative;
+		left: 74px;
+		bottom: 59px;
+		color:black;
+		font-size: 14px;
+	}
+	.maili2 li a{
+		position:relative;
+		left: 235px;
+		bottom: 573px;
+		color:black;
+		font-size: 14px;
+	}
+	.maili li{
+		list-style: none;
+	}
+	.mai2 p{
+		position:relative;
+		left: 344px;
+		bottom: 649px;
+		color:#c00;
+		font-size:28px;
+	}
+	.maili3 li a{
+		position:relative;
+		left: 419px;
+		bottom: 708px;
+		color:black;
+		font-size:14px;
+	}
+	.zufang p{
+		position:relative;
+		left: 529px;
+		bottom: 785px;
+		color:#c00;
+		font-size:28px;
+	}
+	.zufangli li a{
+		position:relative;
+		left: 602px;
+		bottom: 845px;
+		color:black;
+		font-size:14px;
+	}
+	.zufangli2 li a{
+		position:relative;
+		left: 692px;
+		bottom: 888px;
+		color:black;
+		font-size:14px;
+	}
+	.zhuangxiu p{
+		position:relative;
+		left: 784px;
+		bottom: 964px;
+		color:#c00;
+		font-size:28px;
+	}
+	.zhuangxiuli li a{
+		position:relative;
+		left: 858px;
+		bottom: 1024px;
+		color:black;
+		font-size:14px;
+	}
+	.zhuangxiuli2 li a{
+		position:relative;
+		left: 965px;
+		bottom: 1066px;
+		color:black;
+		font-size:14px;
+	}
+	.zhixiao p{
+		position:relative;
+		left: 1064px;
+		bottom: 1141px;
+		color:#c00;
+		font-size:28px;
+	}
+	.zhixiaoli li a{
+		position:relative;
+		left: 1137px;
+		bottom: 1201px;
+		color:black;
+		font-size:14px;
+	}
+	.zhixiaoli2 li a{
+		position:relative;
+		left: 965px;
+		bottom: 1066px;
+		color:black;
+		font-size:14px;
+	}
+	.zhixiaoli2 li a{
+		position:relative;
+		left: 1226px;
+		bottom: 1243px;
+		color:black;
+		font-size:14px;
+	}
+
+    .middle{
+     	width: 1217px;
+    	height: 306px;
+    }
+    .border{
+    	height: 65px;
+    	background-color:#f1f1f1;
+    	margin-left: 10px;
+        border: 1px solid #ddd;
+        position:relative;
+		left: 66px;
+		bottom: 1200px;
+    }
+    .middle .border ul li {
+    	list-style: none;
+    	float: left;
+    	margin-right: 337px;
+    }
+    .middle .border ul li a{
+    	color: black;
+    }
+    .border ul{
+    	position:relative;
+		left: 161px;
+		bottom: -21px;
+		color:black;
+		font-size:18x;
+    }
+    .border:hover{
+    	background-color:white;
+    }
+    .border1{
+    	height: 219px;
+    	background-color:white;
+    	margin-left: 10px;
+        border: 1px solid #ddd;
+        position:relative;
+		left: 66px;
+		bottom: 1200px;
+		width: 300px;
+		margin-top: 10px;
+    }
+    .border1 img{
+    	margin-top: 10px;
+    	margin-left:20px;
+    }
+    .cp a{
+    	color:black;
+    	font-size:18px;
+    	position:relative;
+		left: 133px;
+		bottom: 1250px;
+		color:black;
+    }
+    .cp1{
+    	color:black;
+    	font-size:04px;
+    	position:relative;
+		left: 104px;
+		bottom: 1264px;
+		color:black;
+    }
+     .dudong p{
+    	color:#c00;
+    	font-size:18px;
+    	position:relative;
+		left: 245px;
+		bottom: 1320px;
+	}
+	 .xianfang{
+    	color:black;
+    	font-size:04px;
+    	position:relative;
+		left: 255px;
+		bottom: 1340px;
+		color:black;
+    }
+     .border2{
+    	height: 219px;
+    	background-color:white;
+    	margin-left: 10px;
+        border: 1px solid #ddd;
+        position:relative;
+		left: 367px;
+		bottom: 1561px;
+		width: 300px;
+		margin-top: 10px;
+    }
+      .border2 img{
+    	margin-top: 10px;
+    	margin-left:20px;
+    }
+     .ft a{
+    	color:black;
+    	font-size:18px;
+    	position:relative;
+		left: 445px;
+		bottom: 1611px;
+		color:black;
+    }
+     .ft1{
+    	color:black;
+    	font-size:04px;
+    	position:relative;
+		left: 437px;
+		bottom: 1625px;
+		color:black;
+    }
+     .gaishan p{
+    	color:#c00;
+    	font-size:18px;
+    	position:relative;
+		left: 546px;
+		bottom: 1681px;
+	}
+	 .gaishan1{
+    	color:black;
+    	font-size:04px;
+    	position:relative;
+		left: 555px;
+		bottom: 1701px;
+		color:black;
+    }
+     .border3{
+    	height: 219px;
+    	background-color:white;
+    	margin-left: 10px;
+        border: 1px solid #ddd;
+        position:relative;
+		left: 668px;
+		bottom: 1922px;
+		width: 300px;
+		margin-top: 10px;
+    }
+      .border3 img{
+    	margin-top: 10px;
+    	margin-left:20px;
+    }
+      .cq a{
+    	color:black;
+    	font-size:18px;
+    	position:relative;
+		left: 746px;
+		bottom: 1972px;
+		color:black;
+    }
+      .cq1{
+    	color:black;
+    	font-size:04px;
+    	position:relative;
+		left: 733px;
+		bottom: 1986px;
+		color:black;
+    }
+      .wan p{
+    	color:#c00;
+    	font-size:18px;
+    	position:relative;
+		left: 845px;
+		bottom: 2043px;
+	}
+	 .wan1{
+    	color:black;
+    	font-size:04px;
+    	position:relative;
+		left: 857px;
+		bottom: 2063px;
+		color:black;
+    }
+     .border4{
+    	height: 219px;
+    	background-color:white;
+    	margin-left: 10px;
+        border: 1px solid #ddd;
+        position:relative;
+		left: 970px;
+		bottom: 2283px;
+		width: 300px;
+		margin-top: 10px;
+    }
+      .border4 img{
+    	margin-top: 10px;
+    	margin-left:20px;
+    }
+      .hb a{
+    	color:black;
+    	font-size:18px;
+    	position:relative;
+		left: 1011px;
+		bottom: 2334px;
+		color:black;
+    }
+    .hb1{
+    	color:black;
+    	font-size:04px;
+    	position:relative;
+		left: 1028px;
+		bottom: 2348px;
+		color:black;
+    }
+    .chou p{
+    	color:#c00;
+    	font-size:18px;
+    	position:relative;
+		left: 1150px;
+		bottom: 2404px;
+	}
+	.chou1{
+    	color:black;
+    	font-size:04px;
+    	position:relative;
+		left: 1154px;
+		bottom: 2425px;
+		color:black;
+    }
+    .bk{
+    	height: 65px;
+    	background-color:#f1f1f1;
+    	margin-left: 10px;
+        border: 1px solid #ddd;
+        position:relative;
+		left: 66px;
+		bottom: 2721px;
+		width: 402px;
+    }
+    .bk p{
+        text-align: center;
+    }
+    .bk a{
+    	color: black;
+    }
+    .bk:hover{
+        background-color: white;
+    }
+    .bk a:hover{
+    	font-size: 18px;
+    }
+    .bk1{
+    	height: 65px;
+    	background-color:#f1f1f1;
+    	margin-left: 10px;
+        border: 1px solid #ddd;
+        position:relative;
+		left: 470px;
+		bottom: 2788px;
+		width: 402px;
+    }
+    .bk1 p{
+        text-align: center;
+    }
+    .bk1 a{
+    	color: black;
+    }
+    .bk1:hover{
+        background-color: white;
+    }
+    .bk1 a:hover{
+    	font-size: 18px;
+    }
+    .bk2{
+    	height: 65px;
+    	background-color:#f1f1f1;
+    	margin-left: 10px;
+        border: 1px solid #ddd;
+        position:relative;
+		left: 874px;
+		bottom: 2855px;
+		width: 397px;
+    }
+    .bk2 p{
+        text-align: center;
+    }
+    .bk2 a{
+    	color: black;
+    }
+    .bk2:hover{
+        background-color: white;
+    }
+    .bk2 a:hover{
+    	font-size: 18px;
+    }
+    .a {
+    	position: absolute;
+    	left:0px;
+    	top: 50px;
+    	z-index: 3;
+    	display: none;
+    	background: #fff;
+    }
+    .a li{
+    	width: 120px;
+    	text-align: left;
+    	padding:10px 0 10px 10px;
+    }
+    .top .a ul li:hover {
+            background: #b30000;
+            height: 50px;
+        }
+    .top>ul>li:hover .a {
+            display: block;
+        }
+    .top .a li a{
+    	color: black;
+    }
+    .a::after{
+		content: "";
+		height: 0;
+		display: block;
+		clear: both;
+	}
+</style>
+</head>
+<body>
+<div class="top">
+	<ul>
+		<li><a href="#">全国<img src="./img/QQ图片20170918194146.gif"></a>
+		<ul class="a">
+			<li><a href="">吉林</a></li>
+			<li><a href="">吉林</a></li>
+			<li><a href="">吉林</a></li>
+			<li><a href="">吉林</a></li>
+		</ul>
+		</li>
+		<li><a href="#">首页</a></li>
+		<li><a href="#">新房</a></li>
+		<li><a href="#">二手房</a></li>
+		<li><a href="#">租房</a></li>
+		<li><a href="#">查房价</a></li>
+		<li><a href="#">装修房居</a></li>
+		<li><a href="#">写字楼</a></li>
+		<li><a href="#">商铺</a></li>
+		<li><a href="#">业主论坛</a></li>
+		<li><a href="#">房产百科</a></li>
+		<li><a href="#">移动APP</a></li>
+		<li><a href="#">更多</a></li>
+		</ul>
+		<div class="a">
+	    <ul>
+		<div class="image"></div>
+			<li class="kan"><a href="#">看房</a></li>
+	    </ul>
+	    </div>
+	    <div class="b">
+	    <ul>
+	    	<div class="image1"></div>
+	    	<li class="ding"><a href="#">订单</a></li>
+	    </ul>
+	    </div>
+	    <div class="dl">
+	    <ul>
+	    	<li class="#"><a href="#">登录</a></li>
+	    </ul>
+	    </div>
+	     <div class="zc">
+	    <ul>
+	    	<li class="#"><a href="#">丨注册</a></li>
+	    </ul>
+	    </div>
+	</ul>
+	<div class="img">
+	<a href=""><img src="./img/12377.jpg"></a>
+	</div>
+</div>
+<div class="datu">
+	<img src="./img/f3dae2f84a994f49adaef5eaac718ae8.jpg">
+	<div class="xtu">
+	<img src="./img/searchbj.png">
+	</div>
+	<div class="ftx">
+		<img src="./img/fangtianxia.png">
+	</div>
+	<div class="qg">
+        <p>全国</p>
+	</div>
+	<div class="qh">
+		<a href="#">【切换城市】</a>
+	</div>
+	<div class="suo">
+		<ul>
+			<li><a href="#">查房价</a></li>
+		    <li><a href="#">买新房</a></li>
+			<li><a href="#">买二手房</a></li>
+			<li><a href="#">找租房</a></li>
+			<li><a href="#">装修家居</a></li>
+			<li><a href="#">房产快讯</a></li>
+			<li><a href="#">海外房产</a></li>
+			<li><a href="#">地图找房</a></li>
+			<li><a href="#">更多</a></li>
+		</ul>
+	</div>
+	<div class="sanjiao">
+		<img src="./img/navicon1.gif">
+	</div>
+	<div class="input">
+		<input type="text" value="">
+	</div>
+	<div class="fdj">
+		<a href="#"><img src="./img/suo.png"></a>
+	</div>
+</div>
+</div>
+<div>
+	<div class="mai">
+		<p>买房</p>
+	</div>
+	<div class="maili">
+		<ul>
+			<li><a href="#">新房</a></li>
+			<li><a href="#">新房资源</a></li>
+		</ul>
+	</div>
+	<div class="maili2">
+		<ul>
+			<li><a href="#">二手房</a></li>
+			<li><a href="#">业主论坛</a></li>
+		</ul>
+	</div>
+	<div class="mai2">
+		<p>卖房</p>
+	</div>
+	<div class="maili3">
+		<ul>
+			<li><a href="#">我要买房</a></li>
+			<li><a href="#">查房价</a></li>
+		</ul>
+	</div>
+	<div class="zufang">
+			<p>租房</p>
+	</div>
+	<div class="zufangli">
+		<ul>
+			<li><a href="#">找房租</a></li>
+			<li><a href="#">我要出租</a></li>
+		</ul>
+	</div>
+	<div class="zufangli2">
+		<ul>
+			<li><a href="#">短租</a></li>
+			<li><a href="#">月付公寓</a></li>
+		</ul>
+	</div>
+	<div class="zhuangxiu">
+			<p>装修</p>
+	</div>
+	<div class="zhuangxiuli">
+		<ul>
+			<li><a href="#">装修案例</a></li>
+			<li><a href="#">找装饰公司</a></li>
+		</ul>
+	</div>
+	<div class="zhuangxiuli2">
+		<ul>
+			<li><a href="#">我要装修</a></li>
+			<li><a href="#">抢优惠</a></li>
+		</ul>
+	</div>
+	<div class="zhixiao">
+			<p>直销</p>
+	</div>
+	<div class="zhixiaoli">
+		<ul>
+			<li><a href="#">新房直销</a></li>
+			<li><a href="#">金融货款</a></li>
+		</ul>
+	</div>
+	<div class="zhixiaoli2">
+		<ul>
+			<li><a href="#">二手房源</a></li>
+			<li><a href="#">我要加盟</a></li>
+		</ul>
+	</div>
+</div>
+</div>
+
+
+<div class="middle">
+	<div class="border">
+            <ul>
+            	<li><a href="#">热销楼盘</a></li>
+            	<li><a href="#">品牌地产</a></li>
+            	<li><a href="#">全城好房</a></li>
+            </ul>
+	</div>
+    <div class="border1">
+		<img src="./img/wun.jpg">
+    </div>
+    <div class="cp">
+		<a href="#">昌平</a>
+    </div>
+    <div class="cp1">
+		<p>北五环奥北别墅区</p>
+    </div>
+    <div class="dudong">
+    	<b><p>独栋别墅</p></b>
+    </div>
+    <div class="xianfang">
+    	<p>现房出售</p>
+    </div>
+    <div class="border2">
+		<img src="./img/feng.jpg">
+	</div>
+	<div class="ft">
+		<a href="#">丰台</a>
+	</div>
+	<div class="ft1">
+		<p>西四环边</p>
+    </div>
+    <div class="gaishan">
+    	<b><p>改善之选</p></b>
+    </div>
+    <div class="gaishan1">
+    	<p>科技大宅</p>
+    </div>
+    <div class="border3">
+		<img src="./img/cao.jpg">
+	</div>
+	<div class="cq">
+		<a href="#">朝青</a>
+	</div>
+	<div class="cq1">
+		<p>品质二手房</p>
+    </div>
+    <div class="wan">
+    	<b><p>300-400万</p></b>
+    </div>
+     <div class="wan1">
+    	<p>共28条房源</p>
+    </div>
+     <div class="border4">
+		<img src="./img/hong.jpg">
+	</div>
+	<div class="hb">
+		<a href="#">红包等你来领</a>
+	</div>
+	<div class="hb1">
+		<p>全国25城联动</p>
+    </div>
+        <div class="chou">
+    	<b><p>抽iPhone8</p></b>
+    </div>
+    <div class="chou1">
+    	<p>赢10000元现金</p>
+    </div>
+    <div class="bk">
+    	<p><a href="#">热销楼盘</a></p>
+    </div>
+    <div class="bk1">
+    	<p><a href="#">品牌地产</a></p>
+    </div>
+    <div class="bk2">
+    	<p><a href="#">全城好房</a></p>
+    </div>
+</div>
+</body>
+</html>

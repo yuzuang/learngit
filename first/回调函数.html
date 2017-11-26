@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="./js/jquery.fullPage.css">
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script type="text/javascript" src="./js/jquery.fullPage.js"></script>
+  </head>
+  <body>
+    <div id="dowebok">
+      <div class="section">
+          <h3>第一屏</h3>
+      </div>
+      <div class="section">
+          <h3>第二屏</h3>
+      </div>
+      <div class="section">
+        <div class="slide">第三屏的第一屏</div>
+        <div class="slide">第三屏的第二屏</div>
+        <div class="slide">第三屏的第三屏</div>
+        <div class="slide">第三屏的第四屏</div>
+      </div>
+      <div class="section">
+          <h3>第四屏</h3>
+      </div>
+  </div>
+  <script type="text/javascript">
+    $(function(){
+      $('#dowebok').fullpage({
+        navigation:true,
+        slidesNavigation:true,
+        slidesNavPosition:"top",
+        controlArrowColor:"red",
+      });
+    });
+  </script>
+  </body>
+</html>

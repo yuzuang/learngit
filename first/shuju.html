@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/jquery-3.2.0.min.js"></script>
+	<title>000</title>
+	<style type="text/css">
+		.input{
+			width: 500px;
+			height: 20px;
+		}
+		.search-btn{
+			height: 20px;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" class="input">
+	<button class="search-btn">搜索</button>
+</body>
+<script type="text/javascript">
+	$(".search-btn").click(function(){
+		        var searchQuery = $("#search").val();
+		        $.ajax({
+					url: "http://test.zhituteam.com/fetch.php",
+					type: "get",
+					dataType: "json",
+					data: {
+						query: searchQuery,
+					},
+					success:function(res){
+						for(var i=0;i<res.search_results.length;i++){
+						   if(res.search_results[i].type == 'DISEASE_DESC') {
+								var str = "<div class='top-title'>"+res.search_results[i].query_str+"</div><p>"+res.search_results[i].desc+"</p><div class='top-bottom'><a href='#'>就诊科室</a><a href='#'>术前注意事项</a><a href='#'>术后护理</a></div>";
+								$(".top").html(str);
+						   };
+						   if(res.search_results[i].type == 'SIMILAR_PRO'){
+								var askStr = "";
+								for(var j=0;j<res.search_results[i].result.length; j++){
+									console.log(res.search_results[i].result[j]);
+									askStr+="<div class='middle-content'><img src='./images/ask.png' alt=''><p>"+res.search_results[i].result[j].ask+"</p></div>"
+								}
+								$(".ask-content").html(askStr);
+						   }
+						}
+					},
+					error:function(res){
+						// alert(res);
+					}
+				});
+			})
+
+</script>
+</html>

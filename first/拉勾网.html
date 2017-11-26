@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/jquery-3.2.0.min.js"></script>
+	<title>拉勾网</title>
+	<style>
+		  html,body,ul,li{
+	      	margin: 0;
+	      	padding: 0;
+	      }
+		   .clearfix::after{
+			content: "";
+			height: 0;
+			display: block;
+			clear: both;
+		  }
+	      .top{
+	      	width: 100%;
+	      	height: 360px;
+	      	background-color:#00b38a;
+	      }
+	      .top .logo{
+		  	position: absolute;
+		    z-index: 9999;
+		    top: 76px;
+		    left: 50%;
+		    margin-left: -350px;
+		    width: 112px;
+		    height: 42px;
+		    background: url(./img/la.png) no-repeat;
+		    background-size: contain;
+	      }
+	      .top-a{
+		    border: 1px solid white;
+		    width: 702px;
+		    height: 402px;
+		    position: absolute;
+		    top: 159px;
+		    left: 327px;
+		    background-color:white;
+	      }
+	      .top-a .left-area{
+	      	border: 1px ;
+	      	width: 290px;
+	      	height: 275px;
+	      	float:left;
+	      	position: absolute;
+	      	top: 62px;
+		    left: 45px;
+	      }
+	      .top-a .left-area .left-area-mi{
+	      	border: 1px ;
+	      	width: 290px;
+	      	height: 33px;
+	      	float:left;
+	      	border-bottom: 1px solid #ededed;
+	      		
+	      }
+	      .left-area-mi ul{
+	      	list-style: none;
+	      	text-align: center;
+	      	padding-left: 20px;
+	      }
+	      .left-area-mi ul li{
+	      	font-size: 16px;
+		    line-height: 24px;
+		    position: relative;
+		    float: left;
+		    width: 50%;
+		    height: 33px;
+		    cursor: pointer;
+		    text-align: center;
+	      }
+	      .left-area-mi a{
+	      	color: #00b38a;
+	      	font-size: 16px;
+	      	text-align: center;
+	      	float:left;
+	      	text-decoration: none;
+	      }
+	      .left-input{
+	      	width: 290px;
+	      	height: 170px;
+	      	margin-top: 26px;
+	      	float:left;
+	      }
+	      .left-input input{
+	      	color: #333;
+	      	width: 285px;
+	      	height: 56px;
+	      	border-left: 0;
+		    border-top: 0;
+		    border-right: 0;
+		    border-color: #ededed;
+		    background: 0 0;
+	      }
+	      .left-denglu button{
+	      	color: #fff;
+	      	font-size: 18px;
+	      	text-align: center;
+	      	background-color: #00b38a;
+	      	width: 290px;
+	      	height: 46px;
+	      	margin-top: 0px;
+	      }
+	      .top-a .wang a{
+	      	color: #00b38a;
+	      	margin-left: 209px;
+	      	text-decoration: none;
+	      }
+	      .top-a .divider-f1{
+	      	border-right: 1px dashed #ededed;
+	      	height: 200px;
+	      	width: 0px;
+	      	position: relative;
+	      	left: 400px;
+	      	top: 50px;
+	      }
+
+</style>
+</head>
+<body>
+	<div class="top">
+		<a href="" class="logo"></a>
+	</div>
+	<div class="top-a">
+		<div class="left-area">
+			<div class="left-area-mi">
+				<ul class="clearfix">
+					<li class="left-area-mi1"><a href="">密码登录</a></li>
+					<li><a href="">验证码登录</a></li>
+				</ul>
+			</div>
+			<div class="left-input">
+				<input type="text" value="" name="username" placeholder="请输入手机号或邮箱">
+				<input type="password" value="" name="password" placeholder="请输入密码">
+			</div>
+			<div class="wang">
+				<a href="">忘记密码？</a>
+			</div>
+			<div class="left-denglu">
+				<p><button>登录</button></p>
+			</div>
+		</div>
+		    <div class="divider-f1">
+		    	
+		    </div>
+		    <div></div>		
+	</div>
+	<script>
+        $(function(){
+            // var goBackHtml = $(".go-back").html("111");
+            // console.log(goBackHtml);
+
+            $("button").click(function(){
+                var username = "fanyuanhe";
+                var password = "123456";
+
+                // var loginText = $("button").text("登录");
+
+                // console.log(loginText);
+
+                var enterUserName = $("input[name='username']").val();
+                var enterPassword = $("input[name='password']").val();  
+                if(enterUserName == username && enterPassword == password){
+                    alert("登录成功！");
+                    location.href="http://www.baidu.com";
+                }else {
+                    alert("登陆失败！");
+                }
+            })
+        })
+    </script>
+
+</body>
+</html>

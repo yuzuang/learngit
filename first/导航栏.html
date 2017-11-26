@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/jquery-3.2.0.min.js"></script>
+	<title>导航栏</title>
+</head>
+<style type="text/css">
+ html,body,ul,li {
+            margin: 0;
+            padding: 0;
+        }
+        ul li {
+            list-style: none;
+        }
+        .clearfix::after {
+            height: 0;
+            content: "";
+            display: block;
+            clear: both;
+        }
+        ul.one {
+            width: 200px;
+            margin: 0 auto;
+        }
+        ul.one li>a {
+            background-color: #dddddd;
+        }
+        ul.one li>a:hover {
+            background-color: #FAFAFA;
+        }
+        .in-bar {
+            display: none;
+        }
+        .in-bar li {
+            background-color: #f00;
+        }
+        .in-bar li:hover {
+            background-color: blue;
+        }
+        ul.one li>a,.in-bar li {
+            width: 200px;
+            height: 30px;
+            text-decoration: none;
+            color: #000000;
+            line-height: 30px;
+            text-align: center;
+            display: block;
+        }
+
+</style>
+<body>
+		<ul class="one">
+			<li>
+				<a href="javascript:void(0)">a</a>
+					<ul class="in-bar">
+						<li>1</li>
+						<li>1</li>
+						<li>1</li>
+					</ul>
+			</li>
+		</ul>
+		<ul class="one">
+			<li>
+				<a href="javascript:void(0)">b</a>
+					<ul class="in-bar">
+						<li>2</li>
+						<li>2</li>
+						<li>2</li>
+					</ul>
+			</li>
+		</ul>
+		<ul class="one">
+			<li>
+				<a href="javascript:void(0)">c</a>
+					<ul class="in-bar">
+						<li>3</li>
+						<li>3</li>
+						<li>3</li>
+					</ul>
+			</li>
+		</ul>
+	<script type="text/javascript">
+		$(function  () {
+			$("ul.one li>a").click(function(){
+				$(".in-bar").hide();
+				$(this).siblings(".in-bar").toggle();
+			// $("ul.one li>a").click(function(){
+			// 	$(".in-bar").hide();
+			// 	$(this).find("ul").toggle();
+			// })
+			})
+		})
+	</script>
+<!-- 	<div class="two">
+			<a href="">2</a>
+	</di>
+	<div class="thr">
+			<a href="">3</a>
+	</di> -->
+
+</body>
+</html>

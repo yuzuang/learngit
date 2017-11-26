@@ -1,0 +1,2733 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/jquery-3.2.0.min.js"></script>
+	<title>小米官网</title>
+	<style type="text/css">
+			html,body,ul,li{
+	      	margin: 0;
+	      	padding: 0;
+	      }
+	        a{
+	      	text-decoration: none;
+	      }
+	        ul{
+	      	list-style: none;
+	      }
+	      form {
+			margin: 0;
+		  }
+		   .clearfix::after{
+			content: "";
+			height: 0;
+			display: block;
+			clear: both;
+		  }
+		  .site-bn-bar {
+		    width: 100%;
+		    height: 120px;
+		    background-repeat: no-repeat;
+		    background-position: center 0;
+		}
+		  .site-topbar {
+		    position: relative;
+		    z-index: 30;
+		    height: 40px;
+		    font-size: 12px;
+		    color: #b0b0b0;
+		    background: #333;
+		}
+		.site-topbar .container {
+		    width: 1226px;
+		    height: 40px;
+		    margin-right: auto;
+		    margin-left: auto;
+		}
+		.site-topbar .topbar-nav {
+		    float: left;
+		    height: 40px;
+		    line-height: 40px;
+		    overflow: hidden;
+		    _zoom: 1;
+		    width: 691.14px;
+		}
+		.site-topbar a {
+		    color: #b0b0b0;
+		}
+		.site-topbar .sep {
+		    margin: 0 .5em;
+		    color: #424242;
+		}
+		.site-topbar a:hover{
+			color: white;
+		}
+		.site-topbar .topbar-cart {
+		    width: 120px;
+		    margin-left: 15px;
+		    position: relative;
+		    float: right;
+		    _display: inline;
+		    height: 40px;
+		}
+		.site-topbar .cart-mini {
+		    position: relative;
+		    z-index: 32;
+		    display: block;
+		    height: 40px;
+		    line-height: 40px;
+		    text-align: center;
+		    color: #b0b0b0;
+		    background: #424242;
+		}
+		.site-topbar .cart-mini i {
+		    margin-right: 4px;
+		    font-size: 20px;
+		    line-height: 20px;
+		    vertical-align: -4px;
+		}
+		.iconfont {
+		    font-family: "iconfont" !important;
+		    font-style: normal;
+		    -webkit-font-smoothing: antialiased;
+		    -webkit-text-stroke-width: 0.2px;
+		    -moz-osx-font-smoothing: grayscale;
+		}
+		.site-topbar .cart-mini-num {
+		    margin-left: -4px;
+		}
+		.site-topbar .cart-menu {
+		    display: none;
+		    position: absolute;
+		    right: 0;
+		    right: -1px \9;
+		    top: 40px;
+		    z-index: 100;
+		    width: 316px;
+		    padding: 15px 0 0;
+		    color: #424242;
+		    background: #fff;
+		    border: 1px solid #e0e0e0 \9;
+		    border-top: 0 \9;
+		    -webkit-box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+		    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+		}
+		.site-topbar .cart-menu .loading {
+		    margin: 5px 20px 20px;
+		    text-align: center;
+		}
+		.loading {
+			padding: 20px 0;
+		}
+		.loader {
+		    position: relative;
+		    margin: 0 auto;
+		    width: 192px;
+		    height: 20px;
+		    overflow: visible;
+		    -webkit-animation-delay: 0s;
+		    animation-delay: 0s;
+		    -webkit-transform: scale(1, 1);
+		    -ms-transform: scale(1, 1);
+		    transform: scale(1, 1);
+		}
+		.topbar-cart a:hover{
+			color: #ff6700;
+		}
+		.topbar-cart .cart-mini:hover{
+			background-color: white;
+		}
+  		.topbar-cart:hover .cart-menu{
+		   	display: block;
+		}
+		.site-topbar .topbar-info {
+		    line-height: 40px;
+		}
+		.site-topbar .topbar-cart, .site-topbar .topbar-info {
+		    position: relative;
+		    float: right;
+		    _display: inline;
+		    height: 40px;
+		}
+		.site-topbar .topbar-info .link {
+		    padding: 0 5px;
+		    text-align: center;
+		    float: left;
+		}
+		.site-topbar a {
+		    color: #b0b0b0;
+		}
+		.site-topbar .topbar-info .sep {
+		    margin: 0;
+		    float: left;
+		}
+		.site-header {
+		    position: relative;
+		    z-index: 20;
+		    height: 100px;
+		}
+		.site-header .container {
+		    position: relative;
+		}
+		.site-header .container {
+		    width: 1226px;
+		    height: 100px;
+		    margin-right: auto;
+		    margin-left: auto;
+		}
+		.site-header .header-logo {
+		    float: left;
+		    width: 58px;
+		    margin-top: 22px;
+		}
+		.header-logo{
+			height: 57px;
+			background: url(./img/QQ截图20171030194948.png);
+		}
+		.site-header .header-nav {
+		    float: left;
+		    width: 850px;
+		    height: 100px;
+		}
+		.site-header .nav-list {
+			position: relative;
+		    z-index: 10;
+		    float: left;
+		    width: 760px;
+		    height: 88px;
+		    margin: 0;
+		    padding: 12px 0 0 25px;
+		    list-style-type: none;
+		    font-size: 16px;
+		}
+		.site-header .nav-category {
+		    position: relative;
+		    float: left;
+		    width: 127px;
+		    padding-right: 15px;
+		}
+		.site-header .nav-item {
+		    float: left;
+		}
+		.site-header .nav-item .link {
+		    display: block;
+		    padding: 26px 10px 38px;
+		    color: #333;
+		}
+		.site-header .container {
+		    position: relative;
+		}
+		.site-header .header-nav .link span:hover{
+			 color: #ff6700;
+		}
+		.site-header .header-search {
+		    float: right;
+		    width: 296px;
+		    margin-top: 25px;
+		}
+		.site-header .search-form {
+		    position: relative;
+		    width: 296px;
+		    height: 50px;
+		}
+		.site-header .search-text {
+		    position: absolute;
+		    top: 0;
+		    right: 51px;
+		    z-index: 1;
+		    width: 223px;
+		    height: 48px;
+		    padding: 0 10px;
+		    border: 1px solid #e0e0e0;
+		    font-size: 14px;
+		    line-height: 48px;
+		    outline: 0;
+		    -webkit-transition: all .2s;
+		    transition: all .2s;
+		}
+		.site-header .search-hot-words {
+		    position: absolute;
+		    top: 14px;
+		    right: 62px;
+		    z-index: 2;
+		    text-align: right;
+		}
+		.site-header .search-hot-words a {
+		    display: inline-block;
+		    margin-left: 5px;
+		    padding: 0 5px;
+		    font-size: 12px;
+		    background: #eee;
+		    color: #757575;
+		    -webkit-transition: all .2s;
+		    transition: all .2s;
+		}
+		.site-header .search-hot-words a:hover{
+			background: #ff6700;
+			color: white;
+		}
+		.site-header .search-btn {
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		    z-index: 2;
+		    width: 52px;
+		    height: 50px;
+		    border: 1px solid #e0e0e0;
+		    font-size: 24px;
+		    line-height: 24px;
+		    background: #fff;
+		    color: #616161;
+		    outline: 0;
+		    -webkit-transition: all .2s;
+		    transition: all .2s;
+		}
+		.site-header .nav-category {
+		    position: relative;
+		    float: left;
+		    width: 127px;
+		    padding-right: 15px;
+		}
+		.site-header .nav-category .link-category {
+		    display: block;
+		    padding: 26px 0 38px;
+		    text-align: right;
+		    color: #333;
+		}
+		.site-header .nav-category .link-category {
+		    visibility: hidden;
+		}
+		.site-category {
+		    display: block;
+		}
+		.site-category {
+		   /* display: none;*/
+		    position: absolute;
+		    top: 88px;
+		    left: -83px;
+		    z-index: 21;
+		    width: 234px;
+		    height: 460px;
+		    font-size: 14px;
+		}
+		.site-category-list {
+		    height: 420px;
+		    border: 0;
+		    color: #fff;
+		    background: #333;
+		    background: rgba(0,0,0,0.6);
+		    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#99000000", endColorstr="#99000000")\9;
+		}
+		.site-category-list {
+		    height: 418px;
+		    margin: 0;
+		    padding: 20px 0;
+		    list-style-type: none;
+		  /*  border: 1px solid #ff6700;*/
+		    color: #424242;
+		
+		}
+		.site-category-list .title {
+		    position: relative;
+		    display: block;
+		    padding-left: 30px;
+		    height: 42px;
+		    line-height: 42px;
+		    color: #fff;
+		}
+		.site-category-list .children-col-3 {
+		    width: 795px;
+		}
+		.site-category-list .children {
+		    display: none;
+		    position: absolute;
+		    left: 234px;
+		    top: 0;
+		    z-index: 24;
+		    height: 458px;
+		    border: 1px solid #e0e0e0;
+		    border-left: 0;
+		    background: #fff;
+		    -webkit-box-shadow: 0 8px 16px rgba(0,0,0,0.18);
+		    box-shadow: 0 8px 16px rgba(0,0,0,0.18);
+		}
+		.site-category-list .children-list-col {
+		    float: left;
+		    width: 265px;
+		}
+		.site-category-list .children-list {
+		    height: 458px;
+		    margin: 0;
+		    padding: 2px 0;
+		    list-style-type: none;
+		}
+		.site-category-list .children-list li {
+		    position: relative;
+		    float: left;
+		    width: 265px;
+		    height: 76px;
+		}
+		.site-category-list .children-list li.star-goods .link {
+		    width: 170px;
+		    padding-right: 0;
+		}
+		.site-category-list .children-list .link {
+		    display: block;
+		    padding: 18px 20px;
+		    line-height: 40px;
+		    color: #333;
+		    -webkit-transition: color .2s;
+		    transition: color .2s;
+		}
+		.site-category-list .children-list .thumb {
+		    margin-right: 12px;
+		    vertical-align: middle;
+		    width: 40px;
+    		height: 40px;
+		}
+		.site-category-list .children-list .text {
+		    line-height: 40px;
+		}
+		.site-category-list .children-list .btn-buy {
+		    position: absolute;
+		    right: 10px;
+		    top: 26px;
+		    width: 58px;
+		    height: 22px;
+		    line-height: 22px;
+		}
+		.btn-line-primary {
+		    border-color: #ff6700;
+		    background: #fff;
+		    color: #ff6700;
+		}
+		.btn {
+		    display: inline-block;
+		    width: 158px;
+		    height: 38px;
+		    padding: 0;
+		    margin: 0;
+		    border: 1px solid #ff6700;
+		    font-size: 14px;
+		    line-height: 38px;
+		    text-align: center;
+		    /*color: #b0b0b0;*/
+		    cursor: pointer;
+		    -webkit-transition: all .4s;
+		    transition: all .4s;
+		}
+	   .category-item:hover .children{
+		   	display: block;
+		}
+	   .category-item:hover{
+	   	background: #ff6700;
+	   }
+	   .site-category-list .children-col-4 {
+		    width: 992px;
+		}
+		.site-category-list .children-list .thumb {
+		    margin-right: 3px;
+		    vertical-align: middle;
+		    width: 40px;
+		    height: 40px;
+		}
+		.site-category-list .children-list-col {
+		    float: left;
+		    width: 248px;
+		}
+		 .site-category-list .children-col-5 {
+		    width: 500px;
+		}
+		 .site-category-list .children-col-6 {
+		    width: 300px;
+		}
+		.home-hero-container {
+		    position: relative;
+		    z-index: 10;
+		}
+		.container {
+		    width: 1226px;
+		   /* height: 1180px;*/
+		    margin-right: auto;
+		    margin-left: auto;
+		}
+		.home-hero {
+		    position: relative;
+		    margin-bottom: 26px;
+		}
+		.home-hero-slider {
+		    position: relative;
+		    height: 460px;
+		    overflow: hidden;
+		    _zoom: 1;
+		}
+		.ui-wrapper {
+		    position: relative;
+		    margin: 0;
+		    padding: 0;
+		}
+		.icon .selected{
+            background-color: white;
+        }
+        .icon{
+            position: absolute;
+            bottom: 0;
+            left: 85%;
+        }
+         .icon li{
+           list-style: none;
+		    float: left;
+		    width: 7px;
+		    height: 7px;
+		    border-radius: 35px;
+		    background-color: #757575;
+		    margin: 0 8px 12px 7px;
+        }
+        .hide{
+        	display: none;
+        }
+        .show{
+        	display: block;
+        }
+        .ui-wrapper .ui-controls-direction a {
+		    position: absolute;
+		    top: 50%;
+		    z-index: 999;
+		    width: 41px;
+		    height: 69px;
+		    margin-top: -35px;
+		    text-indent: -9999px;
+		    overflow: hidden;
+		    _zoom: 1;
+		    outline: 0;
+		}
+		.ui-wrapper .ui-prev {
+		    left: 0;
+		    background: url(./img/icon-slides.png) no-repeat -84px 50%;
+		}
+		.ui-wrapper .ui-next {
+		    right: 0;
+		    background: url(./img/icon-slides.png) no-repeat -125px 50%;
+		}
+		.ui-wrapper .ui-controls-direction .ui-prev:hover{
+			background: #757575;
+		}
+		.ui-wrapper .ui-controls-direction .ui-next:hover{
+			color: white;
+		}
+		.home-hero .home-hero-sub {
+		    margin-top: 14px;
+		}
+		.span4 {
+		    width: 234px;
+		    float: left;
+	/*	    margin-left: 14px;*/
+		    min-height: 1px;
+		}
+		.home-channel-list {
+		    margin: 0;
+		    padding: 3px;
+		    list-style-type: none;
+		    font-size: 12px;
+		    text-align: center;
+		    background: #5f5750;
+		}
+		.home-channel-list li {
+		    position: relative;
+		    float: left;
+		    width: 70px;
+		    height: 82px;
+		    padding: 0 3px;
+		}
+		.home-channel-list a {
+		    display: block;
+		    padding-top: 18px;
+		    text-overflow: ellipsis;
+		    white-space: nowrap;
+		    overflow: hidden;
+		    _zoom: 1;
+		    color: #fff;
+		    color: rgba(255,255,255,0.7);
+		    -webkit-transition: color .2s;
+		    transition: color .2s;
+		}
+		.home-channel-list i {
+		    display: block;
+		    height: 24px;
+		    margin-bottom: 4px;
+		    font-size: 24px;
+		    line-height: 24px;
+		}
+		.home-channel-list a:hover{
+			color: white;
+		}
+		.span16 {
+		    width: 978px;
+		    float: left;
+		    margin-left: 14px;
+		    min-height: 1px
+		}
+		.home-promo-list {
+		    margin: 0;
+		    padding: 0;
+		    list-style-type: none;
+		}
+		.home-promo-list li.first {
+		    margin-left: 0;
+		}
+		.home-promo-list li {
+		    float: left;
+		    width: 316px;
+		    height: 170px;
+		    margin-left: 15px;
+		    -webkit-transition: -webkit-box-shadow .2s linear;
+		    transition: box
+		}
+		.home-promo-list li.second a img{
+		    width: 316px;
+		    height: 170px;
+		}
+		.xm-plain-box .box-hd {
+		    position: relative;
+		    height: 58px;
+		    -webkit-font-smoothing: antialiased;
+		}
+		.xm-plain-box .box-hd .title {
+		    margin: 0;
+		    font-size: 22px;
+		    font-weight: 200;
+		    line-height: 58px;
+		    color: #333;
+		}
+		.home-star-goods .box-hd .more {
+		    top: 24px;
+		}
+		.xm-plain-box .box-hd .more {
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+		}
+		.xm-controls-line-small .control {
+		    /* width: 24px; */
+		    height: 16px;
+		    padding: 3px 5px;
+		    border: 1px solid #e0e0e0;
+		    font-size: 16px;
+		    line-height: 57px;
+		}
+		.home-star-goods .box-bd {
+		    position: relative;
+		    width: 1226px;
+		    overflow: hidden;
+		    _zoom: 1;
+		    padding-bottom: 40px;
+		}
+		.home-star-goods .goods-list .thumb img {
+		    width: 160px;
+		    height: 160px;
+		}
+		.home-star-goods .goods-list .thumb {
+		    display: block;
+		    width: 160px;
+		    margin: 0 auto 22px;
+		}
+		.home-star-goods .goods-list li {
+		    height: 300px;
+		    padding-top: 39px;
+		    border-top-width: 1px;
+		    border-top-style: solid;
+		    text-align: center;
+		    background: #fafafa;
+		    -webkit-transition: all .6s;
+		    transition: all .6s;
+		}
+		.xm-carousel-col-5-list li {
+		    float: left;
+		    width: 234px;
+		}
+		.xm-carousel-list li {
+		    float: left;
+		    width: 234px;
+		    margin-right: 14px;
+		}
+		.home-star-goods .goods-list .title {
+		    margin: 0 20px 3px;
+		    font-size: 14px;
+		    font-weight: 400;
+		    text-overflow: ellipsis;
+		    white-space: nowrap;
+		    overflow: hidden;
+		    _zoom: 1;
+		}
+		.home-star-goods .goods-list .desc {
+		    height: 18px;
+		    margin: 0 20px 12px;
+		    font-size: 12px;
+		    text-overflow: ellipsis;
+		    white-space: nowrap;
+		    overflow: hidden;
+		    _zoom: 1;
+		    color: #b0b0b0;
+		}
+		.home-star-goods .goods-list .price {
+		    margin: 0;
+		    color: #ff6709;
+		}
+		.xm-carousel-list>li{
+			float: left;
+		}
+		.site-header .header-nav-menu .children-list {
+		    margin: 0;
+		    padding: 0;
+		    list-style-type: none;
+		    font-size: 12px;
+		}
+		.header-nav-menu .children-list li {
+		    position: relative;
+		    float: left;
+		    width: 180px;
+		    padding: 35px 12px 0;
+		    text-align: center;
+		}
+		.site-header .header-nav-menu .figure-thumb {
+		    width: 160px;
+		    height: 110px;
+		    margin: 0 auto 16px;
+		    text-align: center;
+		}
+		.site-header .header-nav-menu .flags {
+		    position: absolute;
+		    top: -1px;
+		    left: 0;
+		    z-index: 1;
+		    width: 100%;
+		    font-size: 12px;
+		    text-align: center;
+		}
+		.header-nav-menu .flag {
+		    display: inline-block;
+		    height: 18px;
+		    padding: 1px 20px;
+		    border: 1px solid #ff6700;
+		    color: #ff6700;
+		}
+		.site-header .header-nav .link span:hover .header-nav-menu{
+			display: block;
+		}
+		.home-main {
+		    padding-top: 60px;
+		}
+		.page-main {
+		    background: #f5f5f5;
+		}
+		.home-brick-row-2-box {
+		    height: 686px;
+		}
+		.home-brick-box {
+		    margin-bottom: 8px;
+		}
+		.xm-plain-box .box-hd .more {
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+		}
+		.xm-plain-box .box-hd .more .tab-list {
+		    margin: 0;
+		    padding: 16px 0 0;
+		    list-style-type: none;
+		    font-size: 16px;
+		}
+		.xm-plain-box .box-hd .more .tab-list li:hover, .xm-plain-box .box-hd .more .tab-list li.tab-active {
+		    color: #ff6700;
+		    border-bottom: 2px solid #ff6700;
+		}
+		.xm-plain-box .box-hd .more .tab-list li {
+		    display: inline-block;
+		    padding: 0;
+		    margin: 0 15px;
+		    color: #424242;
+		    border-bottom: 2px solid #f5f5f5;
+		    border-bottom: 2px solid transparent;
+		    -webkit-transition: border-color .5s;
+		    transition: border-color .5s;
+		    cursor: pointer;
+		}
+		.row {
+		    margin-left: -14px;
+		    _margin-left: 0;
+		}
+		.brick-item {
+		    position: relative;
+		    z-index: 1;
+		    float: left;
+		    width: 234px;
+		    margin-left: 14px;
+		    margin-bottom: 14px;
+		    background: #fff;
+		    -webkit-transition: all .2s linear;
+		    transition: all .2s linear;
+		}
+		.brick-promo-list a {
+		    display: block;
+		    width: 100%;
+		    height: 100%;
+		}
+		.span16 {
+		    width: 992px;
+		    float: left;
+		    margin-left: 14px;
+		    min-height: 1px;
+		}
+		.brick-item-m {
+		    height: 246px;
+		    padding: 34px 0 20px;
+		}
+		.brick-item {
+		    position: relative;
+		    z-index: 1;
+		    float: left;
+		    width: 234px;
+		    margin-left: 14px;
+		    margin-bottom: 14px;
+		    background: #fff;
+		    -webkit-transition: all .2s linear;
+		    transition: all .2s linear;
+		}
+		.brick-item-m .figure-img {
+		    width: 150px;
+		    height: 150px;
+		    margin: 0 auto 18px;
+		}
+		.brick-item-m .title, .brick-item-m .title a {
+		    color: #333;
+		}
+		.brick-item-m .title {
+		    margin: 0 10px;
+		    font-size: 14px;
+		    font-weight: 400;
+		    text-align: center;
+		}
+		.brick-item-m .desc {
+		    margin: 0 10px 10px;
+		    height: 18px;
+		    font-size: 12px;
+		    text-align: center;
+		    text-overflow: ellipsis;
+		    white-space: nowrap;
+		    overflow: hidden;
+		    _zoom: 1;
+		    color: #b0b0b0;
+		}
+		.brick-item-m .price {
+		    margin: 0 10px 10px;
+		    text-align: center;
+		    color: #ff6700;
+		}
+		.brick-item-m .price {
+		    margin: 0 10px 10px;
+		    text-align: center;
+		    color: #ff6700;
+		}
+		.brick-item-s {
+		    height: 93px;
+		    padding-top: 50px;
+		}
+		.brick-item-s .figure-img {
+		    position: absolute;
+		    right: 20px;
+		    top: 32px;
+		    width: 80px;
+		    height: 80px;
+		}
+		.brick-item-s .figure-img img {
+		    width: 80px;
+		    height: 80px;
+		}
+		.brick-item-s .title {
+		    margin: -10px 110px 5px 30px;
+		    font-size: 14px;
+		    font-weight: 400;
+		}
+		.brick-item-s .title a {
+		    display: block;
+		    text-overflow: ellipsis;
+		    white-space: nowrap;
+		    overflow: hidden;
+		    _zoom: 1;
+		}
+		.brick-item-s .price {
+		    margin: 0 110px 0 30px;
+		    font-size: 12px;
+		    color: #ff6700;
+		}
+		.brick-item-s .price .num {
+		    font-size: 14px;
+		}
+		.brick-item-s .price {
+		    margin: 0 110px 0 30px;
+		    font-size: 12px;
+		    color: #ff6700;
+		}
+		.brick-item-s .more {
+		    display: block;
+		    margin: 0 110px 0 30px;
+		    font-size: 18px;
+		    color: #333;
+		}
+		.brick-item-s .more small {
+		    display: block;
+		    font-size: 12px;
+		    color: #757575;
+		}
+		.hide{
+			display: none;
+		}
+		.show{
+			display: block;
+		}
+</style>
+</head>
+<body>
+	<div class="site-bn-bar" style="background-image:url(./img/cms_15091164369374_XnfVU.jpg)"></div>
+	<div class="site-topbar">
+		<div class="container">
+			<div class="topbar-nav">
+				<a href="#">小米商城</a>
+				<span class="sep">|</span>
+				<a href="#">MIUI</a>
+				<span class="sep">|</span>
+				<a href="#">米聊</a>
+				<span class="sep">|</span>
+				<a href="#">游戏</a>
+				<span class="sep">|</span>
+				<a href="#">多看阅读</a>
+				<span class="sep">|</span>
+				<a href="#">云服务</a>
+				<span class="sep">|</span>
+				<a href="#">金融</a>
+				<span class="sep">|</span>
+				<a href="#">米币</a>
+				<span class="sep">|</span>
+				<a href="#">小米商城手机版</a>
+				<span class="sep">|</span>
+				<a href="#">问题反馈</a>
+				<span class="sep">|</span>
+				<a href="#">Select Region</a>
+			</div>
+			<div class="topbar-cart">
+				<a href="#" class="cart-mini">
+					<i class="iconfont"></i>
+					购物车
+					<span class="cart-mini-num J_cartNum">（0）</span>
+				</a>
+				<div class="cart-menu">
+					<div class="loading">
+						<div class="loader">购物车中还没有商品，赶紧选购吧！</div>
+					</div>
+				</div>
+			</div>
+			<div class="topbar-info">
+				<a href="#" class="link">登录</a>
+				<span class="sep">|</span>
+				<a href="#" class="link">注册</a>
+				<span class="sep">|</span>
+				<a href="#" class="link">消息通知</a>
+			</div>
+		</div>
+	</div>
+	<div class="site-header">
+		<div class="container">
+			<div class="header-logo"></div>
+			<div class="header-nav">
+				<ul class="nav-list J_navMainList clearfix">
+					<li class="nav-category">
+						<a href="#" class="link-category">
+							<span class="text">全部商品分类</span>
+						</a>
+						<div class="site-category">
+							<ul class="site-category-list clearfix">
+								<li class="category-item">
+									<a href="#" class="title">手机 电话卡</a>
+									<div class="children clearfix children-col-3">
+										<ul class="children-list children-list-col children-list-col-1">
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/note3-80-2.png" class="thumb">
+													<span class="text">小米Note 3</span>
+												</a>
+												<a href="#" class="btn btn-line-primary btn-small btn-buy">选购</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/mix2-80.png" class="thumb">
+													<span class="text">小米MIX 2</span>
+												</a>
+												<a href="#" class="btn btn-line-primary btn-small btn-buy">选购</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/note3-80-2.png" class="thumb">
+													<span class="text">小米Note 3</span>
+												</a>
+												<a href="#" class="btn btn-line-primary btn-small btn-buy">选购</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/note3-80-2.png" class="thumb">
+													<span class="text">小米Note 3</span>
+												</a>
+												<a href="#" class="btn btn-line-primary btn-small btn-buy">选购</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/note3-80-2.png" class="thumb">
+													<span class="text">小米Note 3</span>
+												</a>
+												<a href="#" class="btn btn-line-primary btn-small btn-buy">选购</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/note3-80-2.png" class="thumb">
+													<span class="text">小米Note 3</span>
+												</a>
+												<a href="#" class="btn btn-line-primary btn-small btn-buy">选购</a>
+											</li>
+										</ul>
+										<ul class="children-list children-list-col children-list-col-2">
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/note3-80-2.png" class="thumb">
+													<span class="text">小米Note 3</span>
+												</a>
+												<a href="#" class="btn btn-line-primary btn-small btn-buy">选购</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/mix2-80.png" class="thumb">
+													<span class="text">小米MIX 2</span>
+												</a>
+												<a href="#" class="btn btn-line-primary btn-small btn-buy">选购</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/note3-80-2.png" class="thumb">
+													<span class="text">小米Note 3</span>
+												</a>
+												<a href="#" class="btn btn-line-primary btn-small btn-buy">选购</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/note3-80-2.png" class="thumb">
+													<span class="text">小米Note 3</span>
+												</a>
+												<a href="#" class="btn btn-line-primary btn-small btn-buy">选购</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/note3-80-2.png" class="thumb">
+													<span class="text">小米Note 3</span>
+												</a>
+												<a href="#" class="btn btn-line-primary btn-small btn-buy">选购</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/note3-80-2.png" class="thumb">
+													<span class="text">小米Note 3</span>
+												</a>
+												<a href="#" class="btn btn-line-primary btn-small btn-buy">选购</a>
+											</li>
+										</ul>
+										<ul class="children-list children-list-col children-list-col-3">
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/note3-80-2.png" class="thumb">
+													<span class="text">小米Note 3</span>
+												</a>
+												<a href="#" class="btn btn-line-primary btn-small btn-buy">选购</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/mix2-80.png" class="thumb">
+													<span class="text">小米MIX 2</span>
+												</a>
+												<a href="#" class="btn btn-line-primary btn-small btn-buy">选购</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/note3-80-2.png" class="thumb">
+													<span class="text">小米Note 3</span>
+												</a>
+												<a href="#" class="btn btn-line-primary btn-small btn-buy">选购</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/note3-80-2.png" class="thumb">
+													<span class="text">小米Note 3</span>
+												</a>
+												<a href="#" class="btn btn-line-primary btn-small btn-buy">选购</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/note3-80-2.png" class="thumb">
+													<span class="text">小米Note 3</span>
+												</a>
+												<a href="#" class="btn btn-line-primary btn-small btn-buy">选购</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/note3-80-2.png" class="thumb">
+													<span class="text">小米Note 3</span>
+												</a>
+												<a href="#" class="btn btn-line-primary btn-small btn-buy">选购</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="category-item">
+									<a href="#" class="title">笔记本</a>
+									<div class="children clearfix children-col-3">
+										<ul class="children-list children-list-col children-list-col-1">
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/bijiben80.jpg" class="thumb">
+													<span class="text">笔记本Air 12.5"</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/bijiben80.jpg" class="thumb">
+													<span class="text">笔记本Air 12.5"</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/bijiben80.jpg" class="thumb">
+													<span class="text">笔记本Air 12.5"</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/bijiben80.jpg" class="thumb">
+													<span class="text">笔记本Air 12.5"</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/bijiben80.jpg" class="thumb">
+													<span class="text">笔记本Air 12.5"</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/bijiben80.jpg" class="thumb">
+													<span class="text">笔记本Air 12.5"</span>
+												</a>
+											</li>
+										</ul>
+										<ul class="children-list children-list-col children-list-col-2">
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/bijiben80.jpg" class="thumb">
+													<span class="text">笔记本Air 12.5"</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/bijiben80.jpg" class="thumb">
+													<span class="text">笔记本Air 12.5"</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/bijiben80.jpg" class="thumb">
+													<span class="text">笔记本Air 12.5"</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/bijiben80.jpg" class="thumb">
+													<span class="text">笔记本Air 12.5"</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/bijiben80.jpg" class="thumb">
+													<span class="text">笔记本Air 12.5"</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/bijiben80.jpg" class="thumb">
+													<span class="text">笔记本Air 12.5"</span>
+												</a>
+											</li>
+										</ul>
+										<ul class="children-list children-list-col children-list-col-3">
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/bijiben80.jpg" class="thumb">
+													<span class="text">笔记本Air 12.5"</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/bijiben80.jpg" class="thumb">
+													<span class="text">笔记本Air 12.5"</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/bijiben80.jpg" class="thumb">
+													<span class="text">笔记本Air 12.5"</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/bijiben80.jpg" class="thumb">
+													<span class="text">笔记本Air 12.5"</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/bijiben80.jpg" class="thumb">
+													<span class="text">笔记本Air 12.5"</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/bijiben80.jpg" class="thumb">
+													<span class="text">笔记本Air 12.5"</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="category-item">
+									<a href="#" class="title">电视 盒子</a>
+									<div class="children clearfix children-col-4">
+										<ul class="children-list children-list-col children-list-col-1">
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xin55.png" class="thumb">
+													<span class="text">小米电视4C 43英寸</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xin55.png" class="thumb">
+													<span class="text">小米电视4C 43英寸</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xin55.png" class="thumb">
+													<span class="text">小米电视4C 43英寸</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xin55.png" class="thumb">
+													<span class="text">小米电视4C 43英寸</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xin55.png" class="thumb">
+													<span class="text">小米电视4C 43英寸</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xin55.png" class="thumb">
+													<span class="text">小米电视4C 43英寸</span>
+												</a>
+											</li>
+										</ul>
+										<ul class="children-list children-list-col children-list-col-2">
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xin55.png" class="thumb">
+													<span class="text">小米电视4C 43英寸</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xin55.png" class="thumb">
+													<span class="text">小米电视4C 43英寸</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xin55.png" class="thumb">
+													<span class="text">小米电视4C 43英寸</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xin55.png" class="thumb">
+													<span class="text">小米电视4C 43英寸</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xin55.png" class="thumb">
+													<span class="text">小米电视4C 43英寸</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xin55.png" class="thumb">
+													<span class="text">小米电视4C 43英寸</span>
+												</a>
+											</li>
+										</ul>
+										<ul class="children-list children-list-col children-list-col-3">
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xin55.png" class="thumb">
+													<span class="text">小米电视4C 43英寸</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xin55.png" class="thumb">
+													<span class="text">小米电视4C 43英寸</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xin55.png" class="thumb">
+													<span class="text">小米电视4C 43英寸</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xin55.png" class="thumb">
+													<span class="text">小米电视4C 43英寸</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xin55.png" class="thumb">
+													<span class="text">小米电视4C 43英寸</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xin55.png" class="thumb">
+													<span class="text">小米电视4C 43英寸</span>
+												</a>
+											</li>
+										</ul>
+										<ul class="children-list children-list-col children-list-col-4">
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xin55.png" class="thumb">
+													<span class="text">小米电视4C 43英寸</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xin55.png" class="thumb">
+													<span class="text">小米电视4C 43英寸</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xin55.png" class="thumb">
+													<span class="text">小米电视4C 43英寸</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xin55.png" class="thumb">
+													<span class="text">小米电视4C 43英寸</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xin55.png" class="thumb">
+													<span class="text">小米电视4C 43英寸</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xin55.png" class="thumb">
+													<span class="text">小米电视4C 43英寸</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="category-item">
+									<a href="#" class="title">路由器 智能硬件</a>
+									<div class="children clearfix children-col-4">
+										<ul class="children-list children-list-col children-list-col-1">
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/phcplus80.jpg" class="thumb">
+													<span class="text">九号平衡车</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/phcplus80.jpg" class="thumb">
+													<span class="text">九号平衡车</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/phcplus80.jpg" class="thumb">
+													<span class="text">九号平衡车</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/phcplus80.jpg" class="thumb">
+													<span class="text">九号平衡车</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/phcplus80.jpg" class="thumb">
+													<span class="text">九号平衡车</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/phcplus80.jpg" class="thumb">
+													<span class="text">九号平衡车</span>
+												</a>
+											</li>
+										</ul>
+										<ul class="children-list children-list-col children-list-col-2">
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/phcplus80.jpg" class="thumb">
+													<span class="text">九号平衡车</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/phcplus80.jpg" class="thumb">
+													<span class="text">九号平衡车</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/phcplus80.jpg" class="thumb">
+													<span class="text">九号平衡车</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/phcplus80.jpg" class="thumb">
+													<span class="text">九号平衡车</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/phcplus80.jpg" class="thumb">
+													<span class="text">九号平衡车</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/phcplus80.jpg" class="thumb">
+													<span class="text">九号平衡车</span>
+												</a>
+											</li>
+										</ul>
+										<ul class="children-list children-list-col children-list-col-3">
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/phcplus80.jpg" class="thumb">
+													<span class="text">九号平衡车</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/phcplus80.jpg" class="thumb">
+													<span class="text">九号平衡车</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/phcplus80.jpg" class="thumb">
+													<span class="text">九号平衡车</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/phcplus80.jpg" class="thumb">
+													<span class="text">九号平衡车</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/phcplus80.jpg" class="thumb">
+													<span class="text">九号平衡车</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/phcplus80.jpg" class="thumb">
+													<span class="text">九号平衡车</span>
+												</a>
+											</li>
+										</ul>
+										<ul class="children-list children-list-col children-list-col-4">
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/phcplus80.jpg" class="thumb">
+													<span class="text">九号平衡车</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/phcplus80.jpg" class="thumb">
+													<span class="text">九号平衡车</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/phcplus80.jpg" class="thumb">
+													<span class="text">九号平衡车</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/phcplus80.jpg" class="thumb">
+													<span class="text">九号平衡车</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/phcplus80.jpg" class="thumb">
+													<span class="text">九号平衡车</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/phcplus80.jpg" class="thumb">
+													<span class="text">九号平衡车</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="category-item">
+									<a href="#" class="title">移动电源 电池 插线板</a>
+									<div class="children clearfix children-col-5">
+										<ul class="children-list children-list-col children-list-col-1">
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/dianyuan280.jpg" class="thumb">
+													<span class="text">小米移动电源</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/dianyuan280.jpg" class="thumb">
+													<span class="text">小米移动电源</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/dianyuan280.jpg" class="thumb">
+													<span class="text">小米移动电源</span>
+												</a>
+											</li>											
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/dianyuan280.jpg" class="thumb">
+													<span class="text">小米移动电源</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/dianyuan280.jpg" class="thumb">
+													<span class="text">小米移动电源</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/dianyuan280.jpg" class="thumb">
+													<span class="text">小米移动电源</span>
+												</a>
+											</li>
+										</ul>
+										<ul class="children-list children-list-col children-list-col-2">
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/dianyuan280.jpg" class="thumb">
+													<span class="text">小米移动电源</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="category-item">
+									<a href="#" class="title">耳机音响</a>
+									<div class="children clearfix children-col-4">
+										<ul class="children-list children-list-col children-list-col-1">
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/toudai80.jpg" class="thumb">
+													<span class="text">小米头戴式耳机</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/toudai80.jpg" class="thumb">
+													<span class="text">小米头戴式耳机</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/toudai80.jpg" class="thumb">
+													<span class="text">小米头戴式耳机</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/toudai80.jpg" class="thumb">
+													<span class="text">小米头戴式耳机</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/toudai80.jpg" class="thumb">
+													<span class="text">小米头戴式耳机</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/toudai80.jpg" class="thumb">
+													<span class="text">小米头戴式耳机</span>
+												</a>
+											</li>
+										</ul>
+										<ul class="children-list children-list-col children-list-col-2">
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/toudai80.jpg" class="thumb">
+													<span class="text">小米头戴式耳机</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/toudai80.jpg" class="thumb">
+													<span class="text">小米头戴式耳机</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/toudai80.jpg" class="thumb">
+													<span class="text">小米头戴式耳机</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/toudai80.jpg" class="thumb">
+													<span class="text">小米头戴式耳机</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/toudai80.jpg" class="thumb">
+													<span class="text">小米头戴式耳机</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/toudai80.jpg" class="thumb">
+													<span class="text">小米头戴式耳机</span>
+												</a>
+											</li>
+										</ul>
+										<ul class="children-list children-list-col children-list-col-3">
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/toudai80.jpg" class="thumb">
+													<span class="text">小米头戴式耳机</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/toudai80.jpg" class="thumb">
+													<span class="text">小米头戴式耳机</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/toudai80.jpg" class="thumb">
+													<span class="text">小米头戴式耳机</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/toudai80.jpg" class="thumb">
+													<span class="text">小米头戴式耳机</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/toudai80.jpg" class="thumb">
+													<span class="text">小米头戴式耳机</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/toudai80.jpg" class="thumb">
+													<span class="text">小米头戴式耳机</span>
+												</a>
+											</li>
+										</ul>
+										<ul class="children-list children-list-col children-list-col-4">
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/toudai80.jpg" class="thumb">
+													<span class="text">小米头戴式耳机</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/toudai80.jpg" class="thumb">
+													<span class="text">小米头戴式耳机</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/toudai80.jpg" class="thumb">
+													<span class="text">小米头戴式耳机</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/toudai80.jpg" class="thumb">
+													<span class="text">小米头戴式耳机</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/toudai80.jpg" class="thumb">
+													<span class="text">小米头戴式耳机</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/toudai80.jpg" class="thumb">
+													<span class="text">小米头戴式耳机</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="category-item">
+									<a href="#" class="title">保护套 贴膜</a>
+									<div class="children clearfix children-col-6">
+										<ul class="children-list children-list-col children-list-col-1">
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/tiemo.jpg" class="thumb">
+													<span class="text">贴膜</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/tiemo.jpg" class="thumb">
+													<span class="text">贴膜</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="category-item">
+									<a href="#" class="title">线材 支架 储存卡</a>
+									<div class="children clearfix children-col-6">
+										<ul class="children-list children-list-col children-list-col-1">
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xiancai.jpg" class="thumb">
+													<span class="text">线材</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xiancai.jpg" class="thumb">
+													<span class="text">线材</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xiancai.jpg" class="thumb">
+													<span class="text">线材</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xiancai.jpg" class="thumb">
+													<span class="text">线材</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="category-item">
+									<a href="#" class="title">箱包 服饰 鞋 眼镜</a>
+									<div class="children clearfix children-col-6">
+										<ul class="children-list children-list-col children-list-col-1">
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xiangbao-80.jpg" class="thumb">
+													<span class="text">箱包</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xiangbao-80.jpg" class="thumb">
+													<span class="text">箱包</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xiangbao-80.jpg" class="thumb">
+													<span class="text">箱包</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/xiangbao-80.jpg" class="thumb">
+													<span class="text">箱包</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="category-item">
+									<a href="#" class="title">米兔 周边生活</a>
+									<div class="children clearfix children-col-6">
+										<ul class="children-list children-list-col children-list-col-1">
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/mitu-80.jpg" class="thumb">
+													<span class="text">米兔玩偶</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/mitu-80.jpg" class="thumb">
+													<span class="text">米兔玩偶</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/mitu-80.jpg" class="thumb">
+													<span class="text">米兔玩偶</span>
+												</a>
+											</li>
+											<li class="star-goods">
+												<a href="#" class="link">
+													<img src="./img/mitu-80.jpg" class="thumb">
+													<span class="text">米兔玩偶</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="link" style="    color: #333;"><span class="text">小米手机</span><span class="arrow"></span></a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="link" style="    color: #333;"><span class="text">红米</span><span class="arrow"></span></a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="link" style="    color: #333;"><span class="text">笔记本</span><span class="arrow"></span></a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="link" style="    color: #333;"><span class="text">电视</span><span class="arrow"></span></a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="link" style="    color: #333;"><span class="text">盒子</span><span class="arrow"></span></a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="link" style="    color: #333;"><span class="text">新品</span><span class="arrow"></span></a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="link" style="    color: #333;"><span class="text">路由器</span><span class="arrow"></span></a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="link" style="    color: #333;"><span class="text">智能硬件</span><span class="arrow"></span></a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="link" style="    color: #333;"><span class="text">服务</span><span class="arrow"></span></a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="link" style="    color: #333;"><span class="text">社区</span><span class="arrow"></span></a>
+					</li>
+				</ul>
+			</div>
+			<div class="header-search">
+				<form class="search-form">
+					<input type="text" style="width:250px;height: 43px;" placeholder="">
+					<input type="submit" class="search-btn iconfont" value="">
+					<div class="search-hot-words">
+						<a href="#">小米Max2</a>
+						<a href="#">小米MIX2 现货</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="header-nav-menu header-nav-menu-active" style="display:none;z-index: 100;">
+		<div class="container">
+				<ul class="children-list clearfix">
+					<li>
+						<div class="figure figure-thumb">
+							<a href="#"><img src="./img/mix2320-220.png" style=" width: 160px;height: 110px;"></a>
+						</div>
+						<div class="title"><a href="#" style="color: #333;">小米MIX 2</a></div>
+						<p class="price">3299起</p>
+						<div class="flags"><div class="flag">新品</div></div>
+					</li>
+					<li>
+						<div class="figure figure-thumb">
+							<a href="#"><img src="./img/mix2320-220.png" style=" width: 160px;height: 110px;"></a>
+						</div>
+						<div class="title"><a href="#" style="color: #333;">小米MIX 2</a></div>
+						<p class="price">3299起</p>
+						<div class="flags"><div class="flag">新品</div></div>
+					</li>
+					<li>
+						<div class="figure figure-thumb">
+							<a href="#"><img src="./img/mix2320-220.png" style=" width: 160px;height: 110px;"></a>
+						</div>
+						<div class="title"><a href="#" style="color: #333;">小米MIX 2</a></div>
+						<p class="price">3299起</p>
+						<div class="flags"><div class="flag">新品</div></div>
+					</li>
+					<li>
+						<div class="figure figure-thumb">
+							<a href="#"><img src="./img/mix2320-220.png" style=" width: 160px;height: 110px;"></a>
+						</div>
+						<div class="title"><a href="#" style="color: #333;">小米MIX 2</a></div>
+						<p class="price">3299起</p>
+						<div class="flags"><div class="flag">新品</div></div>
+					</li>
+					<li>
+						<div class="figure figure-thumb">
+							<a href="#"><img src="./img/mix2320-220.png" style=" width: 160px;height: 110px;"></a>
+						</div>
+						<div class="title"><a href="#" style="color: #333;">小米MIX 2</a></div>
+						<p class="price">3299起</p>
+						<div class="flags"><div class="flag">新品</div></div>
+					</li>
+					<li>
+						<div class="figure figure-thumb">
+							<a href="#"><img src="./img/mix2320-220.png" style=" width: 160px;height: 110px;"></a>
+						</div>
+						<div class="title"><a href="#" style="color: #333;">小米MIX 2</a></div>
+						<p class="price">3299起</p>
+						<div class="flags"><div class="flag">新品</div></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	<div class="home-hero-container container">
+		<div class="home-hero">
+			<div class="home-hero-slider">
+				<div class="ui-wrapper" style="max-width:100%;" >
+					<div class="ui-viewport" style="width:100%;overflow:hidden;position:relative;height:460px;">
+						<div class="xm-slider" style="width: auto; position: relative;">
+   							<div class="slider loaded exposure">
+   								<a href="#">
+								<div class="viewport">
+									<ul class="movie-list clearfix">
+										<li><img src="./img/xmad_15047918214756_FTUgm.jpg" alt=""></li>
+                                        <li class="hide"><img src="./img/xmad_15077714738381_erTKQ.jpg" alt=""></li>
+                                        <li class="hide"><img src="./img/xmad_15091079662042_ebjqu.jpg" alt=""></li>
+                                        <li class="hide"><img src="./img/xmad_15094573283766_MlNqh.jpg" alt=""></li>
+                                        <li class="hide"><img src="./img/xmad_15057916296159_nUYKy.jpg" alt=""></li>
+                                        <li class="hide"><img src="./img/xmad_15094450170762_VlWgh.jpg" alt=""></li>
+                                        <li class="hide"><img src="./img/xmad_15058906332794_gQDJX.jpg" alt=""></li> 
+									</ul>
+									<ul class="icon">
+								            <li class="selected"></li>
+								            <li></li>
+								            <li></li>
+								            <li></li>
+								            <li></li>
+								            <li></li>
+								            <li></li>
+							        </ul> 
+								</div>
+   								</a>
+   							</div>
+    					</div>
+    					<div class="ui-controls-direction">
+    						<a class="ui-prev" style="left: 234px;">上一张</a>
+    						<a class="ui-next">下一张</a>
+    					</div>
+					</div>
+				</div>
+			</div>
+			<div class="home-hero-sub row" style="height: 200px;">
+				<div class="span4">
+					<ul class="home-channel-list clearfix">
+						<li class="exposure top left">
+							<a href="#">
+								<i class="iconfont"></i>
+								选购手机
+							</a>
+						</li>
+						<li class="exposure top left">
+							<a href="#">
+								<i class="iconfont"></i>
+								企业团购
+							</a>
+						</li>
+						<li class="exposure top left">
+							<a href="#">
+								<i class="iconfont"></i>
+								F码通道
+							</a>
+						</li>
+						<li class="exposure top left">
+							<a href="#">
+								<i class="iconfont"></i>
+								米粉卡
+							</a>
+						</li>
+						<li class="exposure top left">
+							<a href="#">
+								<i class="iconfont"></i>
+								以旧换新
+							</a>
+						</li>
+						<li class="exposure top left">
+							<a href="#">
+								<i class="iconfont"></i>
+								话费充值
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="span16">
+					<ul class="home-promo-list clear">
+						<li class="first">
+							<a href="#" class="item exposure"><img src="./img/xmad_15094575641081_SxnJl.jpg"></a>
+						</li>
+						<li class="second">
+							<a href="#" class="item exposure"><img src="./img/xmad_15067798057483_gquZc.jpg"></a>
+						</li>
+						<li>
+							<a href="#" class="item exposure"><img src="./img/xmad_15095081181632_veEwQ.jpg"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="home-star-goods xm-carousel-container">
+			<div class="xm-plain-box">
+				<div class="box-hd">
+					<h2 class="title">小米明星单品</h2>
+					<div class="more">
+						<div class="xm-controls xm-controls-line-small xm-carousel-controls"><a class="control control-prev iconfont control-disabled"></a><a class="control control-next iconfont"></a>
+					</div>
+					</div>
+				</div>
+				<div class="box-bd">
+					<div class="xm-carousel-wrapper" style="height: 340px;overflow: hidden;">
+						<ul class="xm-carousel-list xm-carousel-col-5-list goods-list rainbow-list clearfix" style="width: 2480px;">
+							<li class="rainbow-item-1">
+										<a href="#" class="thumb exposure">
+											<img src="./img/xmad_1496643954435_EcHtv.png" style="width: 160px;height: 160px;">
+										</a>
+										<h3 class="title">
+											<a href="#" style="color: black;">小米Max 2</a>
+										</h3>
+										<p class="desc">大屏大电量，享多重好礼</p>
+										<p class="price">1399元起</p>
+							</li>
+							<li class="rainbow-item-1">
+										<a href="#" class="thumb exposure">
+											<img src="./img/xmad_1489401341687_vUojl.png" style="width: 160px;height: 160px;">
+										</a>
+										<h3 class="title">
+											<a href="#"style="color: black;">红米Note 4X</a>
+										</h3>
+										<p class="desc">4100mAh超长续航，多彩金属</p>
+										<p class="price">999元起</p>
+							</li>
+							<li class="rainbow-item-1">
+										<a href="#" class="thumb exposure">
+											<img src="./img/xmad_14966625747867_qcTyh.png" style="width: 160px;height: 160px;">
+										</a>
+										<h3 class="title">
+											<a href="#"style="color: black;">红米 4X</a>
+										</h3>
+										<p class="desc">4100mAh超长续航，8 核处理器</p>
+										<p class="price">699元起</p>
+							</li>
+							<li class="rainbow-item-1">
+										<a href="#" class="thumb exposure">
+											<img src="./img/pms_1503909150.67293503!220x220.png" style="width: 160px;height: 160px;">
+										</a>
+										<h3 class="title">
+											<a href="#"style="color: black;">小米电视4A 43英寸 标准版</a>
+										</h3>
+										<p class="desc">全高清HDR  四核高性能处理器 </p>
+										<p class="price">1799元</p>
+							</li>
+							<li class="rainbow-item-1">
+										<a href="#" class="thumb exposure">
+											<img src="./img/725a37e3-78b7-4298-8098-c40097bf179d.png" style="width: 160px;height: 160px;">
+										</a>
+										<h3 class="title" >
+											<a href="#"style="color: black;">小米笔记本</a>
+										</h3>
+										<p class="desc">更轻更薄，像杂志一样随身携带</p>
+										<p class="price">3599元起</p>
+							</li>
+
+							<li class="rainbow-item-1">
+										<a href="#" class="thumb exposure">
+											<img src="./img/xmad_1496643954435_EcHtv.png" style="width: 160px;height: 160px;">
+										</a>
+										<h3 class="title">
+											<a href="#" style="color: black;">小米Max 2</a>
+										</h3>
+										<p class="desc">大屏大电量，享多重好礼</p>
+										<p class="price">1399元起</p>
+							</li>
+							<li class="rainbow-item-1">
+										<a href="#" class="thumb exposure">
+											<img src="./img/xmad_1489401341687_vUojl.png" style="width: 160px;height: 160px;">
+										</a>
+										<h3 class="title">
+											<a href="#"style="color: black;">红米Note 4X</a>
+										</h3>
+										<p class="desc">4100mAh超长续航，多彩金属</p>
+										<p class="price">999元起</p>
+							</li>
+							<li class="rainbow-item-1">
+										<a href="#" class="thumb exposure">
+											<img src="./img/xmad_14966625747867_qcTyh.png" style="width: 160px;height: 160px;">
+										</a>
+										<h3 class="title">
+											<a href="#"style="color: black;">红米 4X</a>
+										</h3>
+										<p class="desc">4100mAh超长续航，8 核处理器</p>
+										<p class="price">699元起</p>
+							</li>
+							<li class="rainbow-item-1">
+										<a href="#" class="thumb exposure">
+											<img src="./img/pms_1503909150.67293503!220x220.png" style="width: 160px;height: 160px;">
+										</a>
+										<h3 class="title">
+											<a href="#"style="color: black;">小米电视4A 43英寸 标准版</a>
+										</h3>
+										<p class="desc">全高清HDR  四核高性能处理器 </p>
+										<p class="price">1799元</p>
+							</li>
+							<li class="rainbow-item-1">
+										<a href="#" class="thumb exposure">
+											<img src="./img/725a37e3-78b7-4298-8098-c40097bf179d.png" style="width: 160px;height: 160px;">
+										</a>
+										<h3 class="title" >
+											<a href="#"style="color: black;">小米笔记本</a>
+										</h3>
+										<p class="desc">更轻更薄，像杂志一样随身携带</p>
+										<p class="price">3599元起</p>
+							</li>						
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page-main home-main">
+		<div class="container" style="height:1248px;">
+			<div class="home-brick-box home-brick-row-2-box xm-plain-box J_itemBox J-brickBox is-visible loaded">
+				<div class="box-hd">
+					<h2 class="title">家电</h2>
+						<div class="more J_brickNav">
+							<ul class="tab-list J_brickTabSwitch">
+								<li class="tab-active">热门</li>
+								<li>电视影音</li>
+								<li>电脑</li>
+								<li>家居</li>
+							</ul>
+						</div>
+				</div>
+				<div class="box-bd J_brickBd">
+					<div class="row">
+						<div class="span4 span-first">
+							<ul class="brick-promo-list clearfix">
+								<li class="brick-item brick-itrm-1">
+									<a href="3"><img src="./img/xmad_14950222431232_Twnyl.jpg"></a>
+								</li>
+							</ul>
+						</div>
+						<div class="span16">
+							<div class="tab-container">
+								<ul class="brick-list tab-content clearfix tab-content-active J_recommenActive">
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1500287084.72131750!220x220.jpg" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1500287084.72131750!220x220.jpg" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1500287084.72131750!220x220.jpg" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1500287084.72131750!220x220.jpg" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1500287084.72131750!220x220.jpg" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1500287084.72131750!220x220.jpg" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1500287084.72131750!220x220.jpg" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-s">
+										<div class="figure figure-img">
+											<a href="3"><img src="./img/pms_1468806372.46368911!220x220.jpg"></a>
+										</div>
+										<h3 class="title">
+											<a href="3" style="color:black;">小白摄影机</a>
+										</h3>
+										<p class="price">
+											<span class="num">399元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-s">
+										<div class="figure figure-more">
+											<a href="#" class="more">
+												浏览更多
+												<small>热门</small>
+											</a>
+										</div>
+									</li>
+								</ul>
+								<ul class="brick-list tab-content clearfix tab-content-hide"  style="display:none;">
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1490778418.99894062!220x220.png" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1490778418.99894062!220x220.png" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1490778418.99894062!220x220.png" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1490778418.99894062!220x220.png" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1490778418.99894062!220x220.png" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1490778418.99894062!220x220.png" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1490778418.99894062!220x220.png" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-s">
+										<div class="figure figure-img">
+											<a href="3"><img src="./img/pms_1468806372.46368911!220x220.jpg"></a>
+										</div>
+										<h3 class="title">
+											<a href="3" style="color:black;">小白摄影机</a>
+										</h3>
+										<p class="price">
+											<span class="num">399元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-s">
+										<div class="figure figure-more">
+											<a href="#" class="more">
+												浏览更多
+												<small>热门</small>
+											</a>
+										</div>
+									</li>
+								</ul>
+								<ul class="brick-list tab-content clearfix tab-content-hide"  style="display:none;">
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1499138177.54329452!220x220.jpg" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1499138177.54329452!220x220.jpg" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1499138177.54329452!220x220.jpg" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1499138177.54329452!220x220.jpg" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1499138177.54329452!220x220.jpg" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1499138177.54329452!220x220.jpg" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1499138177.54329452!220x220.jpg" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-s">
+										<div class="figure figure-img">
+											<a href="3"><img src="./img/pms_1468806372.46368911!220x220.jpg"></a>
+										</div>
+										<h3 class="title">
+											<a href="3" style="color:black;">小白摄影机</a>
+										</h3>
+										<p class="price">
+											<span class="num">399元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-s">
+										<div class="figure figure-more">
+											<a href="#" class="more">
+												浏览更多
+												<small>热门</small>
+											</a>
+										</div>
+									</li>
+								</ul>
+								<ul class="brick-list tab-content clearfix tab-content-hide"  style="display:none;">
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1465366178.11466342!220x220.jpg" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1465366178.11466342!220x220.jpg" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1465366178.11466342!220x220.jpg" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1465366178.11466342!220x220.jpg" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1465366178.11466342!220x220.jpg" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1465366178.11466342!220x220.jpg" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-m">
+										<div class="figure figure-img">
+											<a href="#"><img src="./img/pms_1465366178.11466342!220x220.jpg" style="width: 150px;"></a>
+										</div>
+										<h3 class="title">
+											<a href="#">小米电视4A 32"</a>
+										</h3>
+										<p class="desc">64位四核处理器／1GB+4GB大内存</p>
+										<p class="price">
+											<span class="num">949元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-s">
+										<div class="figure figure-img">
+											<a href="3"><img src="./img/pms_1468806372.46368911!220x220.jpg"></a>
+										</div>
+										<h3 class="title">
+											<a href="3" style="color:black;">小白摄影机</a>
+										</h3>
+										<p class="price">
+											<span class="num">399元</span>
+										</p>
+									</li>
+									<li class="brick-item brick-item-s">
+										<div class="figure figure-more">
+											<a href="#" class="more">
+												浏览更多
+												<small>热门</small>
+											</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript">
+        $(function(){
+            var index = $(".icon li.selected").index();
+            function goLeft(){
+                if(index==0){index = 7;}
+                $(".icon li").eq(index-=1).addClass("selected").siblings().removeClass("selected")
+                $(".movie-list li").eq(index).fadeIn().siblings().fadeOut();
+            }
+            function goRight(){
+                if(index==6){index = -1;}
+                $(".icon li").eq(index+=1).addClass("selected").siblings().removeClass("selected")
+                $(".movie-list li").eq(index).fadeIn().siblings().fadeOut();
+            }
+            $(".ui-prev").click(function(){
+                 goLeft()
+            })
+            $(".ui-next").click(function(){
+                goRight()
+            })
+            //定时器
+            function exportTimer(){
+                timer = setInterval(function(){
+                    goLeft();
+                },4000);
+            }
+            exportTimer();
+            $(".ui-prev,.ui-next").hover(
+                function(){
+                    clearInterval(timer)
+                },
+                function(){
+                    exportTimer();
+                }
+            )
+            $(".icon li").mouseover(function(){
+                $(this).addClass("selected").siblings().removeClass("selected")
+                var index = $(this).index();
+                $(".movie-list li").eq(index).fadeIn().siblings().fadeOut();
+            })
+            $(".movie-list").mouseover(function(){
+                $(".ui-prev,.ui-next").show()                             
+            }) 
+            $(".movie-list").mouseout(function(){
+                $(".ui-prev,.ui-next").hide()                             
+            })
+         })
+        $(function(){
+			function goLeft(){
+            	$(".xm-carousel-list").stop(true,true).animate({
+                    marginLeft:"-=1240px",
+                },4000,function(){
+                    var first = $(".xm-carousel-list>li").first();
+                    var last = $(".xm-carousel-list>li").last();
+                    first.insertAfter(last);
+                    $(".xm-carousel-list").css("margin-left","+0px");
+                });
+            };
+            // function goRight(){
+            // 	$(".xm-carousel-list").stop(true,true).animate({
+            //         marginRight:"+=1240px",
+            //     },1000,function(){
+            //         var first = $(".xm-carousel-list>li").first();
+            //         var last = $(".xm-carousel-list>li").last();
+            //         first.insertAfter(last);
+            //         $(".xm-carousel-list").css("margin-right","+1240px");
+            //     });
+            // };
+            // function goRight(){
+            // 	 $(".xm-carousel-list").stop(true,true).animate({
+            //         marginLeft:"+=1240px",
+            //     },1000,function(){
+            //         var first = $(".tu-list>li").first();
+            //         var last = $(".tu-list>li").last();
+            //         last.insertBefore(first);
+            //         $(".xm-carousel-list").css("margin-left","-1240px");
+            //     });
+            // };
+            //左侧点击
+   //          $(".control control-prev").click(function(){
+			// goRight()	
+			// });	
+			// // 右侧点击
+			// $(".control control-next").click(function(){
+			// 	goLeft()
+			// });
+			// //定时器方法
+			function exportTimer1(){
+				timer1 = setInterval(function(){
+					goLeft();
+				},4000);
+			};
+			//第一次执行定时器
+			exportTimer1();
+			//左侧触碰停止开始定时器
+			$(".control control-prev").hover(
+				function(){
+					clearInterval(timer1)
+				},
+				function(){
+					exportTimer1()
+				}
+			);
+			//右侧触碰停止开始定时器
+			$(".control control-next").hover(
+				function(){
+					clearInterval(timer1)
+				},
+				function(){
+					exportTimer1()
+				}
+			);
+        });  
+		 $(function(){
+            $(".tab-list li").mouseover(function(){
+                $(this).addClass("tab-active").siblings().removeClass("tab-active");
+                var index = $(this).index();
+                $(".brick-list").eq(index).show().siblings().hide();
+            })
+
+//            var allLi = $(".bar li");
+//            console.log(allLi.eq(2))
+        })
+</script>
+</body>
+</html>
+

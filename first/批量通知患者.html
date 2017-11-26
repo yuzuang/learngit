@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width,user-scalable=no,initial-scale=1.0,maximum=1.0,minimum=1.0">
+	<title>Document</title>
+	<style>
+		html,body,p {
+			margin: 0;
+			padding: 0;
+		}
+		html,body {
+			font-size: 62.5%;
+		}
+		.top {
+			padding: 1rem;
+			font-size: 1.6rem;
+			background-color: red;
+		}
+		.right {
+			float: right;
+		}
+		.list-item {
+			position: relative;
+			padding: 2rem 2rem 2rem 8rem;
+		}
+		.userlogo {
+			position: absolute;
+			left: 1rem;
+			width: 5rem;
+			height: 5rem;
+		}
+		.btn {
+			width: 2rem;
+			height: 2rem;
+			display: inline-block;
+			float: right;
+		}
+		.btn-selected {
+			background-image: url("./img/quanxuan.png");
+			background-size: 100% 100%;
+		}
+		.selected {
+            background-image: url("./img/a1.png");
+            background-size: 100% 100%;
+        }
+        .next-btn {
+            width: 70%;
+            display: inline-block;
+            background:#1c91e0;
+            height: 4rem;
+            line-height: 4rem;
+            text-align: center;
+            color: #fff;
+            font-size: 1.5rem;
+        }
+        .bottom {
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-size: 0;
+        }
+        .select-all {
+            font-size: 1.5rem;
+            display: inline-block;
+            width: 30%;
+            height: 4rem;
+            line-height: 4rem;
+            text-align: center;
+            color: #000;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: block;
+            height: 0;
+        }
+        .all-btn {
+            width: 1.6rem;
+            height: 1.6rem;
+            display: inline-block;
+            vertical-align: -0.4rem;
+        }
+        .all-noselected {
+            background-image: url("./img/quanxuan.png");
+            background-size: 100% 100%;
+        }
+        .all-selected {
+            background-image: url("./img/a1.png");
+            background-size: 100% 100%;
+        }
+	</style>
+</head>
+<body>
+	<div class="top"><span>已选3人</span><span class="right">关闭管理</span></div>
+	<div class="list">
+		<div class="list-item">
+			<img class="userlogo" src="./img/tou.png" alt="">
+			<div>
+				<p><span>天小时</span><span>感冒</span><span class="btn btn-selected"></span></p>
+				<p><span>天  小时</span</p>
+				<p><span>天小  时</span></p>
+			</div>
+		</div>
+		<div class="list-item">
+			<img class="userlogo" src="./img/tou.png" alt="">
+			<div>
+				<p><span>天小时</span><span>感冒</span><span class="btn btn-selected"></span></p>
+				<p><span>天  小时</span</p>
+				<p><span>天小  时</span></p>
+			</div>
+		</div>
+		<div class="list-item">
+			<img class="userlogo" src="./img/tou.png" alt="">
+			<div>
+				<p><span>天小时</span><span>感冒</span><span class="btn btn-selected"></span></p>
+				<p><span>天  小时</span</p>
+				<p><span>天小  时</span></p>
+			</div>
+		</div>
+	  </div>
+	  <div class="bottom clearfix">
+	        <div class="next-btn">下一步</div>
+	        <div class="select-all">全选 <span class="all-btn all-noselected"></span></div>
+	   </div>
+	    <script>
+        $(function(){
+            //选中全部
+            $(".select-all").click(function(){
+                if($(".all-btn").hasClass("all-noselected")){
+                    $(".all-btn").addClass("all-selected").removeClass("all-noselected");
+                    $(".select-btn").addClass("selected").removeClass("no-selected");
+                }else {
+                    $(".all-btn").addClass("all-noselected").removeClass("all-selected");
+                    $(".select-btn").addClass("no-selected").removeClass("selected");
+                }
+
+            });
+
+            //单个选中
+            $("ul li").click(function(){
+                $(this).children(".select-btn").toggleClass("selected");
+                var selectedNum = $(".selected").length;
+                var selectedBtnNum = $(".select-btn").length;
+                if(selectedNum == selectedBtnNum) {
+                    $(".all-btn").addClass("all-selected").removeClass("all-noselected");
+                }else {
+                    $(".all-btn").addClass("all-noselected").removeClass("all-selected");
+                }
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+html,body,ul,li,header,h6{
+	      	margin: 0;
+	      	padding: 0;
+	      	font-size: 62.5%;
+	      }
+	        a{
+	      	text-decoration: none;
+	      }
+	        ul{
+	      	list-style: none;
+	      }
+	      form {
+			margin: 0;
+		  }
+		  body,header{
+		    	font-family:"微软雅黑";
+		    	background-color: #eceef3;
+		    }
+	      .clearfix::after{
+			content: "";
+			height: 0;
+			display: block;
+			clear: both;
+		  }
+		  header {
+		    padding-left: .32rem;
+		    border-bottom: 1px solid #f4f4f4;
+		    padding-left: 0;
+		    background-color: #fff;
+		}
+		header .header-top {
+		    position: relative;
+		    padding: 3.4rem .32rem .4rem 0;
+		}
+		header .header-top .logo {
+		    display: block;
+		    margin: 0 auto;
+		    margin-top: -1.84rem;
+		    margin-bottom: 9px;
+		    width: 111px;
+		}
+		header .user-center {
+		    position: absolute;
+		    width: 4.64rem;
+		    height: .64rem;
+		    right: .32rem;
+		    top: 1.53333rem;
+		    background: url(../img/data-image-png;base….png) no-repeat left top;
+		    -webkit-background-size: .64rem auto;
+		    /* background-size: .64rem auto; */
+		}
+		.search-container {
+		    border-top: 1px solid #f4f4f4;
+		    border-bottom: 1px solid #f4f4f4;
+		}
+		.search-container input {
+		    width: 93%;
+		    height: 27px;
+		    font-size: .37333rem;
+		    color: #666;
+		    border: 0;
+		    padding: 0;
+		    outline: 0;
+		    padding-left: .4rem;
+		    -webkit-box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    box-sizing: border-box;
+		    background-color: #F4F4F4;
+		    -webkit-border-radius: .10667rem;
+		    border-radius: .10667rem;
+		    -webkit-tap-highlight-color: transparent;
+		    margin:11px 0 11px 15px;
+		}
+		.mianfei a .img img{
+			margin:20px 10px 0 15px;
+			float: left;
+		}
+		.mianfei a h6{
+			font-size: 22px;
+		    /* color: black; */
+		    font-weight: 400;
+		    margin-bottom: 0;
+		    color: #323232;
+		        padding: 18px 0 0 0;
+		}
+		.home-header-doctors {
+		    overflow: hidden;
+		    text-align: center;
+		    border-top: 1px solid #f4f4f4;
+		    height: 90px;
+		}
+		.home-header-doctors .home-header-doctors-1{
+			border-right: 1px solid #f4f4f4;
+			width: 50%;
+			height: 90px;
+			float: left;
+		}
+		.home-header-doctors .home-header-doctors-1 img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        } 
+	.home-header-doctors .home-header-doctors-1 p a{
+ 			margin:0 auto;
+ 			color: #999;
+ 			font-size: 13px;
+        }
+        .home-header-doctors .home-header-doctors-2 img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        } 
+	.home-header-doctors .home-header-doctors-2 p a{
+ 			margin:0 auto;
+ 			color: #999;
+ 			font-size: 13px;
+        }
+        .banner-list-wrap {
+		    margin-bottom: .26667rem;
+		    overflow: hidden;
+		    background-color: #fff;
+		    width: 100%;
+		    height: 103px;
+		}
+		.banner-list-wrap .banner-list-container {
+		    position: relative;
+		    height: 2.77333rem;
+		    width: 10rem;
+		    overflow: hidden;
+		}
+		.swiper-container {
+		    margin-left: auto;
+		    margin-right: auto;
+		    position: relative;
+		    overflow: hidden;
+		    z-index: 1;
+		}
+		.home-title {
+		    font-size: 1.64rem;
+		    color: #323232;
+		    font-weight: 400;
+		    padding: .32rem;
+		    background-color: #fff;
+		    margin-top: 1.26667rem;
+		       /* margin-left: 13px;*/
+		}
+/*		.home-title-tag.hot {
+		    width: .8rem;
+		    height: .29333rem;
+		    background: url(../img/hot.png) no-repeat left top;
+		    -webkit-background-size: .82667rem auto;
+		    background-size: .82667rem auto;
+		}
+*/
+
+		.home-title-tag {
+		    display: inline-block;
+		    vertical-align: super;
+		    margin-left: .05333rem;
+		}
+		.more {
+		    float: right;
+		    font-size:1.5rem;
+		    padding-top: 0.5rem;
+		    padding-right: .32rem;
+		    color: #999;
+		    text-decoration: none;
+		    background: url(../img/111.png) no-repeat right .16rem;
+		    -webkit-background-size: .16rem auto;
+		    background-size: .16rem auto;
+		    line-height: 1;
+		}
+		.hot-qa-wrap {
+		    font-size: .37333rem;
+		     color: #323232; 
+
+		}
+		section {
+		    padding: 0;
+		    margin: 0;
+		    background-color: #fff;
+		     /*margin-left: 13px;*/
+		}
+		.hot-qa-list.first {
+		    border-top: 0;
+		}
+		.hot-qa-list {
+		    display: block;
+		    border-top: 1px solid #f1f1f1;
+		    padding: 18px 0 18px 0;
+		}
+		.hot-qa-list .title-tag {
+		    float: left;
+		    font-size:15px;
+		    color: #fff;
+		    width: 22px;
+		    margin-bottom: 58px;
+		    background-color: #ffa800;
+		    text-align: center;
+		    font-weight: 400;
+		    margin-right: 10px;
+		}
+		.hot-qa-list .hot-qa-user{
+			padding: 0px 0 0px 32px;
+		    font-size: 13px;
+		    color: #999;
+		}
+		.block-list-wrap {
+		    padding: .13333rem;
+		    overflow: hidden;
+		    background-color: #fff;
+		}
+		.block-list-wrap .block-list {
+		    float: left;
+		    padding: 8px;
+		    margin: 8px 11px;
+		    text-align: center;
+		    border: 1px solid #e7e7e7;
+		    -webkit-border-radius: .05333rem;
+		    border-radius: .05333rem;
+		}
+		.block-list-wrap .block-list  a{
+			color: black;
+		}
+		 .universal{
+	    	margin-top: 1rem;
+	    	padding:1.5rem;
+	    	background:#fff;
+	    }
+	    .uni_content{
+	    	border-bottom: 1px solid #f4f4f4;
+	    }
+	    .uni_content>span{
+			font-size: 16px;
+			color: #666;
+			line-height: 16px;
+	    }
+	    .universal_right{
+	    	margin-top: 1rem;
+	    	padding: 0.6rem 0.4rem 1.5rem 10rem;
+	    	position: relative;
+	    }
+	    .universal_right p{
+	    	display: block;
+	    	font-size: 15px;
+	    	color: #323232;
+	    	padding-bottom: 3rem;
+	    }
+	    .universal_right span{
+	    	font-size: 13px;
+	    	color: #999;
+	    }
+	    .universal img{
+	    	width: 9rem;
+	    	height: 7.5rem;
+	    	position: absolute;
+	    	left: 1.5rem;
+	    	margin-top: 2rem;
+
+	    }
+	    .banner-list-wrap .banner-list-container {
+		    position: relative;
+		    height: 6.77333rem;
+		    width: 24rem;
+		    overflow: hidden;
+		}
+		.swiper-wrapper .swiper-wrapper img{
+			width: 100%;
+			float: left;
+		}	
